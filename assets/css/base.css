@@ -180,3 +180,9 @@ button,
 input {
     outline: 0;
 }
+
+button {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}

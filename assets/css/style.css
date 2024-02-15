@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Authentic Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/AUTHENTICSans-90.woff2") format("woff2"),
+        url("../fonts/AUTHENTICSans-90.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Authentic Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/AUTHENTICSans-130.woff2") format("woff2"),
+        url("../fonts/AUTHENTICSans-130.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Authentic Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/AUTHENTICSans-150.woff2") format("woff2"),
+        url("../fonts/AUTHENTICSans-150.woff") format("woff");
+}
+
+:root {
+    --doc-height: 100%;
+    --color-txt: #000000;
+    --color-pub: #f6f79d;
+    --color-pro: #ccddde;
+    --color-neutral: #83ff8e;
+    --main-margin: 1rem 2.5rem;
+    --button-padding: .35rem 1.5rem;
+    --button-size: 12px;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: "Authentic Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    color: var(--color-txt);
+    overflow-x: hidden;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    top: .1rem
+}
+
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: var(--main-margin);
+    z-index: 9;
+}
+
+.footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: var(--main-margin);
+    z-index: 9;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button {
+    display: inline-block;
+    font-family: "Authentic Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: var(--button-size);
+    padding: var(--button-padding);
+    border: solid 1px var(--color-txt);
+    border-radius: 2.5rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2.5rem;
+}
