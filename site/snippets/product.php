@@ -1,23 +1,23 @@
 <div class="item" data-category="<?= $page->category()->slug() ?>">
-    <figure class="">
-        <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $page->alt() ?>" />
-            <figcaption>
-                <?php if ($page->itemheader()->isNotEmpty()): ?>
-                    <p class=""><?= $page->itemheader() ?></p>
-                <?php endif ?>
-                <?php if ($page->itemtitle()->isNotEmpty()): ?>
-                    <p class=""><?= $page->itemtitle() ?></p>
-                <?php endif ?>
-                <?php if ($page->iteminfo()->isNotEmpty()): ?>
-                    <p class=""><?= $page->iteminfo() ?></p>
-                <?php endif ?>
-                <?php if ($slots->book()) : ?>
-                    <button class=""><?= $buy ?></button>
-                <?php endif ?>
-            </figcaption>
+    <figure class="item-preview">
+        <?php if ($cover = $page->cover()->toFile()) : ?>
+            <img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
+        <?php endif ?>
+        <figcaption class="item-info">
+            <?php if ($page->itemheader()->isNotEmpty()): ?>
+                <p class="text"><?= $page->itemheader() ?></p>
+            <?php endif ?>
+            <p class="text-title"><?= $page->title() ?></p>
+            <?php if ($page->iteminfo()->isNotEmpty()): ?>
+                <p class="text"><?= $page->iteminfo() ?></p>
+            <?php endif ?>
+            <?php if ($slots->book()) : ?>
+                <button class="item-button"><?= $buy ?></button>
+            <?php endif ?>
+        </figcaption>
     </figure>
 
-    <div class="">
+    <div class="item-page">
         <div class="gallery">
             <?php foreach ($page->gallery()->toFiles() as $file) : ?>
                 <div class="gallery-wrapper">

@@ -1,0 +1,15 @@
+title: Publishing
+
+sections:
+  items:
+    label: false
+    type: pages
+    layout: cards
+    info: false
+    template:
+      - product
+    image:
+      cover: true
+      ratio: 1/1
+      back: black
+    sortable: true

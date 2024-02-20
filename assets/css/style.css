@@ -31,6 +31,7 @@
     --color-pro: #ccddde;
     --color-neutral: #83ff8e;
     --main-margin: 1rem 2.5rem;
+    --text-size: 14px;
     --button-padding: .35rem 1.5rem;
     --button-size: 12px;
     --button-radius: 2.5rem;
@@ -47,7 +48,22 @@ body {
     font-weight: 400;
     line-height: 130%;
     color: var(--color-txt);
+    background: #ffffff;
     overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.text {
+    font-size: var(--text-size);
+    font-weight: 400;
+}
+
+.text-title {
+    font-size: var(--text-size);
+    font-weight: 500;
 }
 
 .header {
@@ -60,7 +76,7 @@ body {
 
 .footer {
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
     padding: var(--main-margin);
     z-index: 9;
@@ -104,8 +120,39 @@ body {
     justify-content: space-between;
 }
 
-
 .main-nav {
     display: flex;
     gap: 2.5rem;
+}
+
+.main-content {
+    padding: 11rem 2.5rem;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1.5rem
+}
+
+.item-cover {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: solid 1px #d9a1f8;
+}
+
+.item-info {
+    position: relative;
+}
+
+.item-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.item-page {
+    display: none;
 }

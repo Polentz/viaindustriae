@@ -8,6 +8,7 @@ return function ($kirby) {
         $href = 'en';
         $cart = 'Carrello';
         $search = 'Cerca';
+        $all = 'Tutti i libri';
         $buy = 'Compra';
     } else if ($kirby->language()->code() == 'en') {
         $lang = 'en';
@@ -16,6 +17,7 @@ return function ($kirby) {
         $href = '/';
         $cart = 'Cart';
         $search = 'Search';
+        $all = 'All books';
         $buy = 'Buy';
     }
 
@@ -26,6 +28,7 @@ return function ($kirby) {
         'href' => $href,
         'cart' => $cart,
         'search' => $search,
+        'all' => $all,
         'buy' => $buy
     ];
 };
