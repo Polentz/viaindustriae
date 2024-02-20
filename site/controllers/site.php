@@ -5,12 +5,18 @@ return function ($kirby) {
         $lang = 'it';
         $langCode = 'it_IT';
         $languageString = 'It';
-        $href = '/';
+        $href = 'en';
+        $cart = 'Carrello';
+        $search = 'Cerca';
+        $buy = 'Compra';
     } else if ($kirby->language()->code() == 'en') {
         $lang = 'en';
         $langCode = 'en_US';
         $languageString = 'En';
-        $href = 'en';
+        $href = '/';
+        $cart = 'Cart';
+        $search = 'Search';
+        $buy = 'Buy';
     }
 
     return [
@@ -18,5 +24,8 @@ return function ($kirby) {
         'langCode' => $langCode,
         'languageString' => $languageString,
         'href' => $href,
+        'cart' => $cart,
+        'search' => $search,
+        'buy' => $buy
     ];
 };

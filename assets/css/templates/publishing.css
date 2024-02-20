@@ -1,0 +1,9 @@
+:root {
+    --color-page: #ccddde;
+    --color-page: #d9a1f8;
+}
+
+.nav-button.--current {
+    background: var(--color-page);
+    border-radius: var(--button-radius);
+}

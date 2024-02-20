@@ -33,6 +33,7 @@
     --main-margin: 1rem 2.5rem;
     --button-padding: .35rem 1.5rem;
     --button-size: 12px;
+    --button-radius: 2.5rem;
 }
 
 html {
@@ -49,19 +50,6 @@ body {
     overflow-x: hidden;
 }
 
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    top: .1rem
-}
-
-
 .header {
     width: 100%;
     position: fixed;
@@ -72,10 +60,37 @@ h6 {
 
 .footer {
     width: 100%;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     padding: var(--main-margin);
     z-index: 9;
+}
+
+.button {
+    display: inline-block;
+    font-family: "Authentic Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: var(--button-size);
+    padding: var(--button-padding);
+    border: solid 1px var(--color-txt);
+}
+
+.button a,
+.button p,
+.button h1 {
+    position: relative;
+    top: .05rem;
+}
+
+.static-button {
+    border-radius: var(--button-radius);
+}
+
+.button:not(.static-button):hover {
+    border-radius: var(--button-radius);
 }
 
 .nav {
@@ -89,18 +104,6 @@ h6 {
     justify-content: space-between;
 }
 
-.nav-button {
-    display: inline-block;
-    font-family: "Authentic Sans";
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-    text-transform: uppercase;
-    font-size: var(--button-size);
-    padding: var(--button-padding);
-    border: solid 1px var(--color-txt);
-    border-radius: 2.5rem;
-}
 
 .main-nav {
     display: flex;

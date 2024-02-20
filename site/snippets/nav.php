@@ -1,53 +1,55 @@
 <nav class="nav">
-    <?php if ($slots->homeNav()) : ?>
+    <?php if ($slots->home()) : ?>
         <menu class="main-menu">
             <div class="main-nav">
-                <div class="main-nav-wrapper">
-                    <button class="nav-button"><a href=""><?= $site->title() ?></a></button>
-                    <button class="nav-button"><a href="">Publishing</a></button>
-                </div>
+                <ul class="main-nav-wrapper">
+                    <li class="button nav-button static-button"><h1><?= $site->title() ?></h1></li>
+                    <?php foreach ($pages->template('publishing') as $page) : ?>
+                        <li class="button nav-button"><a href="<?= $page->url() ?>"><?= $page->title() ?></a></li>
+                    <?php endforeach ?>
+                </ul>
             </div>
             <div class="main-nav">
-                <div class="main-nav-wrapper">
-                    <button class="nav-button"><a href=""><?= $site->title() ?></a></button>
-                    <button class="nav-button"><a href="">Projects</a></button>
-                </div>
+                <ul class="main-nav-wrapper">
+                    <li class="button nav-button static-button"><h1><?= $site->title() ?></h1></li>
+                    <li class="button nav-button"><a href="">Projects</a></li>
+                </ul>
             </div>
         </menu>
     <?php endif ?>
-    <?php if ($slots->pageNav()) : ?>
+    <?php if ($slots->page()) : ?>
         <menu class="main-menu">
             <div class="main-nav">
-                <button class="nav-button"><a href=""><?= $site->title() ?></a></button>
-                <button class="nav-button"><a href="">Publishing</a></button>
+                <ul class="main-nav-wrapper">
+                    <li class="button nav-button"><h1><a href="<?= page('home')->url() ?>"><?= $site->title() ?></a></h1></li>
+                    <!-- add listed when I am ready -->
+                    <?php foreach($pages->template(['publishing', 'projects']) as $page) : ?>
+                        <li class="button nav-button <?= e($page->isOpen(), '--current') ?>"><p><?= $page->title() ?></p></li>
+                    <?php endforeach ?> 
+                    <!-- elimnare questo -->
+                    <li class="button nav-button"><a href="">Projects</a></li>
+                </ul>
+                <ul class="main-nav-wrapper">
+                    <li class="button nav-button info-button"><p>Info</p></li>
+                    <li class="button nav-button"><p>Agenda</p></li>
+                </ul>
             </div>
             <div class="main-nav">
-                <button class="nav-button"><a href=""><?= $site->title() ?></a></button>
-                <button class="nav-button"><a href="">Projects</a></button>
+                <ul class="main-nav-wrapper">
+                    <li class="button nav-button cart-button"><p href=""><?= $cart ?></p></li>
+                    <li class="button nav-button lang-button"><a href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a></li>                    
+                </ul>
             </div>
         </menu>
         <menu class="hinner-menu">
-            <ul class="inner-nav">
-                <li class=""></li>
-            </ul>
-        </menu>
-    <?php endif ?>
-    <?php if ($slots->footerNav()) : ?>
-        <menu class="main-menu">
-            <div class="main-nav">
-                <div class="main-nav-wrapper">
-                    <button class="nav-button">© <?= $site->title() ?> 2024</button>
-                </div>
-                <div class="main-nav-wrapper">
-                    <button class="nav-button">Info</button>
-                    <button class="nav-button">Agenda</button>
-                    <button class="nav-button"><?= $languageString ?></button>
-                </div>
-            </div>
-            <div class="main-nav">
-                <button class="nav-button"><a href="">Newletter</a></button>
-                <button class="nav-button"><a href="">FB</a></button>
-                <button class="nav-button"><a href="">IG</a></button>
+            <div class="inner-nav">
+                <ul class="inner-nav-wrapper">
+                    <!-- https://webdesign.tutsplus.com/how-to-build-a-search-bar-with-javascript--cms-107227t -->
+                    <li class="button serach-bar"><?= $search ?></li>
+                    <?php foreach ($page->children()->listed() as $item) : ?>
+                        <li class="button"><p><?= $item->category() ?></p></li>
+                    <?php endforeach ?>
+                </ul>
             </div>
         </menu>
     <?php endif ?>

@@ -1,8 +1,8 @@
-<?= snippet('head') ?>
+<?= snippet('header') ?>
 
 <header class="header">
     <?php snippet('nav', slots: true) ?>
-        <?php slot('homeNav') ?>
+        <?php slot('home') ?>
         <?php endslot() ?>
     <?php endsnippet() ?>
 </header>
@@ -25,4 +25,7 @@
     </section>
 </main>
 
-<?= snippet('footer') ?>
+<?php snippet('footer', slots: true) ?>
+    <?php slot('home') ?>
+    <?php endslot() ?>
+<?php endsnippet() ?>
