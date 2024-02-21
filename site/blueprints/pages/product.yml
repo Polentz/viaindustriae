@@ -1,42 +1,52 @@
 title: Book
 
-tabs:
-  item:
-    label: Preview
-    icon: page
-    columns:
-      main:
-        width: 2/3
-        sections:
-          content:
-            label: false
-            type: fields
-            fields:
-              cover:
-                label: Cover
-                type: files
-                width: 1/1
-                multiple: false
-                image:
-                  icon: true
-                  ratio: 4/3
-                  back: white
-                  cover: true
-              itemheader:
-                type: text
-              itemtitle: 
-                type: text
-              iteminfo:
-                type: text
-      sidebar:
-        width: 1/3
-        sections:
-          features:
-            label: false
-            type: fields
-            fields:
-              category:
-                type: tags
-  page:
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        label: false
+        type: fields
+        fields:
+          gallery:
+            label: Gallery
+            type: files
+            multiple: true
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true
+          cover:
+            label: Cover
+            type: files
+            multiple: false
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true
+          author:
+            type: text
+          price:
+            label: Price
+            type: number
+            required: true
+          info:
+            type: writer
+          description:
+            type: blocks
+            fieldsets:
+              - text
+  sidebar:
+    width: 1/3
+    sections:
+      features:
+        label: false
+        type: fields
+        fields:
+          category:
+            type: tags
 
 

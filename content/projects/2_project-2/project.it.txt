@@ -1,0 +1,33 @@
+Title: Project 2
+
+----
+
+Gallery: 
+
+----
+
+Cover: 
+
+----
+
+Author: 
+
+----
+
+Info: 
+
+----
+
+Blocks: 
+
+----
+
+Category: Archives
+
+----
+
+Text: 
+
+----
+
+Uuid: cBYJNjGs12bsgufw

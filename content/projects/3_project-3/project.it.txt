@@ -1,0 +1,33 @@
+Title: Project 3
+
+----
+
+Gallery: 
+
+----
+
+Cover: 
+
+----
+
+Author: 
+
+----
+
+Info: 
+
+----
+
+Blocks: 
+
+----
+
+Category: Exhibitions
+
+----
+
+Text: 
+
+----
+
+Uuid: 0khXU0oJrTDnZ9hr

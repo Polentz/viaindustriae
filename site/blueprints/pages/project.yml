@@ -1,0 +1,48 @@
+title: Project
+
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        label: false
+        type: fields
+        fields:
+          gallery:
+            label: Gallery
+            type: files
+            multiple: true
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true
+          cover:
+            label: Cover
+            type: files
+            multiple: false
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true
+          author:
+            type: text
+          info:
+            type: writer
+          blocks:
+            type: blocks
+            fieldsets:
+              - text
+  sidebar:
+    width: 1/3
+    sections:
+      features:
+        label: false
+        type: fields
+        fields:
+          category:
+            type: tags
+
+

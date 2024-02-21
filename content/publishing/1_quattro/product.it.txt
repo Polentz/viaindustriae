@@ -2,31 +2,35 @@ Title: Quattro
 
 ----
 
+Gallery: - file://cV7p6HjZ356EkHa8
+
+----
+
 Cover: - file://cV7p6HjZ356EkHa8
 
 ----
 
-Itemheader: Luca Pucci
+Author: Luca Pucci
 
 ----
 
-Itemtitle: Quattro
+Price: 16
 
 ----
 
-Iteminfo: 16 €
+Info: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
 
 ----
 
-Category: Sound
+Description: [{"content":{"text":"<p>Ogni anno, al Carnevale di Sant’Eraclio (Foligno, PG), sfilano carri allegorici. Vengono fatti in cartapesta usando tre tipi di giornale: bianco (La Nazione), giallo (Il Sole 24 Ore), rosa (La Gazzetta dello Sport). <em>Quattro </em>prova ad aggiungere un quarto colore. <em>Quattro</em> può essere acquistato con o senza multiplo in edizione limitata.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Viverra adipiscing at in tellus. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Elit at imperdiet dui accumsan sit amet nulla facilisi. At ultrices mi tempus imperdiet nulla. Volutpat ac tincidunt vitae semper quis lectus nulla at volutpat. Euismod quis viverra nibh cras pulvinar mattis nunc sed. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Pretium lectus quam id leo in. Odio facilisis mauris sit amet massa vitae tortor condimentum lacinia. Metus aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Vitae justo eget magna fermentum iaculis eu non diam phasellus. At ultrices mi tempus imperdiet. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Quam elementum pulvinar etiam non quam lacus. Nisl nunc mi ipsum faucibus. Tortor at auctor urna nunc id cursus. Tempor orci eu lobortis elementum nibh tellus molestie. Eu lobortis elementum nibh tellus.</p><p>Risus in hendrerit gravida rutrum. Sollicitudin ac orci phasellus egestas. Etiam dignissim diam quis enim lobortis. Ante metus dictum at tempor commodo ullamcorper. Dapibus ultrices in iaculis nunc. Id porta nibh venenatis cras sed felis eget velit aliquet. Tempus urna et pharetra pharetra. Malesuada pellentesque elit eget gravida cum sociis. In egestas erat imperdiet sed. Semper risus in hendrerit gravida rutrum quisque non tellus. Nisl pretium fusce id velit ut tortor pretium viverra. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Ut porttitor leo a diam sollicitudin tempor id eu. Ut placerat orci nulla pellentesque dignissim. At in tellus integer feugiat scelerisque varius morbi. Tellus at urna condimentum mattis pellentesque id. Odio morbi quis commodo odio aenean sed adipiscing diam. Diam vulputate ut pharetra sit amet.</p>"},"id":"ca1aca39-257b-4de0-b127-9a6ed504e69e","isHidden":false,"type":"text"}]
 
 ----
 
-Gallery: - file://Alif3u8bImrimjNY
+Category: Artist's book
 
 ----
 
-Text: 
+Blocks: [{"content":{"text":"<p>Ogni anno, al Carnevale di Sant’Eraclio (Foligno, PG), sfilano carri allegorici. Vengono fatti in cartapesta usando tre tipi di giornale: bianco (La Nazione), giallo (Il Sole 24 Ore), rosa (La Gazzetta dello Sport). <em>Quattro </em>prova ad aggiungere un quarto colore. <em>Quattro</em> può essere acquistato con o senza multiplo in edizione limitata.</p>"},"id":"b9997279-4570-4934-b466-edb52e7aeb03","isHidden":false,"type":"text"},{"content":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna condimentum mattis pellentesque. Venenatis tellus in metus vulputate eu scelerisque. Dui sapien eget mi proin sed libero enim sed faucibus. Elementum nibh tellus molestie nunc non blandit massa enim nec. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Dictumst vestibulum rhoncus est pellentesque. A condimentum vitae sapien pellentesque habitant morbi. Donec massa sapien faucibus et molestie. A diam maecenas sed enim ut sem viverra aliquet. Et pharetra pharetra massa massa ultricies mi quis.</p><p>Molestie nunc non blandit massa enim nec dui. Dui sapien eget mi proin sed libero. Tellus orci ac auctor augue. Nec dui nunc mattis enim ut. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Elit duis tristique sollicitudin nibh sit amet commodo. Amet cursus sit amet dictum. Velit dignissim sodales ut eu. Sed cras ornare arcu dui vivamus arcu. Neque vitae tempus quam pellentesque nec nam aliquam sem et. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc.</p>"},"id":"495c5fe9-9f89-4ffd-ae71-44e55e2c06c0","isHidden":false,"type":"text"}]
 
 ----
 

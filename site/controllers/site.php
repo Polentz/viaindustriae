@@ -14,7 +14,7 @@ return function ($kirby) {
         $lang = 'en';
         $langCode = 'en_US';
         $languageString = 'En';
-        $href = '/';
+        $href = 'it';
         $cart = 'Cart';
         $search = 'Search';
         $all = 'All books';

@@ -1,5 +1,12 @@
 title: Site
 
 sections:
+  home:
+    type: pages
+    template:
+      - home
   pages:
     type: pages
+    template:
+      - publishing
+      - projects

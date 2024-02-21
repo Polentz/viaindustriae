@@ -5,11 +5,11 @@
     <?php endslot() ?>
 <?php endsnippet() ?>
 
-<main class="main main-content">
+<main class="main content">
     <section class="items-grid">
-        <?php foreach ($page->children()->listed() as $product) : ?>
-            <?php snippet('product', ['page' => $product], slots: true) ?>
-                <?php slot('book') ?>
+        <?php foreach ($page->children()->listed() as $item) : ?>
+            <?php snippet('item', ['page' => $item], slots: true) ?>
+                <?php slot('product') ?>
                 <?php endslot() ?>
             <?php endsnippet() ?>
         <?php endforeach ?> 
