@@ -5,7 +5,7 @@ const documentHeight = () => {
 
 const headerHeight = () => {
     const header = document.querySelector("header");
-    const stickyElements = document.querySelectorAll(".item-gallery");
+    const stickyElements = document.querySelectorAll(".item-gallery, .description-header-ui");
     stickyElements.forEach(element => {
         element.style.top = `${header.offsetHeight}px`;
     });

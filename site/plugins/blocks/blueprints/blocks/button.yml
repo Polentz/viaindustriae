@@ -1,0 +1,13 @@
+name: Button
+icon: bolt
+fields:
+  text:
+    label: Pulsante
+    placeholder: Testo del pulsante …
+    width: 1/2
+    type: text
+  link:
+    label: false
+    placeholder: Url del pulsante …
+    width: 1/2
+    type: url

@@ -53,7 +53,7 @@
             </div>
         </div>
         <!-- type="button" onclick="window.history.back()" -->
-        <div class="item-close">
+        <div class="close-ui item-close">
             <a href="<?= $page->parent()->url() ?>">
                 <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13 1L1 13M1 1L13 13"/>
