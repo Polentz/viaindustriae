@@ -2,8 +2,10 @@ title: Site
 
 tabs:
   pages:
-    label: Website pages
-    icon: angle-right
+    label:
+      en: Website
+      it: Website
+    icon: page
     sections:
       home:
         type: pages
@@ -15,8 +17,10 @@ tabs:
           - publishing
           - projects
   about:
-    label: About
-    icon: angle-right
+    label:
+      en: About
+      it: Info
+    icon: info
     columns:
       main:
         width: 1/3
@@ -25,7 +29,9 @@ tabs:
             type: fields
             fields:
               contact:
-                label: Contatti
+                label:
+                  en: Contact
+                  it: Contatti
                 type: blocks
                 fieldsets:
                   - contactblock
@@ -51,8 +57,50 @@ tabs:
             type: fields
             fields:
               about:
-                label: About
+                label:
+                  en: Biography
+                  it: Biografia
                 type: blocks
                 fieldsets:
                   - text
+  orders:
+    icon: draft
+    label:
+      en: Orders
+      it: Ordini
+    sections:
+      orders:
+        extends: sections/orders
+  shopSettings:
+    label:
+      en: Shop Settings
+      it: Gestione shop
+    icon: settings
+    sections:
+      checkoutPage:
+        headline:
+          en: Checkout Page
+          it: Checkout
+        type: pages
+        template: checkout
+        max: 1
+      shippingPage:
+        headline:
+          en: Shipping Page
+          it: Spedizioni
+        type: pages
+        template: shipping
+        max: 1
+      shopSettings:
+        type: fields
+        fields:
+          maxAmount:
+            label:
+              en: Max Amount per Product
+              it: Numero massimo acquistabile per prodotto
+            type: number
+            translate: false
+            # required: true
+            width: 1/2
+
 

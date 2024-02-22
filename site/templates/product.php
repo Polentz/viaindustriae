@@ -6,7 +6,7 @@
 <?php endsnippet() ?>
 
 <main class="main content">
-    <div id="<?= $page->uuid() ?>" class="item-page" data-category="<?= $page->category()->slug() ?>">
+    <div class="item-page product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category()->slug() ?>">
         <div class="item-gallery">
             <?php foreach ($page->gallery()->toFiles() as $file) : ?>
                 <div class="item-gallery-wrapper">
@@ -32,11 +32,7 @@
                         <div class="description-header-info-wrapper text-caption"><?= $page->info() ?></div>
                     <?php endif ?>
                     <div class="description-header-info-wrapper">
-                        <?php if ($kirby->language()->code() == 'it') : ?>
-                            <p class="text-subtitle"><?= $page->price() ?> €</p>
-                        <?php elseif ($kirby->language()->code() == 'en') : ?>
-                            <p class="text-subtitle">€ <?= $page->price() ?></p>
-                        <?php endif ?>
+                        <p class="price text-subtitle">€ <?= $page->price() ?></p>
                     </div>
                 </div>
                 <div class="description-header-ui">
@@ -45,7 +41,7 @@
                         <button class="button tooltip-button" data-url="<?= $page->url() ?>"><p>Share</p></button>
                         <span class="tooltiptext text-caption">Copy to clipboard</span>
                     </div>
-                    <button class="button buy-button"><p><?= $buy ?></p></button>
+                    <button class="button buy-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                 </div>
             </div>
             <div class="description-text">

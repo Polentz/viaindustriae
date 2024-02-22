@@ -114,7 +114,7 @@ Kirby::plugin('ww/merx', [
             'page.status.complete' => 'Complete',
             'section.headline.orders' => 'Orders',
         ],
-        'de' => [
+        'it' => [
             'error.merx.initializePayment' => 'Die Bezahlung konnte nicht initialisiert werden.',
             'error.merx.noPaymentMethod' => 'Keine Zahlungsmethode angegeben.',
             'error.merx.fieldsvalidation' => 'Felder sind invalide.',
@@ -131,7 +131,7 @@ Kirby::plugin('ww/merx', [
             'field.payment' => 'Bezahlung',
             'field.paymentMethod' => 'Bezahlmethode',
             'field.paymentComplete' => 'Bezahlung vollständig',
-            'field.price' => 'Preis',
+            'field.price' => 'Costo',
             'field.tax' => 'Steuer',
             'field.items' => 'Warenkorb',
             'field.quantity' => 'Menge',

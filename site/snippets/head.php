@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= $lang ?>">
+<html lang="<?= I18n::locale() ?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,11 +29,22 @@
     <?php if ($site->ogimage()->isNotEmpty()) : ?>
         <meta name="twitter:image:alt" content="<?= $site->ogimage()->toFile()->alt() ?>">
     <?php endif ?>
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <!-- Make sure order pages are not indexed by search engines -->
+    <?php if (option('debug') === true || $page->intendedTemplate()->name() === 'order'): ?>
+        <meta name="robots" content="noindex,nofollow">
+    <?php else : ?>
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <?php endif ?>
+
     <?= css ([
         'assets/css/base.css',
         'assets/css/style.css',
         '@auto',
     ]) ?>
+    <?= js('assets/js/cart.js', ['defer' => true]) ?>
+    <!-- <?= js('assets/js/templates/product.js', ['defer' => true]) ?> -->
+    <?php if ($page->intendedTemplate()->name() === 'checkout') : ?>
+        <?= js('assets/js/templates/checkout.js', ['defer' => true]) ?>
+    <?php endif ?>
 </head>
 <body>

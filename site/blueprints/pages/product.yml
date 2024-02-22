@@ -1,6 +1,5 @@
 title: Book
 
-
 columns:
   main:
     width: 2/3
@@ -29,10 +28,6 @@ columns:
               cover: true
           author:
             type: text
-          price:
-            label: Price
-            type: number
-            required: true
           info:
             type: writer
           description:
@@ -46,6 +41,7 @@ columns:
         label: false
         type: fields
         fields:
+          extends: fields/product-standards
           category:
             type: tags
 
