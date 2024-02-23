@@ -1,3 +1,12 @@
+.button {
+    background: transparent;
+}
+
+.nav-button:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
 .hero {
     position: relative;
     height: var(--doc-height);

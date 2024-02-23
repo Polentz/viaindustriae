@@ -38,13 +38,9 @@
 
     <?= css ([
         'assets/css/base.css',
+        'assets/css/variables.css',
         'assets/css/style.css',
         '@auto',
     ]) ?>
-    <?= js('assets/js/cart.js', ['defer' => true]) ?>
-    <!-- <?= js('assets/js/templates/product.js', ['defer' => true]) ?> -->
-    <?php if ($page->intendedTemplate()->name() === 'checkout') : ?>
-        <?= js('assets/js/templates/checkout.js', ['defer' => true]) ?>
-    <?php endif ?>
 </head>
 <body>

@@ -56,3 +56,5 @@
     <?php slot('page') ?>
     <?php endslot() ?>
 <?php endsnippet() ?>
+
+<?php snippet('foot') ?>

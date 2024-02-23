@@ -4,17 +4,17 @@
             <menu class="main-menu">
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
-                        <button class="button nav-button static-button"><h1><?= $site->title() ?></h1></button>
+                        <h1 class="button static-button"><?= $site->title() ?></h1>
                         <?php foreach ($site->children()->filterby('template', 'publishing') as $publishing) : ?>
-                            <button class="button nav-button"><a href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a></button>
+                            <a class="button nav-button" href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
-                        <button class="button nav-button static-button"><h1><?= $site->title() ?></h1></button>
+                        <h1 class="button static-button"><?= $site->title() ?></h1>
                         <?php foreach ($site->children()->filterby('template', 'projects') as $projects) : ?>
-                            <button class="button nav-button"><a href="<?= $projects->url() ?>"><?= $projects->title() ?></a></button>
+                            <a class="button nav-button" href="<?= $projects->url() ?>"><?= $projects->title() ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>
@@ -25,25 +25,25 @@
             <menu class="main-menu">
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
-                        <button class="button nav-button"><h1><a href="<?= page('home')->url() ?>"><?= $site->title() ?></a></h1></button>
+                        <a class="button nav-button" href="<?= page('home')->url() ?>"><?= $site->title() ?></a>
                         <?php foreach ($site->children()->filterby('template', 'publishing') as $publishing) : ?>
                             <?php if ($publishing->isOpen()) : ?>
-                                <button class="button nav-button --current"><p><?= $publishing->title() ?></p></button>
+                                <h1 class="button nav-button --current"><?= $publishing->title() ?></h1>
                             <?php else : ?>
-                                <button class="button nav-button"><a href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a></button>
+                                <a class="button nav-button" href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a>
                             <?php endif ?>
                         <?php endforeach ?>
                         <?php foreach ($site->children()->filterby('template', 'projects') as $projects) : ?>
                             <?php if ($projects->isOpen()) : ?>
-                                <button class="button nav-button --current"><p><?= $projects->title() ?></p></button>
+                                <h1 class="button nav-button --current"><?= $projects->title() ?></h1>
                             <?php else : ?>
-                                <button class="button nav-button"><a href="<?= $projects->url() ?>"><?= $projects->title() ?></a></button>
+                                <a class="button nav-button" href="<?= $projects->url() ?>"><?= $projects->title() ?></a>
                             <?php endif ?>
                         <?php endforeach ?>
                     </div>
                     <div class="main-nav-wrapper">
-                        <button class="button nav-button info-button">Info</button>
-                        <button class="button nav-button">Agenda</button>
+                        <a class="button nav-button info-button">Info</a>
+                        <a class="button nav-button">Agenda</a>
                     </div>
                 </div>
                 <div class="main-nav">
@@ -54,8 +54,7 @@
                             </summary>
                             <div class="cart" id="cart"></div>
                         </details>
-                        <!-- <button class="button nav-button cart-button" id="cart"><p><?= $cart ?></p></button> -->
-                        <div class="button nav-button lang-button --current"><a href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a></div>                    
+                        <a class="button nav-button lang-button --current" href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>                    
                     </div>
                 </div>
             </menu>
@@ -63,10 +62,10 @@
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
                         <!-- https://webdesign.tutsplus.com/how-to-build-a-search-bar-with-javascript--cms-107227t -->
-                        <button class="button serach-bar"><?= $search ?></button>
-                        <button class="button category-button --current"><?= $all ?></button>
+                        <div class="button serach-bar"><?= $search ?></div>
+                        <div class="button category-button --current"><?= $all ?></div>
                         <?php foreach ($page->children()->listed()->pluck('category', null, true) as $page) : ?>
-                            <button class="button category-button"><?= $page->category() ?></button>
+                            <div class="button category-button"><?= $page->category() ?></div>
                         <?php endforeach ?>
                     </div>
                 </div>
@@ -77,25 +76,25 @@
             <menu class="main-menu">
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
-                        <button class="button nav-button"><h1><a href="<?= page('home')->url() ?>"><?= $site->title() ?></a></h1></button>
+                        <a class="button nav-button" href="<?= page('home')->url() ?>"><?= $site->title() ?></a>
                         <?php foreach ($site->children()->filterby('template', 'publishing') as $publishing) : ?>
                             <?php if ($publishing->isOpen()) : ?>
-                                <button class="button nav-button --current"><p><?= $publishing->title() ?></p></button>
+                                <h1 class="button nav-button --current"><?= $publishing->title() ?></h1>
                             <?php else : ?>
-                                <button class="button nav-button"><a href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a></button>
+                                <a class="button nav-button" href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a>
                             <?php endif ?>
                         <?php endforeach ?>
                         <?php foreach ($site->children()->filterby('template', 'projects') as $projects) : ?>
                             <?php if ($projects->isOpen()) : ?>
-                                <button class="button nav-button --current"><p><?= $projects->title() ?></p></button>
+                                <h1 class="button nav-button --current"><?= $projects->title() ?></h1>
                             <?php else : ?>
-                                <button class="button nav-button"><a href="<?= $projects->url() ?>"><?= $projects->title() ?></a></button>
+                                <a class="button nav-button" href="<?= $projects->url() ?>"><?= $projects->title() ?></a>
                             <?php endif ?>
                         <?php endforeach ?>
                     </div>
                     <div class="main-nav-wrapper">
-                        <button class="button nav-button info-button"><p>Info</p></button>
-                        <button class="button nav-button"><p>Agenda</p></button>
+                        <a class="button nav-button info-button">Info</a>
+                        <a class="button nav-button">Agenda</a>
                     </div>
                 </div>
                 <div class="main-nav">
@@ -104,27 +103,21 @@
                             <summary class="button nav-button cart-button" data-action="toggle-cart">
                                 <p><?= $cart ?> <span class="cart-count"></span></p>
                             </summary>
-                            <div class="cart" id="cart" data-theme="dark">
-                                <?php
-                                ?>
-                            </div>
+                            <div class="cart" id="cart"></div>
                         </details>
-                        <!-- <button class="button nav-button cart-button" id="cart"><p><?= $cart ?></p></button> -->
-                        <div class="button nav-button lang-button --current"><a href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a></div>                    
+                        <a class="button nav-button lang-button --current" href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>                    
                     </div>
                 </div>
             </menu>
             <menu class="hinner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
-                        <!-- https://webdesign.tutsplus.com/how-to-build-a-search-bar-with-javascript--cms-107227t -->
-                        <button class="button serach-bar"><p><?= $search ?></p></button>
-                        <button class="button category-button"><a href="<?= $page->parent()->url() ?>"><?= $all ?></a></button>
+                        <div class="button category-button"><a href="<?= $page->parent()->url() ?>"><?= $all ?></a></div>
                         <?php foreach ($page->siblings()->listed()->pluck('category', null, true) as $sibling) : ?>
                             <?php if ($sibling->category() == $page->category()) : ?>
-                                <button class="button category-button --current"><p><?= $sibling->category() ?></p></button>
+                                <div class="button category-button --current"><?= $sibling->category() ?></div>
                             <?php else : ?>
-                                <button class="button category-button"><p><?= $sibling->category() ?></p></button>
+                                <div class="button category-button"><?= $sibling->category() ?></div>
                             <?php endif ?>
                         <?php endforeach ?>
                     </div>

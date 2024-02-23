@@ -27,3 +27,5 @@
     <?php slot('home') ?>
     <?php endslot() ?>
 <?php endsnippet() ?>
+
+<?php snippet('foot') ?>

@@ -8,15 +8,15 @@
                 <div class="item-info-wrapper">
                     <p class="text-subtitle"><?= $page->author() ?></p>
                     <p class="text-title"><?= $page->title() ?></p>
-                </div>
-                <div class="item-info-wrapper">
                     <?php if ($kirby->language()->code() == 'it') : ?>
                         <p class="text-subtitle"><?= $page->price() ?> €</p>
                     <?php elseif ($kirby->language()->code() == 'en') : ?>
                         <p class="text-subtitle">€ <?= $page->price() ?></p>
                     <?php endif ?>
                 </div>
-                <button class="button buy-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
+                <div class="item-info-wrapper">
+                    <button class="text-title buy-button" data-action="add-to-cart"><?= $buy ?></button>
+                </div>
             </figcaption>
         </figure>
 
