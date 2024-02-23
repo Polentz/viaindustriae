@@ -102,7 +102,8 @@ select:visited {
     position: relative;
     width: fit-content;
     height: fit-content;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
     font-family: "Authentic Sans";
     font-style: normal;
     font-weight: 500;
@@ -119,7 +120,8 @@ select:visited {
 
 .nav-button,
 .category-button,
-.no-category-button {
+.no-category-button,
+.action-button {
     cursor: pointer;
 }
 
@@ -127,7 +129,8 @@ select:visited {
 .category-button::after,
 .no-category-button::after,
 .contact-button::after,
-.checkout-button::after {
+.checkout-button::after,
+.action-button::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -144,7 +147,8 @@ select:visited {
 .category-button:hover,
 .no-category-button:hover,
 .contact-button:hover,
-.checkout-button:hover {
+.checkout-button:hover,
+.action-button:hover {
     background: transparent;
     border-radius: var(--button-radius);
 }
@@ -153,7 +157,8 @@ select:visited {
 .category-button:hover::after,
 .no-category-button:hover::after,
 .contact-button:hover::after,
-.checkout-button:hover::after {
+.checkout-button:hover::after,
+.action-button:hover::after {
     transform: translateX(0) scale(1.5);
 }
 
@@ -183,6 +188,11 @@ select:visited {
 .static-button {
     background: transparent;
     border-radius: var(--button-radius);
+}
+
+.lang-button {
+    min-width: 68px;
+    cursor: pointer;
 }
 
 .nav {
@@ -287,6 +297,11 @@ select:visited {
     display: none;
 }
 
+.item-preview .item-cover,
+.item-preview .text-title {
+    cursor: pointer;
+}
+
 .items-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -299,9 +314,14 @@ select:visited {
     border: solid 1px var(--color-page);
 }
 
+.item-price {
+    white-space: nowrap;
+}
+
 .item-info {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 2px;
     align-items: start;
     justify-content: space-between;
 }
@@ -351,7 +371,7 @@ select:visited {
     border-color: var(--color-page);
 }
 
-.description-header-ui .tooltiptext {
+.description-header-ui .tooltip-text {
     display: none;
 }
 

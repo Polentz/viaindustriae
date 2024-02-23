@@ -35,8 +35,8 @@
                 <div class="description-header-ui">
                     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                     <div class="tooltip">
-                        <button class="button tooltip-button" data-url="<?= $page->url() ?>"><p>Share</p></button>
-                        <span class="tooltiptext-subtitle">Copy to clipboard</span>
+                        <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>">Share</div>
+                        <span class="tooltip-text text-subtitle">Copied to clipboard</span>
                     </div>
                 </div>
             </div>

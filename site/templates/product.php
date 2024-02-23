@@ -38,10 +38,10 @@
                 <div class="description-header-ui">
                     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                     <div class="tooltip">
-                        <button class="button tooltip-button" data-url="<?= $page->url() ?>"><p>Share</p></button>
-                        <span class="tooltiptext text-caption">Copy to clipboard</span>
+                        <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>">Share</div>
+                        <span class="tooltip-text text-caption">Copied to clipboard</span>
                     </div>
-                    <button class="button buy-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
+                    <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                 </div>
             </div>
             <div class="description-text">

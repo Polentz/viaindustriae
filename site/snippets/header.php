@@ -54,7 +54,7 @@
                             </summary>
                             <div class="cart" id="cart"></div>
                         </details>
-                        <a class="button nav-button lang-button --current" href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>                    
+                        <a class="button nav-button lang-button" href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>                    
                     </div>
                 </div>
             </menu>
@@ -105,7 +105,7 @@
                             </summary>
                             <div class="cart" id="cart"></div>
                         </details>
-                        <a class="button nav-button lang-button --current" href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>                    
+                        <a class="button nav-button lang-button" href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>                    
                     </div>
                 </div>
             </menu>

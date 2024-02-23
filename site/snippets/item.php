@@ -6,16 +6,16 @@
             <?php endif ?>
             <figcaption class="item-info">
                 <div class="item-info-wrapper">
-                    <p class="text-subtitle"><?= $page->author() ?></p>
-                    <p class="text-title"><?= $page->title() ?></p>
-                    <?php if ($kirby->language()->code() == 'it') : ?>
-                        <p class="text-subtitle"><?= $page->price() ?> €</p>
-                    <?php elseif ($kirby->language()->code() == 'en') : ?>
-                        <p class="text-subtitle">€ <?= $page->price() ?></p>
-                    <?php endif ?>
+                    <p class="text-title"><?= $page->author() ?></p>
+                    <p class="item-title text"><?= $page->title() ?></p>
                 </div>
                 <div class="item-info-wrapper">
-                    <button class="text-title buy-button" data-action="add-to-cart"><?= $buy ?></button>
+                    <?php if ($kirby->language()->code() == 'it') : ?>
+                        <p class="item-price text-title"><?= $page->price() ?> €</p>
+                    <?php elseif ($kirby->language()->code() == 'en') : ?>
+                        <p class="item-price text-title">€ <?= $page->price() ?></p>
+                    <?php endif ?>
+                    <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                 </div>
             </figcaption>
         </figure>
@@ -52,10 +52,10 @@
                     <div class="description-header-ui">
                         <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                         <div class="tooltip">
-                            <button class="button tooltip-button" data-url="<?= $page->url() ?>"><p>Share</p></button>
-                            <span class="tooltiptext text-caption">Copy to clipboard</span>
+                            <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>">Share</div>
+                            <span class="tooltip-text text-caption">Copied to clipboard</span>
                         </div>
-                        <button class="button buy-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
+                        <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                     </div>
                 </div>
                 <div class="description-text">
@@ -82,7 +82,7 @@
                     <?php if ($page->itemheader()->isNotEmpty()): ?>
                         <p class="text-subtitle"><?= $page->itemheader() ?></p>
                     <?php endif ?>
-                    <p class="text-title"><a href="<?= $page->url() ?>"><?= $page->title() ?></a></p>
+                    <p class="item-title text"><a href="<?= $page->url() ?>"><?= $page->title() ?></a></p>
                 </div>
                 <div class="item-info-wrapper">
                     <?php if ($page->iteminfo()->isNotEmpty()): ?>
