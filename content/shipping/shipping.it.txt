@@ -10,7 +10,7 @@ Stock:
 
 ----
 
-Freeshipping: 
+Freeshipping: 100
 
 ----
 

@@ -1,69 +1,58 @@
 <?php
-/**
- * Used for the order page template.
- * PHP equivalent to /assets/js/cart.js
- *
- * @var Wagnerwagner\Merx\Cart $cart
- */
-
-$shippingPrice = 0;
-foreach ($cart->filter('template', 'shipping') as $shippingItem) {
-    $shippingPrice += $shippingItem['price'];
-}
+  $shippingPrice = 0;
+  foreach ($cart->filter('template', 'shipping') as $shippingItem) {
+      $shippingPrice += $shippingItem['price'];
+  }
 ?>
+
 <div class="cart">
-  <table>
-    <thead>
-      <tr>
-        <th><?= t('cart.product') ?></th>
-        <td><?= t('cart.quantity') ?></td>
-        <td><?= t('cart.price') ?></td>
-        <td><?= t('cart.sum') ?></td>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($cart->filter('template', '!=', 'shipping') as $item): ?>
-        <tr>
-          <th>
-            <?php /** Get more information about the product by catching the product page */ ?>
-            <?php if ($productPage = page($item['id'])): ?>
-              <a href="<?= $productPage->url() ?>">
-                <?php if ($thumb = $productPage->thumb()->toFile()): ?>
-                  <img src="<?= $thumb->thumb('thumb')->url() ?>" alt="<?= $thumb->alt() ?>" width="46" height="46" loading="lazy">
-                <?php endif; ?>
-                <?php if ($productPage->intendedTemplate()->name() === 'product-variant'): ?>
-                  <strong><?= $productPage->parent()->title() ?></strong>
-                  <small><?= $productPage->variantName() ?></small>
-                <?php else: ?>
-                  <strong><?= $item['title'] ?></strong>
-                <?php endif; ?>
-              </a>
-            <?php else: ?>
-            <?php /** If the a product page won’t be available anymore, at least the product title will be shown */ ?>
-              <strong><?= $item['title'] ?></strong>
-            <?php endif; ?>
-          </th>
-          <td><?= $item['quantity'] ?></td>
-          <td><?= formatPrice($item['price']) ?></td>
-          <td><?= formatPrice($item['sum']) ?></td>
-        </tr>
-      <?php endforeach ?>
-    </tbody>
-    <tfoot>
-      <tr>
-        <th colspan="3"><?= t('cart.shipping') ?></th>
-        <td><?= $shippingPrice === 0 ? t('cart.free-shipping') : formatPrice($shippingPrice) ?></td>
-      </tr>
-      <tr>
-        <th colspan="3"><?= t('cart.sum') ?></th>
-        <td><?= formatPrice($cart->getSum()) ?></td>
-      </tr>
-      <?php foreach ($cart->getTaxRates() as $taxRate): ?>
-        <tr class="text-s">
-          <th colspan="3"><?= t('cart.included-vat') ?> (<?= $taxRate['taxRate'] ?> %)</th>
-          <td><?= formatPrice($taxRate['sum']) ?></td>
-        </tr>
-      <?php endforeach; ?>
-    </tfoot>
-  </table>
+  <div class="cart-header">
+      <div class="main-menu">
+          <div class="main-nav-wrapper">
+              <h1 class="button static-button">Viaindustriae</h1>
+              <div class="button static-button">Publishing</div>
+          </div>
+          <div class="close-ui cart-close">
+              <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 1L1 13M1 1L13 13"/>
+              </svg>
+          </div>
+      </div>
+  </div>
+
+  <div class="cart-content">
+    <div class="cart-content-wrapper">
+        <ul class="cart-items">
+            <li class="cart-item text-title"><?= t('cart.product') ?></li>
+            <li class="cart-item text-title"><?= t('cart.quantity') ?></li>
+            <li class="cart-item text-title"><?= t('cart.price') ?></li>
+        </ul>
+        <?php foreach ($cart->filter('template', '!=', 'shipping') as $item) : ?>
+            <ul class="cart-items">
+              <li class="cart-item text-subtitle">
+                <?php if ($productPage = page($item['id'])) : ?>
+                  <a href="<?= $productPage->url() ?>" target="_blank" rel="noopener noreferrer"><?= $item['title'] ?></a>
+                <?php else : ?>
+                  <?= $item['title'] ?>
+                <?php endif ?>
+              </li>
+              <li class="cart-item text-subtitle"><?= $item['quantity'] ?></li>
+              <li class="cart-item text-subtitle"><?= $item['price'] ?></li>
+            </ul>
+        <?php endforeach ?>
+    </div>
+    <div class="cart-content-wrapper">
+        <div class="cart-sum">
+            <p class="text-title"><?= t('cart.shipping') ?></p>
+            <p class="text-subtitle"><?= $shippingPrice === 0 ? t('cart.free-shipping') : $shippingPrice ?></p>
+        </div>
+        <div class="cart-sum">
+            <p class="text-title"><?= t('cart.sum') ?></p>
+            <p class="text-subtitle"><?= $cart->getSum() ?></p>
+        </div>
+    </div>
+    <div class="cart-content-wrapper">
+      <a href="" class="button checkout-button"><?= t('cart.to-checkout') ?></a>
+    </div>
+  </div>  
 </div>

@@ -43,13 +43,29 @@ img {
     width: 100%;
 }
 
+details {
+    display: flex;
+}
+
+select,
+select:active,
+select:focus,
+select:focus-within,
+select:focus-visible,
+select:target,
+select:visited {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
 .text {
     font-size: 16px;
     font-weight: 400;
 }
 
 .text-title {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -79,11 +95,13 @@ img {
     position: relative;
     bottom: 0;
     padding: var(--main-margin);
-    z-index: 9;
+    z-index: 8;
 }
 
 .button {
+    position: relative;
     width: fit-content;
+    height: fit-content;
     display: inline-block;
     font-family: "Authentic Sans";
     font-style: normal;
@@ -92,32 +110,55 @@ img {
     text-transform: uppercase;
     font-size: var(--button-size);
     padding: var(--button-padding);
-    background: #ffffff;
+    background: var(--color-white);
     border: solid 1px var(--color-black);
+    overflow: hidden;
+    transition: all .25s ease-in-out;
 }
 
-.button:hover {
+.nav-button,
+.category-button {
+    cursor: pointer;
+}
+
+.nav-button::after,
+.category-button::after,
+.checkout-button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    z-index: -1;
     background: var(--color-page);
     border-radius: var(--button-radius);
+    transition: all .25s ease-in-out;
+}
+
+.nav-button:hover,
+.category-button:hover,
+.checkout-button:hover {
+    background: transparent;
+    border-radius: var(--button-radius);
+}
+
+.nav-button:hover::after,
+.category-button:hover::after,
+.checkout-button:hover::after {
+    top: 0;
+}
+
+.nav-button.--current,
+.category-button.--current {
+    background: var(--color-page);
+    border-radius: var(--button-radius);
+    cursor: unset;
 }
 
 .static-button {
     background: transparent;
     border-radius: var(--button-radius);
-}
-
-.static-button:hover {
-    background: transparent;
-    border-radius: var(--button-radius);
-}
-
-.contact-button {
-    background: transparent;
-}
-
-.contact-button:hover {
-    background: var(--color-black);
-    color: #ffffff;
 }
 
 .nav {
@@ -141,10 +182,9 @@ img {
     gap: 4px;
 }
 
-.nav-button.--current,
-.category-button.--current {
-    background: var(--color-page);
-    border-radius: var(--button-radius);
+.close-ui {
+    width: 14px;
+    height: fit-content;
 }
 
 .close-ui svg {
@@ -284,5 +324,57 @@ img {
     background: var(--color-pub);
     width: 50%;
     height: var(--doc-height);
-    z-index: 1000;
+    z-index: 9;
+}
+
+.cart-header {
+    width: 100%;
+    position: absolute;
+    padding: var(--main-margin);
+}
+
+.cart-content {
+    display: block;
+    padding: 176px 40px;
+}
+
+.cart-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+    border-top: solid 1px var(--color-black);
+}
+
+.cart-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cart-item {
+    text-align: center;
+}
+
+.cart-item:first-of-type {
+    text-align: left;
+}
+
+.cart-item:last-of-type {
+    text-align: end;
+}
+
+.cart-sum {
+    text-align: end;
+}
+
+.checkout-button {
+    align-self: center;
+}
+
+.checkout-button::after {
+    background: var(--color-black);
+}
+
+.checkout-button:hover {
+    color: var(--color-white);
 }

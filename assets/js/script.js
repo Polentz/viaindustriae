@@ -21,11 +21,20 @@ const shutterEffect = () => {
     });
 };
 
+const closeCart = () => {
+    const cart = document.querySelector(".cart-close");
+    if (cart) {
+        cart.addEventListener('click', () => {
+            document.querySelector(".details-cart").removeAttribute('open');
+        });
+    };
+};
 
 window.addEventListener("load", () => {
     // history.scrollRestoration = "manual";
     documentHeight();
     headerHeight();
+    closeCart();
 });
 
 window.addEventListener("resize", () => {

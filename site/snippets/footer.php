@@ -27,7 +27,7 @@
         <menu class="main-menu">
             <div class="main-nav">
                 <div class="main-nav-wrapper">
-                    <div class="button nav-button">© <?= $site->title() ?> 2024</div>
+                    <div class="button static-button">© <?= $site->title() ?> 2024</div>
                 </div>
                 <div class="main-nav-wrapper">
                     <a class="button nav-button">Terms and Conditions</a>

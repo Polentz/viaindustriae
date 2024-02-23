@@ -17,18 +17,18 @@ class Cart {
         // this should be the same as in /site/languages/en.php
         this.i18n = {
             'cart.empty': 'Il carrello è vuoto',
-            'cart.item.remove': 'Remove',
-            'cart.included-vat': 'Included VAT',
-            'cart.vat-included': 'VAT incl.',
-            'cart.quantity': 'Quantity',
-            'cart.quantity-in-cart': 'in cart',
+            'cart.item.remove': 'Rimuovi',
+            'cart.included-vat': 'IVA inclusa',
+            'cart.vat-included': 'incl. IVA',
+            'cart.quantity': 'Quantità',
+            'cart.quantity-in-cart': 'nel carrello',
             'cart.change-quantity': 'Change quantity',
-            'cart.price': 'Price',
-            'cart.sum': 'Sum',
-            'cart.shipping': 'Shipping',
-            'cart.product': 'Product',
-            'cart.free-shipping': 'free',
-            'cart.to-checkout': 'To Checkout',
+            'cart.price': 'Prezzo',
+            'cart.sum': 'Totale',
+            'cart.shipping': 'Spedizione',
+            'cart.product': 'Articolo',
+            'cart.free-shipping': 'gratuita',
+            'cart.to-checkout': 'Checkout',
         };
         // overwrite default language variables
         if (this.lang === 'en') {
@@ -41,11 +41,11 @@ class Cart {
                 'cart.quantity-in-cart': 'in cart',
                 'cart.change-quantity': 'Change quantity',
                 'cart.price': 'Price',
-                'cart.sum': 'Sum',
+                'cart.sum': 'Total',
                 'cart.shipping': 'Shipping',
-                'cart.product': 'Product',
+                'cart.product': 'Item',
                 'cart.free-shipping': 'free',
-                'cart.to-checkout': 'To Checkout',
+                'cart.to-checkout': 'Checkout',
             };
         }
 
@@ -54,7 +54,7 @@ class Cart {
         });
 
         document.addEventListener('click', () => {
-            this.cartDetailsElement?.removeAttribute('open');
+            this.cartDetailsElement.removeAttribute('open');
         });
 
         // initially load cart data from api
@@ -115,19 +115,12 @@ class Cart {
 
         function createCartItem(item) {
             return `
-          <tr>
-            <th>
-              <a href="${item.url}">
-                <img src="${item.thumb?.url}" alt="${item.thumb?.alt}" width="46" height="46">
-                <strong>${item.title}</strong>
-                ${item.variant ? `<small>${item.variant}</small>` : ''}
-              </a>
-            </th>
-            <td>${createQuantitySelect(item)}</td>
-            <td>${item.price}</td>
-            <td>${item.sum}</td>
-          </tr>
-        `;
+            <ul class="cart-items">
+                <li class="cart-item text-subtitle"><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.title}</a></li>
+                <li class="cart-item text-subtitle">${createQuantitySelect(item)}</li>
+                <li class="cart-item text-subtitle">${item.price}</li>
+            </ul>
+            `;
         }
 
         function createCartItems(items) {
@@ -138,50 +131,73 @@ class Cart {
             return html;
         }
 
-        function createTaxRates(taxRates) {
-            let html = '';
-            taxRates.forEach((taxRate) => {
-                html += `
-            <tr class="text-s color-gray-500">
-              <th colspan="3">${i18n['cart.included-vat']} (${taxRate.taxRate} %)</th>
-              <td>${taxRate.sum}</td>
-            </tr>
-          `;
-            });
-            return html;
-        }
+        // function createTaxRates(taxRates) {
+        //     let html = '';
+        //     taxRates.forEach((taxRate) => {
+        //         html += `
+        //     <tr class="text-s color-gray-500">
+        //       <th colspan="3">${i18n['cart.included-vat']} (${taxRate.taxRate} %)</th>
+        //       <td>${taxRate.sum}</td>
+        //     </tr>
+        //   `;
+        //     });
+        //     return html;
+        // }
 
         if (data.quantity === 0) {
             this.element.innerHTML = `
-          <div class="cart-info">${i18n['cart.empty']}</div>
+            <div class="cart-header">
+                <div class="main-menu">
+                    <div class="main-nav-wrapper">
+                        <div class="cart-info">${i18n['cart.empty']}</div>
+                    </div>
+                    <div class="close-ui cart-close">
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 1L1 13M1 1L13 13"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         `;
         } else {
             this.element.innerHTML = `
-          <table>
-            <thead class="color-gray-500">
-              <tr>
-                <th>${i18n['cart.product']}</th>
-                <td>${i18n['cart.quantity']}</td>
-                <td>${i18n['cart.price']}</td>
-                <td>${i18n['cart.sum']}</td>
-              </tr>
-            </thead>
-            <tbody>
-              ${createCartItems(data.items)}
-            </tbody>
-            <tfoot>
-              <tr>
-                <th colspan="3">${i18n['cart.shipping']}</th>
-                <td>${data.shipping === null ? i18n['cart.free-shipping'] : data.shipping}</td>
-              </tr>
-              <tr>
-                <th colspan="3">${i18n['cart.sum']}</th>
-                <td>${data.sum}</td>
-              </tr>
-              ${createTaxRates(data.taxRates)}
-            </tfoot>
-          </table>
-          ${(this.element.dataset.variant !== 'checkout') ? `<a href="${data.checkoutUrl}" class="button-white">${i18n['cart.to-checkout']}</a>` : ''}
+            <div class="cart-header">
+                <div class="main-menu">
+                    <div class="main-nav-wrapper">
+                        <h1 class="button static-button">Viaindustriae</h1>
+                        <div class="button static-button">Publishing</div>
+                    </div>
+                    <div class="close-ui cart-close">
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 1L1 13M1 1L13 13"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-content">
+                <div class="cart-content-wrapper">
+                    <ul class="cart-items">
+                        <li class="cart-item text-title">${i18n['cart.product']}</li>
+                        <li class="cart-item text-title">${i18n['cart.quantity']}</li>
+                        <li class="cart-item text-title">${i18n['cart.price']}</li>
+
+                    </ul>
+                    ${createCartItems(data.items)}
+                </div>
+                <div class="cart-content-wrapper">
+                    <div class="cart-sum">
+                        <p class="text-title">${i18n['cart.shipping']}</p>
+                        <p class="text-subtitle">${data.shipping === null ? i18n['cart.free-shipping'] : data.shipping}</p>
+                    </div>
+                    <div class="cart-sum">
+                        <p class="text-title">${i18n['cart.sum']}</p>
+                        <p class="text-subtitle">${data.sum}</p>
+                    </div>
+                </div>
+                <div class="cart-content-wrapper">
+                    ${(this.element.dataset.variant !== 'checkout') ? `<a href="${data.checkoutUrl}" class="button checkout-button">${i18n['cart.to-checkout']}</a>` : ''}
+                </div>
+            </div>
         `;
 
             this.element.querySelectorAll('select').forEach((selectElement) => {

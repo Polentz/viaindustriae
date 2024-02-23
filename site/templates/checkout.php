@@ -12,7 +12,6 @@
 ?>
 <?php snippet('head') ?>
 
-<body>
   <?php snippet('header') ?>
   <?php if ($message): ?>
     <div class="global-message"><?= $message ?></div>
@@ -80,6 +79,5 @@
   </main>
 
   <?php snippet('footer') ?>
-</body>
 
 <?php snippet('foot') ?>
