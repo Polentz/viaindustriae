@@ -106,9 +106,10 @@ select:visited {
     font-family: "Authentic Sans";
     font-style: normal;
     font-weight: 500;
+    font-size: var(--button-size);
     line-height: 1;
     text-transform: uppercase;
-    font-size: var(--button-size);
+    white-space: nowrap;
     padding: var(--button-padding);
     background: var(--color-white);
     border: solid 1px var(--color-black);
@@ -117,27 +118,32 @@ select:visited {
 }
 
 .nav-button,
-.category-button {
+.category-button,
+.no-category-button {
     cursor: pointer;
 }
 
 .nav-button::after,
 .category-button::after,
+.no-category-button::after,
+.contact-button::after,
 .checkout-button::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    top: -100%;
+    top: 0;
     left: 0;
     z-index: -1;
     background: var(--color-page);
-    border-radius: var(--button-radius);
-    transition: all .25s ease-in-out;
+    transform: translateY(-100%) scale(0);
+    transition: transform .25s ease-in-out;
 }
 
 .nav-button:hover,
 .category-button:hover,
+.no-category-button:hover,
+.contact-button:hover,
 .checkout-button:hover {
     background: transparent;
     border-radius: var(--button-radius);
@@ -145,12 +151,30 @@ select:visited {
 
 .nav-button:hover::after,
 .category-button:hover::after,
+.no-category-button:hover::after,
+.contact-button:hover::after,
 .checkout-button:hover::after {
-    top: 0;
+    transform: translateX(0) scale(1.5);
+}
+
+.contact-button,
+.checkout-button {
+    background: transparent;
+}
+
+.contact-button::after,
+.checkout-button::after {
+    background: var(--color-black);
+}
+
+.contact-button:hover,
+.checkout-button:hover {
+    color: var(--color-white);
 }
 
 .nav-button.--current,
-.category-button.--current {
+.category-button.--current,
+.no-category-button.--current {
     background: var(--color-page);
     border-radius: var(--button-radius);
     cursor: unset;
@@ -185,6 +209,7 @@ select:visited {
 .close-ui {
     width: 14px;
     height: fit-content;
+    cursor: pointer;
 }
 
 .close-ui svg {
@@ -197,7 +222,7 @@ select:visited {
     padding: 176px 40px;
 }
 
-.section-wrapper {
+.slider {
     display: none;
     height: var(--doc-height);
     max-height: var(--doc-height);
@@ -209,7 +234,11 @@ select:visited {
     z-index: 999;
 }
 
-.section-wrapper .content-grid {
+.slider.--display {
+    display: block;
+}
+
+.slider .content-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 24px;
@@ -230,6 +259,14 @@ select:visited {
 
 .content-text {
     grid-column: 3 / 7;
+}
+
+.item.--filtered {
+    display: block;
+}
+
+.item.--unfiltered {
+    display: none;
 }
 
 .items-grid {
@@ -369,12 +406,4 @@ select:visited {
 
 .checkout-button {
     align-self: center;
-}
-
-.checkout-button::after {
-    background: var(--color-black);
-}
-
-.checkout-button:hover {
-    color: var(--color-white);
 }

@@ -1,5 +1,5 @@
 <?php if ($slots->product()) : ?>
-    <div class="item product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category()->slug() ?>">
+    <div class="item product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
         <figure class="item-preview">
             <?php if ($cover = $page->cover()->toFile()) : ?>
                 <img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
@@ -20,7 +20,7 @@
             </figcaption>
         </figure>
 
-        <div class="item-page product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category()->slug() ?>" style="display: none;">
+        <div class="item-page product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>" style="display: none;">
             <div class="item-gallery">
                 <?php foreach ($page->gallery()->toFiles() as $file) : ?>
                     <div class="item-gallery-wrapper">
@@ -72,7 +72,7 @@
 <?php endif ?>
 
 <?php if ($slots->project()) : ?>
-    <div class="item" data-category="<?= $page->category()->slug() ?>">
+    <div class="item" data-category="<?= $page->category() ?>">
         <figure class="item-preview">
             <?php if ($cover = $page->cover()->toFile()) : ?>
                 <a href="<?= $page->url() ?>"><img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" /></a>
@@ -95,7 +95,7 @@
 <?php endif ?>
 
 <?php if ($slots->agenda()) : ?>
-    <div class="item" data-category="<?= $page->category()->slug() ?>">
+    <div class="item" data-category="<?= $page->category() ?>">
         <div class="item-preview">
             <?php if ($page->linkUrl()->isNotEmpty()) : ?>
                 <div class="item-cover">

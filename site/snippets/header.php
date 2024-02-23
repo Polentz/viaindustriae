@@ -63,9 +63,9 @@
                     <div class="inner-nav-wrapper">
                         <!-- https://webdesign.tutsplus.com/how-to-build-a-search-bar-with-javascript--cms-107227t -->
                         <div class="button serach-bar"><?= $search ?></div>
-                        <div class="button category-button --current"><?= $all ?></div>
+                        <div class="button no-category-button --current"><?= $all ?></div>
                         <?php foreach ($page->children()->listed()->pluck('category', null, true) as $page) : ?>
-                            <div class="button category-button"><?= $page->category() ?></div>
+                            <div class="button category-button" data-category="<?= $page->category() ?>"><?= $page->category() ?></div>
                         <?php endforeach ?>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
             <menu class="hinner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
-                        <div class="button category-button"><a href="<?= $page->parent()->url() ?>"><?= $all ?></a></div>
+                        <div class="button no-category-button"><a href="<?= $page->parent()->url() ?>"><?= $all ?></a></div>
                         <?php foreach ($page->siblings()->listed()->pluck('category', null, true) as $sibling) : ?>
                             <?php if ($sibling->category() == $page->category()) : ?>
                                 <div class="button category-button --current"><?= $sibling->category() ?></div>

@@ -15,9 +15,9 @@
             </div>
             <div class="main-nav">
                 <div class="main-nav-wrapper">
-                    <a class="button nav-button lang-button" href="<?= $site->newsletter() ?>">Newletter</a>
-                    <a class="button nav-button lang-button" href="<?= $site->facebook() ?>">FB</a>
-                    <a class="button nav-button lang-button" href="<?= $site->instagram() ?>">IG</a>
+                    <a class="button nav-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
+                    <a class="button nav-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
+                    <a class="button nav-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
                 </div>
             </div>
         </menu>
@@ -36,9 +36,9 @@
             </div>
             <div class="main-nav">
                 <div class="main-nav-wrapper">
-                    <a class="button nav-button lang-button" href="<?= $site->newsletter() ?>">Newletter</a>
-                    <a class="button nav-button lang-button" href="<?= $site->facebook() ?>">FB</a>
-                    <a class="button nav-button lang-button" href="<?= $site->instagram() ?>">IG</a>
+                    <a class="button nav-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
+                    <a class="button nav-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
+                    <a class="button nav-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
                 </div>
             </div>
         </menu>

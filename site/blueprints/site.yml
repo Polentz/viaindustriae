@@ -38,17 +38,11 @@ tabs:
           buttons:
             type: fields
             fields:
-              subscribeText:
-                type: text
-              subscribeLink:
+              newsletter:
                 type: url
-              fbText:
-                type: text
-              fbLink:
+              facebook:
                 type: url
-              igText:
-                type: text
-              igLink:
+              instagram:
                 type: url
       sidebar:
         width: 2/3
