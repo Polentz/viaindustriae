@@ -75,6 +75,34 @@ const sliderOpener = () => {
     };
 };
 
+const openGalleryItem = () => {
+    const items = document.querySelectorAll(".item");
+    items.forEach(item => {
+        const openers = item.querySelectorAll(".item-cover, .text-title");
+        const preview = item.querySelector(".item-preview");
+        const extended = item.querySelector(".item-page");
+        const closer = item.querySelector(".item-close");
+        openers.forEach(opener => {
+            opener.addEventListener("click", () => {
+                preview.style.display = "none";
+                extended.style.display = "grid";
+                item.style.gridColumn = "1 / 5";
+                const itemPosition = extended.getBoundingClientRect().top;
+                const offsetPosition = itemPosition + window.scrollY - 176;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                });
+            });
+        });
+        closer.addEventListener("click", () => {
+            preview.style.display = "block";
+            extended.style.display = "none";
+            item.style.gridColumn = "auto";
+        });
+    });
+}
+
 const closeCart = () => {
     const cart = document.querySelector(".cart-close");
     if (cart) {
@@ -136,6 +164,7 @@ window.addEventListener("load", () => {
     closeCart();
     sliderOpener();
     handleFilters();
+    openGalleryItem();
 });
 
 window.addEventListener("resize", () => {

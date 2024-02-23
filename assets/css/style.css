@@ -209,6 +209,9 @@ select:visited {
 .close-ui {
     width: 14px;
     height: fit-content;
+    position: absolute;
+    top: -24px;
+    right: 0;
     cursor: pointer;
 }
 
@@ -238,13 +241,28 @@ select:visited {
     display: block;
 }
 
-.slider .content-grid {
+.slider-header {
+    position: absolute;
+    top: 0;
+    padding: var(--main-margin);
+}
+
+.slider-content {
+    position: relative;
+    padding: 176px 40px;
+}
+
+.slider-content-grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 24px;
+    padding: 24px 0;
+    border-top: solid 1px var(--color-black);
+    border-bottom: solid 1px var(--color-black);
 }
 
-.content-contact {
+.slider-content-contact {
     grid-column: 1 / 3;
     display: flex;
     flex-direction: column;
@@ -257,7 +275,7 @@ select:visited {
     gap: 8px;
 }
 
-.content-text {
+.slider-content-text {
     grid-column: 3 / 7;
 }
 
@@ -347,12 +365,12 @@ select:visited {
     text-indent: 24px;
 }
 
-.item-close {
+/* .item-close {
     position: absolute;
     top: -24px;
     right: 0;
     cursor: pointer;
-}
+} */
 
 .cart {
     position: fixed;
