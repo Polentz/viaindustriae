@@ -202,25 +202,48 @@ select:visited {
 
 .main-menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 4px;
 }
 
 .main-nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
-.main-nav-wrapper {
+.main-nav-wrapper,
+.inner-nav-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
+}
+
+.search-wrapper {
+    /* width: 100%; */
+    position: relative;
+}
+
+.search-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: var(--button-padding);
+    border-bottom: solid 1px var(--color-black);
+    display: none;
+}
+
+.search-reset {
+    display: none;
 }
 
 .close-ui {
     width: 14px;
     height: fit-content;
-    position: absolute;
-    top: -24px;
-    right: 0;
     cursor: pointer;
 }
 
@@ -230,8 +253,24 @@ select:visited {
     stroke-width: 1px;
 }
 
+.slider-close,
+.item-close {
+    position: absolute;
+    top: -24px;
+    right: 0;
+}
+
+.search-reset {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+}
+
 .content {
-    padding: 176px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 176px 40px 80px 40px
 }
 
 .slider {
@@ -258,7 +297,7 @@ select:visited {
 
 .slider-content {
     position: relative;
-    padding: 176px 40px;
+    padding: 176px 40px 80px 40px
 }
 
 .slider-content-grid {
@@ -384,6 +423,18 @@ select:visited {
     text-indent: 24px;
 }
 
+.pagination-nav {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination-nav a.--current {
+    text-decoration: underline;
+}
+
 /* .item-close {
     position: absolute;
     top: -24px;
@@ -435,6 +486,10 @@ select:visited {
 
 .cart-item:last-of-type {
     text-align: end;
+}
+
+.cart-item:only-of-type {
+    text-align: left;
 }
 
 .cart-sum {

@@ -103,6 +103,29 @@ const openGalleryItem = () => {
     });
 };
 
+const openSearchBar = () => {
+    const opener = document.querySelector(".search-bar");
+    const elements = document.querySelectorAll(".search-input, .search-reset");
+    const wrapper = document.querySelector(".search-wrapper");
+    const close = document.querySelector(".search-reset");
+
+    opener.addEventListener("click", () => {
+        elements.forEach(el => {
+            el.style.display = "block";
+        });
+        wrapper.style.width = "100%";
+        opener.style.display = "none";
+    });
+
+    close.addEventListener("click", () => {
+        elements.forEach(el => {
+            el.style.display = "none";
+        });
+        wrapper.style.width = "auto";
+        opener.style.display = "inline-flex";
+    });
+}
+
 // const closeCartAction = () => {
 //     const buttonCloseCart = document.querySelector(".cart-close");
 //     if (buttonCloseCart) {
@@ -182,6 +205,7 @@ window.addEventListener("load", () => {
     documentHeight();
     headerHeight();
     // closeCartAction();
+    openSearchBar();
     sliderOpener();
     langInnerHTML();
 });

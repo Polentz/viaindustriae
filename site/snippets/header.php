@@ -1,3 +1,13 @@
+<?php 
+    $categories = $page->children()->listed()->pluck('category', null, true);
+    $query   = get('q');
+    $results = $page
+        ->children()
+        ->listed()
+        ->search( $query, 'author|title', ['words' => true ])
+        ->paginate(16);
+?>
+
 <header class="header">
     <nav class="nav">
         <?php if ($slots->home()) : ?>
@@ -61,11 +71,18 @@
             <menu class="hinner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
-                        <!-- https://webdesign.tutsplus.com/how-to-build-a-search-bar-with-javascript--cms-107227t -->
-                        <div class="button serach-bar"><?= t('search') ?></div>
-                        <div class="button no-category-button --current"><?= t('all') ?></div>
-                        <?php foreach ($page->children()->listed()->pluck('category', null, true) as $page) : ?>
-                            <div class="button category-button" data-category="<?= $page->category() ?>"><?= $page->category() ?></div>
+                        <form class="search-wrapper" action="<?= $page->url() ?>" autocomplete="off">
+                            <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
+                            <input type="search" id="myInput" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
+                            <a href="<?= $page->url() ?>" class="search-reset close-ui">
+                                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 1L1 13M1 1L13 13"/>
+                                </svg>
+                            </a>
+                        </form>
+                        <a href="<?= $page->url() ?>" class="button no-category-button"><?= t('all') ?></a>
+                        <?php foreach ($categories as $category) : ?>
+                            <a class="button category-button" href="<?= $page->url() ?>?filter=<?= $category ?>"><?= $category ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>
@@ -112,13 +129,9 @@
             <menu class="hinner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
-                        <div class="button no-category-button"><a href="<?= $page->parent()->url() ?>"><?= t('all') ?></a></div>
-                        <?php foreach ($page->siblings()->listed()->pluck('category', null, true) as $sibling) : ?>
-                            <?php if ($sibling->category() == $page->category()) : ?>
-                                <div class="button category-button --current"><?= $sibling->category() ?></div>
-                            <?php else : ?>
-                                <div class="button category-button"><?= $sibling->category() ?></div>
-                            <?php endif ?>
+                        <a href="<?= $page->parent()->url() ?>" class="button no-category-button --current"><?= t('all') ?></a>
+                        <?php foreach ($categories as $category) : ?>
+                            <a class="button category-button" href="<?= $page->parent()->url() ?>?filter=<?= $category ?>"><?= $category ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>

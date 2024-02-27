@@ -1,9 +1,8 @@
 <?php if ($slots->product()) : ?>
-    <div class="item product" data-id="<?= $page->uid() ?>" data-category="<?= $page->category() ?>">
+    <div class="item product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
         <figure class="item-preview">
-            <?php if ($cover = $page->cover()->toFile()) : ?>
-                <img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
-            <?php endif ?>
+            <?php $cover = $page->cover()->toFile() ?>
+            <img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
             <figcaption class="item-info">
                 <div class="item-info-wrapper">
                     <p class="text-title"><?= $page->author() ?></p>
@@ -20,7 +19,7 @@
             </figcaption>
         </figure>
 
-        <div class="item-page product" data-id="<?= $page->uid() ?>" data-category="<?= $page->category() ?>" style="display: none;">
+        <div class="item-page product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
             <div class="item-gallery">
                 <?php foreach ($page->gallery()->toFiles() as $file) : ?>
                     <div class="item-gallery-wrapper">
@@ -30,9 +29,9 @@
                         <?php endif ?>
                     </div>
                 <?php endforeach ?>
-                <div class="item-gallery-pagination text-caption">
+                <nav class="item-gallery-pagination text-caption">
                     1 2 3 4
-                </div>
+                </nav>
             </div>
 
             <div class="item-description">

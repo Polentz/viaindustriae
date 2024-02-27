@@ -162,7 +162,7 @@ class Cart {
 
             <div class="cart-content">
                 <div class="cart-content-wrapper">
-                    <ul class="cart-items">
+                    <ul class="cart-item">
                         <li class="cart-info text-title">${i18n['cart.empty']}</li>
                     </ul>
                 </div>
