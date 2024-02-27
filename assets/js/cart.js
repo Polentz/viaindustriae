@@ -200,7 +200,7 @@ class Cart {
                     </div>
                 </div>
                 <div class="cart-content-wrapper">
-                    <a href="${data.checkoutUrl}" class="button checkout-button">${i18n['cart.to-checkout']}</a>
+                    ${(this.element.dataset.variant !== 'checkout') ? `<a href="${data.checkoutUrl}" class="button checkout-button">${i18n['cart.to-checkout']}</a>` : ''}
                 </div>
             </div>
         `;

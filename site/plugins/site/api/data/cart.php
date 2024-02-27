@@ -68,7 +68,7 @@ return function ($status = 'ok', $code = 200) {
             'tax' => formatPrice($cart->getTax()),
             'taxRates' => $taxRates,
             'quantity' => $quantity,
-            // 'checkoutUrl' => site()->checkoutPage()->url(),
+            'checkoutUrl' => site()->checkoutPage()->url(),
         ],
     ];
 };

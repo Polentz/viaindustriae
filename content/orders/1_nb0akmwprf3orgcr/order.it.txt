@@ -1,0 +1,94 @@
+Email: mail@example.com
+
+----
+
+Name: Marta Doe
+
+----
+
+Streetaddress: Milkyway 1
+
+----
+
+Postalcode: 12345
+
+----
+
+City: Ducktown
+
+----
+
+Country: DE
+
+----
+
+Billingaddressisshippingaddress: false
+
+----
+
+Shippingname: Giulia Polenta
+
+----
+
+Shippingstreetaddress: Forster Strasse 50
+
+----
+
+Shippingpostalcode: 10999
+
+----
+
+Shippingcity: Berlin
+
+----
+
+Shippingcountry: Germany
+
+----
+
+Paymentmethod: prepayment
+
+----
+
+Stripepaymentintentid: 
+
+----
+
+Items:
+
+- 
+  key: page://TYFEUZNaz7pgQHBI
+  id: page://TYFEUZNaz7pgQHBI
+  quantity: 1
+  price: 16
+  tax: 1.0467289719626
+  title: Quattro
+  taxrate: 7
+  template: product
+  uid: quattro
+  sum: 16
+  sumtax: "1.0467289719626"
+- 
+  key: shipping
+  id: shipping
+  quantity: 1
+  price: 5
+  tax: 0
+  title: shipping
+  taxrate: 0
+  template: shipping
+  uid: shipping
+  sum: 5
+  sumtax: 0
+
+----
+
+Invoicedate: 2024-02-27T12:28:33+00:00
+
+----
+
+Uuid: clVD7dRzyabvNa6J
+
+----
+
+Paymentcomplete: false
