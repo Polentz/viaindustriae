@@ -12,11 +12,6 @@
               <h1 class="button static-button">Viaindustriae</h1>
               <div class="button static-button">Publishing</div>
           </div>
-          <div class="close-ui cart-close">
-              <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 1L1 13M1 1L13 13"/>
-              </svg>
-          </div>
       </div>
   </div>
 
@@ -50,9 +45,6 @@
             <p class="text-title"><?= t('cart.sum') ?></p>
             <p class="text-subtitle"><?= $cart->getSum() ?></p>
         </div>
-    </div>
-    <div class="cart-content-wrapper">
-      <a href="" class="button checkout-button"><?= t('cart.to-checkout') ?></a>
     </div>
   </div>  
 </div>

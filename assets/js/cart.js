@@ -7,7 +7,7 @@ class Cart {
         this.lang = document.querySelector('html').lang;
 
         this.element = element;
-        this.cartDetailsElement = document.querySelector('.details-cart');
+        this.cartDetailsElement = document.querySelector(".details-cart");
         this.countElement = document.querySelector('.cart-count');
 
         // this object will be used to store the cart data we are loading from the api.
@@ -56,6 +56,10 @@ class Cart {
         document.addEventListener('click', () => {
             this.cartDetailsElement.removeAttribute('open');
         });
+
+        // this.buttonCloseCart.addEventListener('click', () => {
+        //     this.cartDetailsElement.removeAttribute('open');
+        // });
 
         // initially load cart data from api
         this.request('cart');
@@ -146,17 +150,23 @@ class Cart {
 
         if (data.quantity === 0) {
             this.element.innerHTML = `
+
             <div class="cart-header">
                 <div class="main-menu">
                     <div class="main-nav-wrapper">
-                        <div class="cart-info">${i18n['cart.empty']}</div>
-                    </div>
-                    <div class="close-ui cart-close">
-                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 1L1 13M1 1L13 13"/>
-                        </svg>
+                        <h1 class="button static-button">Viaindustriae</h1>
+                        <div class="button static-button">Publishing</div>
                     </div>
                 </div>
+            </div>
+
+            <div class="cart-content">
+                <div class="cart-content-wrapper">
+                    <ul class="cart-items">
+                        <li class="cart-info text-title">${i18n['cart.empty']}</li>
+                    </ul>
+                </div>
+                <div class="cart-content-wrapper"></div>
             </div>
         `;
         } else {
@@ -166,11 +176,6 @@ class Cart {
                     <div class="main-nav-wrapper">
                         <h1 class="button static-button">Viaindustriae</h1>
                         <div class="button static-button">Publishing</div>
-                    </div>
-                    <div class="close-ui cart-close">
-                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13 1L1 13M1 1L13 13"/>
-                        </svg>
                     </div>
                 </div>
             </div>

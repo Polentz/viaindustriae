@@ -101,16 +101,16 @@ const openGalleryItem = () => {
             item.style.gridColumn = "auto";
         });
     });
-}
-
-const closeCart = () => {
-    const cart = document.querySelector(".cart-close");
-    if (cart) {
-        cart.addEventListener('click', () => {
-            document.querySelector(".details-cart").removeAttribute('open');
-        });
-    };
 };
+
+// const closeCartAction = () => {
+//     const buttonCloseCart = document.querySelector(".cart-close");
+//     if (buttonCloseCart) {
+//         buttonCloseCart.addEventListener('click', () => {
+//             document.querySelector(".details-cart").removeAttribute('open');
+//         });
+//     };
+// };
 
 const langInnerHTML = () => {
     const langButton = document.querySelector(".lang-button");
@@ -181,7 +181,7 @@ window.addEventListener("load", () => {
     // history.scrollRestoration = "manual";
     documentHeight();
     headerHeight();
-    closeCart();
+    // closeCartAction();
     sliderOpener();
     handleFilters();
     openGalleryItem();
