@@ -15,9 +15,15 @@
             </div>
             <div class="main-nav">
                 <div class="main-nav-wrapper">
-                    <a class="button nav-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
-                    <a class="button nav-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
-                    <a class="button nav-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
+                    <?php if ($site->newsletter()->isNotEmpty()) : ?>
+                        <a class="button nav-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
+                    <?php endif ?>
+                    <?php if ($site->facebook()->isNotEmpty()) : ?>
+                        <a class="button nav-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
+                    <?php endif ?>
+                    <?php if ($site->instagram()->isNotEmpty()) : ?>
+                        <a class="button nav-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
+                    <?php endif ?>
                 </div>
             </div>
         </menu>
@@ -30,15 +36,21 @@
                     <div class="button static-button">© <?= $site->title() ?> 2024</div>
                 </div>
                 <div class="main-nav-wrapper">
-                    <a class="button nav-button">Terms and Conditions</a>
-                    <a class="button nav-button">Colophon</a>
+                    <a class="button nav-button"><?= t('footer.tac') ?></a>
+                    <a class="button nav-button"><?= t('footer.colophon') ?></a>
                 </div>
             </div>
             <div class="main-nav">
                 <div class="main-nav-wrapper">
-                    <a class="button nav-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
-                    <a class="button nav-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
-                    <a class="button nav-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
+                    <?php if ($site->newsletter()->isNotEmpty()) : ?>
+                        <a class="button nav-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
+                    <?php endif ?>
+                    <?php if ($site->facebook()->isNotEmpty()) : ?>
+                        <a class="button nav-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
+                    <?php endif ?>
+                    <?php if ($site->instagram()->isNotEmpty()) : ?>
+                        <a class="button nav-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
+                    <?php endif ?>
                 </div>
             </div>
         </menu>

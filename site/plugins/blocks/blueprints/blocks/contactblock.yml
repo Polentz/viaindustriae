@@ -19,14 +19,4 @@ fields:
       - email
       - clear
     nodes: false
-  buttonText:
-    label: Pulsante
-    placeholder: Testo del pulsante …
-    width: 1/2
-    type: text
-  buttonUrl:
-    label: false
-    placeholder: Url del pulsante …
-    width: 1/2
-    type: url
   

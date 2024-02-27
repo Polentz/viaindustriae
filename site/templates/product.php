@@ -32,14 +32,18 @@
                         <div class="description-header-info-wrapper text-caption"><?= $page->info() ?></div>
                     <?php endif ?>
                     <div class="description-header-info-wrapper">
-                        <p class="price text-subtitle">€ <?= $page->price() ?></p>
+                        <?php if ($kirby->language()->code() == 'it') : ?>
+                            <p class="price text-subtitle"><?= $page->price() ?> €</p>
+                        <?php elseif ($kirby->language()->code() == 'en') : ?>
+                            <p class="price text-subtitle">€ <?= $page->price() ?></p>
+                        <?php endif ?>
                     </div>
                 </div>
                 <div class="description-header-ui">
                     <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                     <div class="tooltip">
-                        <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>">Share</div>
-                        <span class="tooltip-text text-caption">Copied to clipboard</span>
+                        <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
+                        <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>
                     </div>
                     <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                 </div>

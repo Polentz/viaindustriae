@@ -183,8 +183,6 @@ window.addEventListener("load", () => {
     headerHeight();
     // closeCartAction();
     sliderOpener();
-    handleFilters();
-    openGalleryItem();
     langInnerHTML();
 });
 

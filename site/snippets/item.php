@@ -1,5 +1,5 @@
 <?php if ($slots->product()) : ?>
-    <div class="item product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
+    <div class="item product" data-id="<?= $page->uid() ?>" data-category="<?= $page->category() ?>">
         <figure class="item-preview">
             <?php if ($cover = $page->cover()->toFile()) : ?>
                 <img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
@@ -20,7 +20,7 @@
             </figcaption>
         </figure>
 
-        <div class="item-page product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>" style="display: none;">
+        <div class="item-page product" data-id="<?= $page->uid() ?>" data-category="<?= $page->category() ?>" style="display: none;">
             <div class="item-gallery">
                 <?php foreach ($page->gallery()->toFiles() as $file) : ?>
                     <div class="item-gallery-wrapper">
@@ -46,14 +46,18 @@
                             <div class="description-header-info-wrapper text-caption"><?= $page->info() ?></div>
                         <?php endif ?>
                         <div class="description-header-info-wrapper">
-                            <p class="price text-subtitle">€ <?= $page->price() ?></p>
+                            <?php if ($kirby->language()->code() == 'it') : ?>
+                            <p class="price text-subtitle"><?= $page->price() ?> €</p>
+                            <?php elseif ($kirby->language()->code() == 'en') : ?>
+                                <p class="price text-subtitle">€ <?= $page->price() ?></p>
+                            <?php endif ?>
                         </div>
                     </div>
                     <div class="description-header-ui">
                         <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                         <div class="tooltip">
-                            <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>">Share</div>
-                            <span class="tooltip-text text-caption">Copied to clipboard</span>
+                            <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
+                            <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>
                         </div>
                         <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                     </div>

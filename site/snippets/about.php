@@ -9,9 +9,15 @@
                 <div class="slider-content-contact">
                     <?= $site->contact()->toBlocks() ?>
                     <div class="slider-contact-block">
-                        <a class="button contact-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
-                        <a class="button contact-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
-                        <a class="button contact-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
+                        <?php if ($site->newsletter()->isNotEmpty()) : ?>
+                            <a class="button contact-button" href="<?= $site->newsletter() ?>" target="_blank" rel="noopener noreferrer">Newletter</a>
+                        <?php endif ?>
+                        <?php if ($site->facebook()->isNotEmpty()) : ?>
+                            <a class="button contact-button" href="<?= $site->facebook() ?>" target="_blank" rel="noopener noreferrer">FB</a>
+                        <?php endif ?>
+                        <?php if ($site->instagram()->isNotEmpty()) : ?>
+                            <a class="button contact-button" href="<?= $site->instagram() ?>" target="_blank" rel="noopener noreferrer">IG</a>
+                        <?php endif ?>
                     </div>
                 </div>
                 <div class="slider-content-text description-text">

@@ -10,6 +10,20 @@ return [
     'name' => 'English',
     'url' => NULL,
     'translations' => [
+      'lang' => 'en',
+      'langCode' => 'en_US',
+      'search' => 'Search',
+      'all' => 'All',
+      'allBooks' => 'All books',
+      'allProjects' => 'All projects',
+      'allEvents' => 'All events',
+      'buy' => 'Buy',
+      'share' => 'Share',
+      'tooltip' => 'Copied to clipboard',
+      
+      'footer.tac' => 'Terms and Conditions',
+      'footer.colophon' => 'Colophon',
+
       'cart' => 'Cart',
       'cart.continue-shopping' => 'Continue shopping',
       'cart.empty' => 'Cart is empty.',
@@ -34,7 +48,7 @@ return [
       'paymentMethod.sofort.label' => 'Klarna',
       'paymentMethod.sofort.submitText' => 'Continue to Klarna',
   
-      'product.add-to-cart' => 'Add to cart',
+      'product.add-to-cart' => 'Buy',
       'product.including-tax' => 'Including {tax}&nbsp;% VAT',
       'product.including-shipping' => 'Plus <a href="{url}">shipping costs</a>',
       'product.stock.info.1' => 'Only one product left',

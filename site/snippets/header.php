@@ -50,7 +50,7 @@
                     <div class="main-nav-wrapper">                        
                         <details class="details-cart">
                             <summary class="button nav-button cart-button" data-action="toggle-cart">
-                                <p><?= $cart ?> <span class="cart-count"></span></p>
+                                <p><?= t('cart') ?> <span class="cart-count"></span></p>
                             </summary>
                             <div class="cart" id="cart"></div>
                         </details>
@@ -62,8 +62,8 @@
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
                         <!-- https://webdesign.tutsplus.com/how-to-build-a-search-bar-with-javascript--cms-107227t -->
-                        <div class="button serach-bar"><?= $search ?></div>
-                        <div class="button no-category-button --current"><?= $all ?></div>
+                        <div class="button serach-bar"><?= t('search') ?></div>
+                        <div class="button no-category-button --current"><?= t('all') ?></div>
                         <?php foreach ($page->children()->listed()->pluck('category', null, true) as $page) : ?>
                             <div class="button category-button" data-category="<?= $page->category() ?>"><?= $page->category() ?></div>
                         <?php endforeach ?>
@@ -101,7 +101,7 @@
                     <div class="main-nav-wrapper">                        
                         <details class="details-cart">
                             <summary class="button nav-button cart-button" data-action="toggle-cart">
-                                <p><?= $cart ?> <span class="cart-count"></span></p>
+                                <p><?= t('cart') ?> <span class="cart-count"></span></p>
                             </summary>
                             <div class="cart" id="cart"></div>
                         </details>
@@ -112,7 +112,7 @@
             <menu class="hinner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
-                        <div class="button no-category-button"><a href="<?= $page->parent()->url() ?>"><?= $all ?></a></div>
+                        <div class="button no-category-button"><a href="<?= $page->parent()->url() ?>"><?= t('all') ?></a></div>
                         <?php foreach ($page->siblings()->listed()->pluck('category', null, true) as $sibling) : ?>
                             <?php if ($sibling->category() == $page->category()) : ?>
                                 <div class="button category-button --current"><?= $sibling->category() ?></div>

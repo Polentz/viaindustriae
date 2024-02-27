@@ -23,14 +23,6 @@ panel.plugin("viaindustriae/blocks", {
               @input="update({ text: $event })">
             </k-writer>
           </div>
-          <div v-if="content.buttonText" class="button">
-            <k-input 
-              type="text"
-              :value="content.buttonText"
-              @input="update({ buttonText: $event })"
-            </k-input>
-          </div>
-        </div>
       `
     },
     button: {

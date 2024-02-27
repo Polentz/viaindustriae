@@ -14,7 +14,7 @@ class Cart {
         this.data = {};
 
         // store language variables
-        // this should be the same as in /site/languages/en.php
+        // this should be the same as in /site/languages/it.php
         this.i18n = {
             'cart.empty': 'Il carrello è vuoto',
             'cart.item.remove': 'Rimuovi',

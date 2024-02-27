@@ -10,7 +10,7 @@
     <link rel="canonical" href="<?= $page->url() ?>">
     <meta name="keywords"
         content="<?= $site->keywords() ?>">
-    <meta property="og:locale" content="<?= $langCode ?>">
+    <meta property="og:locale" content="<?= t('langCode') ?>">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= $site->title()?>">
     <meta property="og:description"
