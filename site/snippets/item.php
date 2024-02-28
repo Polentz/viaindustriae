@@ -1,5 +1,5 @@
 <?php if ($slots->product()) : ?>
-    <div class="item product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
+    <div class="item <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
         <figure class="item-preview">
             <?php $cover = $page->cover()->toFile() ?>
             <img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
@@ -7,13 +7,13 @@
                 <div class="item-info-wrapper">
                     <p class="text-title"><?= $page->header() ?></p>
                     <p class="item-title text"><?= $page->title() ?></p>
-                </div>
-                <div class="item-info-wrapper">
                     <?php if ($kirby->language()->code() == 'it') : ?>
                         <p class="item-price text-title"><?= $page->price() ?> €</p>
                     <?php elseif ($kirby->language()->code() == 'en') : ?>
                         <p class="item-price text-title">€ <?= $page->price() ?></p>
                     <?php endif ?>
+                </div>
+                <div class="item-info-wrapper">
                     <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                 </div>
             </figcaption>
@@ -53,7 +53,6 @@
                         </div>
                     </div>
                     <div class="description-header-ui">
-                        <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                         <div class="tooltip">
                             <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
                             <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>
@@ -83,8 +82,6 @@
                 <div class="item-info-wrapper">
                     <p class="text-title"><?= $page->header() ?></p>
                     <p class="item-title text"><?= $page->title() ?></p>
-                </div>
-                <div class="item-info-wrapper">
                     <p class="text-title"><?= $page->category() ?></p>
                 </div>
             </figcaption>
@@ -117,7 +114,6 @@
                         <?php endif ?>
                     </div>
                     <div class="description-header-ui">
-                        <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                         <div class="tooltip">
                             <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
                             <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>
