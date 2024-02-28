@@ -202,10 +202,10 @@ const filterButtonsStyle = () => {
 
 const tooltipHandler = () => {
     const tooltipButton = document.querySelector(".tooltip-button");
-    const url = tooltipButton.dataset.url;
     const tooltipText = document.querySelector(".tooltip-text");
 
     if (tooltipButton) {
+        const url = tooltipButton.dataset.url;
         tooltipButton.addEventListener("click", () => {
             navigator.clipboard.writeText(url);
             gsap.set(tooltipText, {

@@ -32,14 +32,18 @@
 
 <main class="main content">
     <?php if ($query) : ?>
-        <section class="items-grid">
-            <?php foreach ($results as $result) : ?>
-                <?php snippet('item', ['page' => $result], slots: true) ?>
-                    <?php slot('product') ?>
-                    <?php endslot() ?>
-                <?php endsnippet() ?>
-            <?php endforeach ?>
-        </section>
+        <?php if ($results->isNotEmpty()) : ?>
+            <section class="items-grid">
+                <?php foreach ($results as $result) : ?>
+                    <?php snippet('item', ['page' => $result], slots: true) ?>
+                        <?php slot('product') ?>
+                        <?php endslot() ?>
+                    <?php endsnippet() ?>
+                <?php endforeach ?>
+            </section>
+        <?php elseif ($results->isEmpty()) : ?>
+            NO RESULTS!
+        <?php endif ?>
     <?php else : ?>
         <section class="items-grid">
             <?php foreach ($items as $item) : ?>
