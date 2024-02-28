@@ -81,6 +81,6 @@ return [
         'order.invoice.purpose' => 'Causale',
     
         'field.payment-method' => 'Metodo di pagamento',
-        'field.tax-rate' => 'Aliquota fiscale',
+        'field.tax-rate' => "IVA %",
       ],
 ];

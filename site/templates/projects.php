@@ -35,9 +35,7 @@
         <?php if ($results->isNotEmpty()) : ?>
             <section class="items-grid">
                 <?php foreach ($results as $result) : ?>
-                    <?php snippet('item', ['page' => $result], slots: true) ?>
-                        <?php slot('project') ?>
-                        <?php endslot() ?>
+                    <?php snippet('item', ['page' => $result], slots: false) ?>
                     <?php endsnippet() ?>
                 <?php endforeach ?>
             </section>
@@ -47,9 +45,7 @@
     <?php else : ?>
         <section class="items-grid">
             <?php foreach ($items as $item) : ?>
-                <?php snippet('item', ['page' => $item], slots: true) ?>
-                    <?php slot('project') ?>
-                    <?php endslot() ?>
+                <?php snippet('item', ['page' => $item], slots: false) ?>
                 <?php endsnippet() ?>
             <?php endforeach ?>
         </section>

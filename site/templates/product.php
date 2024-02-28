@@ -6,14 +6,17 @@
 <?php endsnippet() ?>
 
 <main class="main content">
-    <div class="item-page product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category()->slug() ?>">
+    <div class="item-page <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category()->slug() ?>">
         <div class="item-gallery">
             <?php foreach ($page->gallery()->toFiles() as $file) : ?>
                 <figure class="item-gallery-wrapper">
                     <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $file->alt() ?>" />
-                    <?php if ($file->caption()->isNotEmpty()) : ?>
-                    <figcaption class=""><?= $file->caption() ?></figcaption>
-                    <?php endif ?>
+                    <figcaption class="item-gallery-caption text-caption">
+                        <?php if ($file->caption()->isNotEmpty()) : ?>
+                            <?= $file->caption() ?>
+                        <?php endif ?>
+                        <nav class="gallery-pagination">1 2 3 4</nav>
+                    </figcaption>
                 </figure>
             <?php endforeach ?>
             <div class="item-gallery-pagination text-caption">

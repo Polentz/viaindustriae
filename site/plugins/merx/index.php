@@ -131,7 +131,7 @@ Kirby::plugin('ww/merx', [
             'field.payment' => 'Bezahlung',
             'field.paymentMethod' => 'Bezahlmethode',
             'field.paymentComplete' => 'Bezahlung vollständig',
-            'field.price' => 'Costo',
+            'field.price' => 'Prezzo',
             'field.tax' => 'Steuer',
             'field.items' => 'Warenkorb',
             'field.quantity' => 'Menge',

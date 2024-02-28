@@ -30,6 +30,13 @@ columns:
             type: text
           info:
             type: writer
+            marks:
+              - bold
+              - italic
+              - link
+              - email
+              - clear
+            nodes: false
           description:
             type: blocks
             fieldsets:

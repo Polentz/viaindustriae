@@ -395,6 +395,12 @@ select:visited {
     position: sticky;
 }
 
+.item-gallery-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
 .item-description {
     display: flex;
     flex-direction: column;
@@ -420,11 +426,16 @@ select:visited {
     position: sticky;
 }
 
-.description-header-ui .button {
+.tooltip {
+    position: relative;
+}
+
+.description-header-ui .action-button,
+.tooltip-button {
     border-color: var(--color-page);
 }
 
-.description-header-ui .tooltip-text {
+.tooltip-text {
     display: none;
     width: max-content;
     position: absolute;

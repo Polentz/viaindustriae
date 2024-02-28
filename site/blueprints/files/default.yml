@@ -1,4 +1,14 @@
 fields:
+  caption:
+    type: writer
+    marks:
+      - bold
+      - italic
+      - link
+      - email
+      - clear
+    nodes: false
   alt:
     label: Alt
     type: text
+

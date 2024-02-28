@@ -1,0 +1,27 @@
+title: Home
+
+sections:
+  content:
+    label: false
+    type: fields
+    fields:
+      heroLeft:
+        label: Publishing Image
+        width: 1/2
+        type: files
+        multiple: false
+        image:
+          icon: true
+          ratio: 4/3
+          back: white
+          cover: true
+      heroRight:
+        label: Projects Image
+        width: 1/2
+        type: files
+        multiple: false
+        image:
+          icon: true
+          ratio: 4/3
+          back: white
+          cover: true

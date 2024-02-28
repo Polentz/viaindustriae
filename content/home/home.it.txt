@@ -2,6 +2,14 @@ Title: Viaindustriae
 
 ----
 
+Heroleft: - file://QWGtm7f09B1Xs7iy
+
+----
+
+Heroright: - file://suxtQii4idJWjPys
+
+----
+
 Text: 
 
 ----
