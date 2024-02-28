@@ -19,6 +19,7 @@ class Product {
 document.querySelectorAll('.product').forEach((productElement) => new Product(productElement));
 
 window.addEventListener("load", () => {
-    // handleFilters();
+    searchFeature();
+    filterButtonsStyle();
     openGalleryItem();
 });

@@ -22,12 +22,12 @@
         <div class="item-page product" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
             <div class="item-gallery">
                 <?php foreach ($page->gallery()->toFiles() as $file) : ?>
-                    <div class="item-gallery-wrapper">
+                    <figure class="item-gallery-wrapper">
                         <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $file->alt() ?>" />
                         <?php if ($file->caption()->isNotEmpty()) : ?>
-                            <p class=""><?= $file->caption() ?></p>
+                        <figcaption class=""><?= $file->caption() ?></figcaption>
                         <?php endif ?>
-                    </div>
+                    </figure>
                 <?php endforeach ?>
                 <nav class="item-gallery-pagination text-caption">
                     1 2 3 4

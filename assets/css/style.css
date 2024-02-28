@@ -221,8 +221,8 @@ select:visited {
 }
 
 .search-wrapper {
-    /* width: 100%; */
     position: relative;
+    transition: all 1s ease;
 }
 
 .search-input {
@@ -239,6 +239,15 @@ select:visited {
 
 .search-reset {
     display: none;
+}
+
+.search-bar.hidden {
+    display: none;
+}
+
+.search-input.visible,
+.search-reset.visible {
+    display: block;
 }
 
 .close-ui {
@@ -267,6 +276,7 @@ select:visited {
 }
 
 .content {
+    min-height: var(--doc-height);
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -275,14 +285,20 @@ select:visited {
 
 .slider {
     display: none;
-    height: var(--doc-height);
+    min-height: var(--doc-height);
     max-height: var(--doc-height);
     position: fixed;
     top: 0;
     left: 0;
     background: var(--color-neutral);
-    overflow: hidden;
+    overflow-y: scroll;
     z-index: 999;
+    scrollbar-width: 0px;
+}
+
+.slider::-webkit-scrollbar {
+    width: 0px;
+    display: none;
 }
 
 .slider.--display {

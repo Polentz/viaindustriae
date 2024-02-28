@@ -73,14 +73,14 @@
                     <div class="inner-nav-wrapper">
                         <form class="search-wrapper" action="<?= $page->url() ?>" autocomplete="off">
                             <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
-                            <input type="search" id="myInput" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
-                            <a href="<?= $page->url() ?>" class="search-reset close-ui">
+                            <input type="search" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
+                            <a href="<?= $page->url() ?>" type="reset" class="search-reset close-ui">
                                 <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13 1L1 13M1 1L13 13"/>
                                 </svg>
                             </a>
                         </form>
-                        <a href="<?= $page->url() ?>" class="button no-category-button"><?= t('all') ?></a>
+                        <a href="<?= $page->url() ?>" class="button no-category-button --current"><?= t('all') ?></a>
                         <?php foreach ($categories as $category) : ?>
                             <a class="button category-button" href="<?= $page->url() ?>?filter=<?= $category ?>"><?= $category ?></a>
                         <?php endforeach ?>
