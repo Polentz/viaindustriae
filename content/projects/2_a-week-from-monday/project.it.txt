@@ -1,16 +1,16 @@
-Title: Project 2
+Title: A Week From Monday
 
 ----
 
-Gallery: 
+Gallery: - file://HWirUVqxgghWa0lq
 
 ----
 
-Cover: 
+Cover: - file://HWirUVqxgghWa0lq
 
 ----
 
-Author: 
+Header: Lorem ipsum
 
 ----
 

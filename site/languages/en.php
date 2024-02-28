@@ -19,7 +19,7 @@ return [
       'allEvents' => 'All events',
       'buy' => 'Buy',
       'share' => 'Share',
-      'tooltip' => 'Copied to clipboard',
+      'tooltip' => 'Link copied!',
       
       'footer.tac' => 'Terms and Conditions',
       'footer.colophon' => 'Colophon',

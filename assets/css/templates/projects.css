@@ -1,3 +1,7 @@
 :root {
     --color-page: #f56868;
 }
+
+.item-page {
+    display: none;
+}

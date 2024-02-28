@@ -222,7 +222,6 @@ select:visited {
 
 .search-wrapper {
     position: relative;
-    transition: all 1s ease;
 }
 
 .search-input {
@@ -427,6 +426,16 @@ select:visited {
 
 .description-header-ui .tooltip-text {
     display: none;
+    width: max-content;
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 1;
+    white-space: nowrap;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-page);
+    padding: var(--button-padding);
 }
 
 .description-text {

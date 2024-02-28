@@ -1,16 +1,16 @@
-Title: Project
+Title: SOPRAWIVENZA
 
 ----
 
-Gallery: 
+Gallery: - file://C6TuxPCaI8BdbhMZ
 
 ----
 
-Cover: 
+Cover: - file://C6TuxPCaI8BdbhMZ
 
 ----
 
-Author: 
+Header: Lorem ipsum
 
 ----
 

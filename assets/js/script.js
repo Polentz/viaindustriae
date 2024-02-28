@@ -111,47 +111,61 @@ const searchFeature = () => {
     const clearButton = document.querySelector(".no-category-button");
 
     const addClasses = () => {
-        wrapper.style.width = "100%";
+        gsap.set(elements, {
+            opacity: 0,
+        });
+        gsap.set(wrapper, {
+            width: "auto",
+        });
         elements.forEach(el => {
             el.classList.add("visible");
         });
         opener.classList.add("hidden");
-    };
-
-    const removeClasses = () => {
-        wrapper.style.width = "auto";
-        elements.forEach(el => {
-            el.classList.remove("visible");
+        gsap.to(wrapper, {
+            width: "100%",
+            duration: 0,
+            ease: "none",
         });
-        opener.classList.remove("hidden");
+        gsap.to(elements, {
+            opacity: 1,
+            duration: 0.5,
+            ease: "power1.out",
+        });
+    };
+    const removeClasses = () => {
+        let tl = gsap.timeline();
+        tl.to(elements, {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power1.out",
+        });
+        tl.to(wrapper, {
+            width: "auto",
+            duration: 0,
+            ease: "none",
+            onComplete: () => {
+                elements.forEach(el => {
+                    el.classList.remove("visible");
+                });
+                opener.classList.remove("hidden");
+            },
+        });
     };
 
     opener.addEventListener("click", () => {
-        // elements.forEach(el => {
-        //     el.style.display = "block";
-        // });
-        // wrapper.style.width = "100%";
-        // opener.style.display = "none";
         addClasses();
     });
 
     close.addEventListener("click", () => {
-        // elements.forEach(el => {
-        //     el.style.display = "none";
-        // });
-        // wrapper.style.width = "auto";
-        // opener.style.display = "inline-flex";
         removeClasses()
     });
 
     const searchLocation = "?q="
     if (window.location.href.includes(searchLocation)) {
         clearButton.classList.remove("--current");
-        // elements.forEach(el => {
-        //     el.style.display = "block";
-        // });
-        // wrapper.style.width = "100%";
-        // opener.style.display = "none";
+        clearButton.addEventListener("click", () => {
+            window.location.href = clearButton.href;
+        });
         addClasses();
     } else {
         close.addEventListener("click", (e) => {
@@ -185,6 +199,38 @@ const filterButtonsStyle = () => {
         });
     };
 };
+
+const tooltipHandler = () => {
+    const tooltipButton = document.querySelector(".tooltip-button");
+    const url = tooltipButton.dataset.url;
+    const tooltipText = document.querySelector(".tooltip-text");
+
+    if (tooltipButton) {
+        tooltipButton.addEventListener("click", () => {
+            navigator.clipboard.writeText(url);
+            gsap.set(tooltipText, {
+                opacity: 0,
+            });
+            tooltipText.style.display = "block";
+            gsap.to(tooltipText, {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power1.out",
+            });
+        });
+
+        tooltipButton.addEventListener("mouseleave", () => {
+            gsap.to(tooltipText, {
+                opacity: 0,
+                duration: 0.5,
+                delay: 0.5,
+                ease: "power1.out",
+                onComplete: () => tooltipText.style.display = "none"
+            });
+        });
+    };
+};
+
 
 // const closeCartAction = () => {
 //     const buttonCloseCart = document.querySelector(".cart-close");
@@ -266,6 +312,7 @@ window.addEventListener("load", () => {
     headerHeight();
     sliderOpener();
     langInnerHTML();
+    tooltipHandler();
 });
 
 window.addEventListener("resize", () => {

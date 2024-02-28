@@ -26,7 +26,7 @@ columns:
               ratio: 4/3
               back: white
               cover: true
-          author:
+          header:
             type: text
           info:
             type: writer

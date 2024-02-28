@@ -1,16 +1,16 @@
-Title: Project 3
+Title: Amazzonia
 
 ----
 
-Gallery: 
+Gallery: - file://ZAZTq7U0Lkdo1Dw1
 
 ----
 
-Cover: 
+Cover: - file://ZAZTq7U0Lkdo1Dw1
 
 ----
 
-Author: 
+Header: Lorem ipsum
 
 ----
 
