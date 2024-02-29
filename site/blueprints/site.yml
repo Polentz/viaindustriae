@@ -14,9 +14,8 @@ tabs:
           - home
       pages:
         type: pages
-        info: "{{ page.intendedTemplate }}"
         template:
-          - publishing
+          - shop
           - projects
   about:
     label:

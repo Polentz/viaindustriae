@@ -15,8 +15,8 @@
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
                         <h1 class="button static-button"><?= $site->title() ?></h1>
-                        <?php foreach ($site->children()->filterby('template', 'publishing') as $publishing) : ?>
-                            <a class="button nav-button" href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a>
+                        <?php foreach ($site->children()->filterby('template', 'shop') as $shop) : ?>
+                            <a class="button nav-button" href="<?= $shop->url() ?>"><?= $shop->title() ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>
@@ -36,11 +36,11 @@
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
                         <a class="button nav-button" href="<?= page('home')->url() ?>"><?= $site->title() ?></a>
-                        <?php foreach ($site->children()->filterby('template', 'publishing') as $publishing) : ?>
-                            <?php if ($publishing->isOpen()) : ?>
-                                <h1 class="button nav-button --current"><?= $publishing->title() ?></h1>
+                        <?php foreach ($site->children()->filterby('template', 'shop') as $shop) : ?>
+                            <?php if ($shop->isOpen()) : ?>
+                                <h1 class="button nav-button --current"><?= $shop->title() ?></h1>
                             <?php else : ?>
-                                <a class="button nav-button" href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a>
+                                <a class="button nav-button" href="<?= $shop->url() ?>"><?= $shop->title() ?></a>
                             <?php endif ?>
                         <?php endforeach ?>
                         <?php foreach ($site->children()->filterby('template', 'projects') as $projects) : ?>
@@ -94,11 +94,11 @@
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
                         <a class="button nav-button" href="<?= page('home')->url() ?>"><?= $site->title() ?></a>
-                        <?php foreach ($site->children()->filterby('template', 'publishing') as $publishing) : ?>
-                            <?php if ($publishing->isOpen()) : ?>
-                                <h1 class="button nav-button --current"><?= $publishing->title() ?></h1>
+                        <?php foreach ($site->children()->filterby('template', 'shop') as $shop) : ?>
+                            <?php if ($shop->isOpen()) : ?>
+                                <h1 class="button nav-button --current"><?= $shop->title() ?></h1>
                             <?php else : ?>
-                                <a class="button nav-button" href="<?= $publishing->url() ?>"><?= $publishing->title() ?></a>
+                                <a class="button nav-button" href="<?= $shop->url() ?>"><?= $shop->title() ?></a>
                             <?php endif ?>
                         <?php endforeach ?>
                         <?php foreach ($site->children()->filterby('template', 'projects') as $projects) : ?>
