@@ -8,8 +8,27 @@
 }
 
 .nav-button:hover {
-    background: var(--color-black);
-    color: var(--color-white);
+    background: var(--color-neutral);
+    /* color: var(--color-white); */
+}
+
+.nav-button#to-shop:hover {
+    background: var(--color-shop);
+    color: var(--color-black);
+}
+
+.nav-button#to-projects:hover {
+    background: var(--color-projects);
+    color: var(--color-black);
+}
+
+.nav-button#to-shop,
+.nav-button#to-projects {
+    visibility: hidden;
+}
+
+.static-button {
+    cursor: ew-resize;
 }
 
 .hero {
@@ -21,14 +40,12 @@
 
 .hero-layer {
     height: var(--doc-height);
-    cursor: crosshair;
-
 }
 
 .hero-layer:first-of-type {
     width: 100vw;
     position: absolute;
-    background: var(--color-pub);
+    background: var(--color-shop);
     color: var(--color-white);
 }
 
@@ -37,7 +54,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: var(--color-pro);
+    background: var(--color-projects);
     color: var(--color-black);
     overflow: hidden;
     z-index: 2;
@@ -72,6 +89,10 @@
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+}
+
+.slider {
+    cursor: unset;
 }
 
 .footer {

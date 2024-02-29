@@ -6,7 +6,7 @@
         ->children()
         ->listed()
         ->when($query, function($query) {
-        return $this->search($query, 'header|title', ['words' => true ]);
+        return $this->search($query, 'header|title|category', ['words' => true ]);
         });
     
     $items = $page

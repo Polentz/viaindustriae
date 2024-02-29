@@ -390,7 +390,7 @@ a:not(.button a):hover {
     object-fit: cover;
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    transition: opacity .5s, transform .5s;
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
 .item-cover figcaption {
@@ -402,9 +402,7 @@ a:not(.button a):hover {
     justify-content: flex-end;
     padding: 16px;
     opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
-    transition: opacity .5s, transform .5s;
+    transition: opacity .5s .25s ease-in-out;
     z-index: 2;
 }
 
@@ -415,7 +413,6 @@ a:not(.button a):hover {
 
 .item-cover:hover figcaption {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
 }
 
 .item-price {
@@ -522,18 +519,11 @@ a:not(.button a):hover {
     text-decoration: underline;
 }
 
-/* .item-close {
-    position: absolute;
-    top: -24px;
-    right: 0;
-    cursor: pointer;
-} */
-
 .cart {
     position: fixed;
     left: 0;
     top: 0;
-    background: var(--color-pub);
+    background: var(--color-shop);
     width: 50%;
     height: var(--doc-height);
     z-index: 9;

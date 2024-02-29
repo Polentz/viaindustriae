@@ -4,7 +4,7 @@
     $results = $page
         ->children()
         ->listed()
-        ->search( $query, 'author|title', ['words' => true ])
+        ->search( $query, 'author|title|category', ['words' => true ])
         ->paginate(16);
 ?>
 
@@ -14,17 +14,20 @@
             <menu class="main-menu">
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
-                        <h1 class="button static-button"><?= $site->title() ?></h1>
                         <?php foreach ($site->children()->filterby('template', 'shop') as $shop) : ?>
-                            <a class="button nav-button" href="<?= $shop->url() ?>"><?= $shop->title() ?></a>
+                            <a class="button nav-button" id="to-shop" href="<?= $shop->url() ?>"><?= $shop->title() ?></a>
                         <?php endforeach ?>
+                    </div>
+                </div>
+                <div class="main-menu">
+                    <div class="main-nav-wrapper">
+                        <h1 class="button static-button"><?= $site->title() ?></h1>
                     </div>
                 </div>
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
-                        <h1 class="button static-button"><?= $site->title() ?></h1>
                         <?php foreach ($site->children()->filterby('template', 'projects') as $projects) : ?>
-                            <a class="button nav-button" href="<?= $projects->url() ?>"><?= $projects->title() ?></a>
+                            <a class="button nav-button" id="to-projects" href="<?= $projects->url() ?>"><?= $projects->title() ?></a>
                         <?php endforeach ?>
                     </div>
                 </div>

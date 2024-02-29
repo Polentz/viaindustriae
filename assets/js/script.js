@@ -12,16 +12,76 @@ const headerHeight = () => {
 }
 
 const shutterEffect = () => {
+    const element = document.querySelector(".hero-layer:last-of-type");
+    const toShopButton = document.getElementById("to-shop");
+    const toProjectsButton = document.getElementById("to-projects");
+    const pageHeading = document.querySelector(".static-button");
+    let oldx = 0;
+
+    gsap.set([toShopButton, toProjectsButton], {
+        autoAlpha: 0,
+    });
+
+    const toProjectsButtonPos = toProjectsButton.getBoundingClientRect().left - 5;
+    const toShopButtonPos = toShopButton.getBoundingClientRect().right + 5;
+
+    // pageHeading.addEventListener("mouseenter", () => {
+    //     gsap.to(toShopButton, {
+    //         autoAlpha: 1,
+    //         duration: 0.5,
+    //     });
+    //     gsap.to(toProjectsButton, {
+    //         autoAlpha: 1,
+    //         duration: 0.5,
+    //     });
+    // });
+    // pageHeading.addEventListener("mouseleave", () => {
+    //     gsap.to(toShopButton, {
+    //         autoAlpha: 0,
+    //         duration: 1,
+    //     });
+    //     gsap.to(toProjectsButton, {
+    //         autoAlpha: 0,
+    //         duration: 1,
+    //     });
+    // });
+
     window.addEventListener("mousemove", (event) => {
         let wW = document.body.clientWidth;
         const x = event.pageX / wW * 100;
         const xX = x.toFixed(2);
-        const element = document.querySelector(".hero-layer:last-of-type");
         gsap.to(element, {
             width: xX + "%",
             duration: 0.85,
             ease: "power2.out",
         });
+
+        if (event.pageX < oldx && event.pageX < toProjectsButtonPos) {
+            gsap.to([".header", ".hero"], {
+                cursor: "nw-resize",
+            });
+            gsap.to(toShopButton, {
+                autoAlpha: 1,
+                duration: 0.035,
+            });
+            gsap.to(toProjectsButton, {
+                autoAlpha: 0,
+                duration: 0.035,
+            });
+        } else if (event.pageX > oldx && event.pageX > toShopButtonPos) {
+            gsap.to([".header", ".hero"], {
+                cursor: "ne-resize",
+            });
+            gsap.to(toShopButton, {
+                autoAlpha: 0,
+                duration: 0.035,
+            });
+            gsap.to(toProjectsButton, {
+                autoAlpha: 1,
+                duration: 0.035,
+            });
+        };
+        oldx = event.pageX;
     });
 };
 

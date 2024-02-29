@@ -12,11 +12,17 @@ tabs:
         max: 1
         template:
           - home
-      pages:
+      mainPages:
+        label: Main pages
         type: pages
+        max: 2
         template:
           - shop
           - projects
+      pages:
+        type: pages
+        template:
+          - page
   about:
     label:
       en: About
