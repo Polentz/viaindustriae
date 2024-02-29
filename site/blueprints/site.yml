@@ -9,10 +9,12 @@ tabs:
     sections:
       home:
         type: pages
+        max: 1
         template:
           - home
       pages:
         type: pages
+        info: "{{ page.intendedTemplate }}"
         template:
           - publishing
           - projects

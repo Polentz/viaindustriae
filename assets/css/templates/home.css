@@ -2,14 +2,15 @@
     --color-page: transparent;
 }
 
-.button {
-    background: var(--color-neutral);
+.header .button,
+.footer .button {
+    background: var(--color-white);
 }
 
-/* .nav-button:hover {
+.nav-button:hover {
     background: var(--color-black);
     color: var(--color-white);
-} */
+}
 
 .hero {
     position: relative;
@@ -20,6 +21,7 @@
 
 .hero-layer {
     height: var(--doc-height);
+    cursor: crosshair;
 
 }
 
@@ -27,6 +29,7 @@
     width: 100vw;
     position: absolute;
     background: var(--color-pub);
+    color: var(--color-white);
 }
 
 .hero-layer:last-of-type {
@@ -35,6 +38,7 @@
     top: 0;
     left: 0;
     background: var(--color-pro);
+    color: var(--color-black);
     overflow: hidden;
     z-index: 2;
 }
@@ -50,7 +54,7 @@
     font-size: 24px;
     line-height: 110%;
     font-weight: 500;
-    text-transform: uppercase;
+    pointer-events: none;
     z-index: 2;
 }
 
@@ -60,6 +64,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    pointer-events: none;
     z-index: 1;
 }
 

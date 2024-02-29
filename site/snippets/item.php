@@ -1,27 +1,29 @@
 
 <div class="item <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
-    <figure class="item-preview">
-        <?php $cover = $page->cover()->toFile() ?>
-        <img class="item-cover" src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
-        <figcaption class="item-info">
+    <div class="item-preview">
+        <figure class="item-cover">
+            <?php $cover = $page->cover()->toFile() ?>
+            <img src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
+            <?php if ($slots->product()) : ?>
+                <figcaption class="item-cover-caption">
+                    <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
+                </figcaption>
+            <?php endif ?>
+        </figure>
+        <div class="item-info">
             <div class="item-info-wrapper">
                 <p class="text-title"><?= $page->header() ?></p>
-                <p class="item-title text"><?= $page->title() ?></p>
-
+                <p class="text"><?= $page->title() ?></p>
                 <?php if ($slots->product()) : ?>
-                        <?php if ($kirby->language()->code() == 'it') : ?>
-                            <p class="item-price text-title"><?= $page->price() ?> €</p>
-                        <?php elseif ($kirby->language()->code() == 'en') : ?>
-                            <p class="item-price text-title">€ <?= $page->price() ?></p>
-                        <?php endif ?>
-                    </div>
-                    <div class="item-info-wrapper">
-                        <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
-                    </div>
+                    <?php if ($kirby->language()->code() == 'it') : ?>
+                        <p class="item-price text-title"><?= $page->price() ?> €</p>
+                    <?php elseif ($kirby->language()->code() == 'en') : ?>
+                        <p class="item-price text-title">€ <?= $page->price() ?></p>
+                    <?php endif ?>
                 <?php endif ?>
-                
-        </figcaption>
-    </figure>
+            </div>
+        </div>
+    </div>
 
     <div class="item-page <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
         <div class="item-gallery">
@@ -41,18 +43,20 @@
             <div class="description-header">
                 <div class="description-header-info">
                     <div class="description-header-info-wrapper">
-                        <p class="text-subtitle"><?= $page->header() ?></p>
-                        <p class="text-title"><?= $page->title() ?></p>
+                        <p class="text-title"><?= $page->header() ?></p>
+                        <p class="text"><?= $page->title() ?></p>
                     </div>
                     <?php if ($page->info()->isNotEmpty()): ?>
-                        <div class="description-header-info-wrapper text-caption"><?= $page->info() ?></div>
+                        <div class="description-header-info-wrapper text-caption">
+                            <?= $page->info() ?>
+                        </div>
                     <?php endif ?>
                     <?php if ($slots->product()) : ?>
                         <div class="description-header-info-wrapper">
                             <?php if ($kirby->language()->code() == 'it') : ?>
-                            <p class="price text-subtitle"><?= $page->price() ?> €</p>
+                            <p class="price text-title"><?= $page->price() ?> €</p>
                             <?php elseif ($kirby->language()->code() == 'en') : ?>
-                                <p class="price text-subtitle">€ <?= $page->price() ?></p>
+                                <p class="price text-title">€ <?= $page->price() ?></p>
                             <?php endif ?>
                         </div>
                     <?php endif ?>

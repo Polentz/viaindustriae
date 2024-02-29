@@ -193,3 +193,12 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
+
+*::selection {
+    color: var(--color-black);
+    background-color: var(--color-page);
+}
+
+img::selection {
+    background-color: var(--color-page);
+}
