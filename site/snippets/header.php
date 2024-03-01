@@ -1,11 +1,19 @@
 <?php 
-    $categories = $page->children()->listed()->pluck('category', null, true);
-    $query   = get('q');
-    $results = $page
+    $categories = $page
         ->children()
         ->listed()
-        ->search( $query, 'author|title|category', ['words' => true ])
-        ->paginate(16);
+        ->pluck('category', null, true);
+
+    $query   = get('q');
+    
+    // $pastEvents = $page
+    //     ->children()
+    //     ->listed()
+    //     ->filter(fn ($child) => $child->date()->toDate() < time());
+    // $futureEvents = $page
+    //     ->children()
+    //     ->listed()
+    //     ->filter(fn ($child) => $child->date()->toDate() > time());
 ?>
 
 <header class="header">
@@ -56,7 +64,13 @@
                     </div>
                     <div class="main-nav-wrapper">
                         <a class="button nav-button info-button">Info</a>
-                        <a class="button nav-button">Agenda</a>
+                        <?php foreach ($site->children()->filterby('template', 'agenda') as $agenda) : ?>
+                            <?php if ($agenda->isOpen()) : ?>
+                                <p class="button nav-button --current"><?= $agenda->title() ?></p>
+                            <?php else : ?>
+                                <a class="button nav-button " href="<?= $agenda->url() ?>"><?= $agenda->title() ?></a>
+                            <?php endif ?>
+                        <?php endforeach ?>
                     </div>
                 </div>
                 <div class="main-nav">
@@ -92,7 +106,7 @@
             </menu>
         <?php endif ?>
 
-        <?php if ($slots->subpage()) : ?>
+        <?php if ($slots->agenda()) : ?>
             <menu class="main-menu">
                 <div class="main-nav">
                     <div class="main-nav-wrapper">
@@ -114,7 +128,13 @@
                     </div>
                     <div class="main-nav-wrapper">
                         <a class="button nav-button info-button">Info</a>
-                        <a class="button nav-button">Agenda</a>
+                        <?php foreach ($site->children()->filterby('template', 'agenda') as $agenda) : ?>
+                            <?php if ($agenda->isOpen()) : ?>
+                                <p class="button nav-button --current"><?= $agenda->title() ?></p>
+                            <?php else : ?>
+                                <a class="button nav-button " href="<?= $agenda->url() ?>"><?= $agenda->title() ?></a>
+                            <?php endif ?>
+                        <?php endforeach ?>
                     </div>
                 </div>
                 <div class="main-nav">
@@ -132,10 +152,15 @@
             <menu class="inner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
-                        <a href="<?= $page->parent()->url() ?>" class="button no-category-button --current"><?= t('all') ?></a>
-                        <?php foreach ($categories as $category) : ?>
-                            <a class="button category-button" href="<?= $page->parent()->url() ?>?filter=<?= $category ?>"><?= $category ?></a>
-                        <?php endforeach ?>
+                        <form class="search-wrapper" action="<?= $page->url() ?>" autocomplete="off">
+                            <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
+                            <input type="search" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
+                            <a href="<?= $page->url() ?>" type="reset" class="search-reset close-ui">
+                                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 1L1 13M1 1L13 13"/>
+                                </svg>
+                            </a>
+                        </form>
                     </div>
                 </div>
             </menu>

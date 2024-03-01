@@ -1,0 +1,19 @@
+:root {
+    --color-page: #a7dea7;
+}
+
+.item-cover {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 110%;
+    padding: 16px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-preview .item-cover,
+.item-preview .text-title {
+    cursor: unset;
+}

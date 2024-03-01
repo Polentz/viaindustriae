@@ -9,7 +9,13 @@
                 </div>
                 <div class="main-nav-wrapper">
                     <a class="button nav-button info-button">Info</a>
-                    <a class="button nav-button">Agenda</a>
+                    <?php foreach ($site->children()->filterby('template', 'agenda') as $agenda) : ?>
+                        <?php if ($agenda->isOpen()) : ?>
+                            <p class="button nav-button --current"><?= $agenda->title() ?></p>
+                        <?php else : ?>
+                            <a class="button nav-button " href="<?= $agenda->url() ?>"><?= $agenda->title() ?></a>
+                        <?php endif ?>
+                    <?php endforeach ?>
                     <a class="button nav-button lang-button" href="<?= $page->url($href) ?>" hreflang="<?= $href ?>"><?= $languageString ?></a>
                 </div>
             </div>

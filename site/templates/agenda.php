@@ -1,20 +1,15 @@
 <?php 
     $query   = get('q');
-    $filterBy = get('filter');
-
     $results = $page
         ->children()
         ->listed()
         ->when($query, function($query) {
-        return $this->search($query, 'header|title|category', ['words' => true ]);
+            return $this->search($query, 'header|title|category', ['words' => true ]);
         });
     
     $items = $page
         ->children()
         ->listed()
-        ->when($filterBy, function($filterBy) {
-            return $this->filterBy('category', $filterBy);
-        })
         ->paginate(16);
     
     $pagination = $items->pagination();
@@ -25,7 +20,7 @@
 <?= snippet('head') ?>
 
 <?php snippet('header', slots: true) ?>
-    <?php slot('page') ?>
+    <?php slot('agenda') ?>
     <?php endslot() ?>
 <?php endsnippet() ?>
 
@@ -34,8 +29,8 @@
     <?php if ($query) : ?>
         <?php if ($results->isNotEmpty()) : ?>
             <section class="items-grid">
-                <?php foreach ($results as $result) : ?>
-                    <?php snippet('item', ['page' => $result], slots: false) ?>
+                <?php foreach ($results->sortBy('category', 'desc') as $result) : ?>
+                    <?php snippet('event', ['page' => $result], slots: false) ?>
                     <?php endsnippet() ?>
                 <?php endforeach ?>
             </section>
@@ -44,8 +39,8 @@
         <?php endif ?>
     <?php else : ?>
         <section class="items-grid">
-            <?php foreach ($items as $item) : ?>
-                <?php snippet('item', ['page' => $item], slots: false) ?>
+            <?php foreach ($items->sortBy('category', 'desc') as $item) : ?>
+                <?php snippet('event', ['page' => $item], slots: false) ?>
                 <?php endsnippet() ?>
             <?php endforeach ?>
         </section>

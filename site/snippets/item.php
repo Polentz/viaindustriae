@@ -1,4 +1,3 @@
-
 <div class="item <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
     <div class="item-preview">
         <figure class="item-cover">
@@ -84,28 +83,3 @@
         </div>
     </div>
 </div>
-
-<?php if ($slots->agenda()) : ?>
-    <div class="item" data-category="<?= $page->category() ?>">
-        <div class="item-preview">
-            <?php if ($page->linkUrl()->isNotEmpty()) : ?>
-                <div class="item-cover">
-                    <a href="<?= $link->url() ?>"><p class="text-subtitle"><?= $page->linkText() ?></p></a>
-                </div> 
-            <?php else : ?>
-                <div class="item-cover">
-                    <p class="text-subtitle"><?= $page->linkText() ?></p>
-                </div>
-            <?php endif ?>
-            <div class="item-info">
-                <?php if ($page->itemheader()->isNotEmpty()): ?>
-                    <p class="text-subtitle"><?= $page->itemheader() ?></p>
-                <?php endif ?>
-                <p class="text-title"><?= $page->title() ?></p>
-                <?php if ($page->iteminfo()->isNotEmpty()): ?>
-                    <p class="text-subtitle"><?= $page->iteminfo() ?></p>
-                <?php endif ?>
-            </div>
-        </div>
-    </div>
-<?php endif ?>

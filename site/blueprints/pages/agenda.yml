@@ -15,7 +15,8 @@ sections:
     template:
       - event
     image:
-      cover: true
+      cover: false
+      icon: false
       ratio: 1/1
-      back: black
+      back: "#a7dea7"
     sortable: true

@@ -1,0 +1,53 @@
+title: 
+  en: Event
+  it: Evento
+create:
+  status: unlisted
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        label: false
+        type: fields
+        fields:
+          quoteText:
+            label: 
+              en: Text preview
+              it: Testo di anteprima
+            type: text
+            maxlength: 60
+          header:
+            label:
+              en: Where
+              it: Dove
+            type: text
+          panelTitle: 
+            label:
+              en: Title
+              it: Titolo
+            type: text
+            placeholder: "{{ page.title }}"
+            disabled: true
+          eventDate: 
+            label: 
+              en: Date
+              it: Data
+            type: text         
+  sidebar:
+    width: 1/3
+    sections:
+      features:
+        label: false
+        type: fields
+        fields:
+          category:
+            label:
+              en: Date
+              it: Data
+            type: date
+            default: today
+            display: DD/MM/YYYY
+
+

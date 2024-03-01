@@ -11,6 +11,15 @@ const documentHeight = () => {
 //     });
 // };
 
+const itemWidth = () => {
+    const items = document.querySelectorAll(".item");
+    items.forEach(item => {
+        const itemCover = item.querySelector(".item-cover");
+        const itemPreview = item.querySelector(".item-preview");
+        itemCover.style.height = `${itemPreview.offsetWidth}px`;
+    });
+}
+
 const handleHeaderOnScroll = () => {
     const topBar = document.querySelector(".header");
     const innerMenu = document.querySelector(".inner-menu");
@@ -225,7 +234,7 @@ const searchFeature = () => {
     });
 
     const searchLocation = "?q="
-    if (window.location.href.includes(searchLocation)) {
+    if (window.location.href.includes(searchLocation) && clearButton) {
         clearButton.classList.remove("--current");
         clearButton.addEventListener("click", () => {
             window.location.href = clearButton.href;
