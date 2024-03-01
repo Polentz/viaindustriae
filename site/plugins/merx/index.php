@@ -89,7 +89,7 @@ Kirby::plugin('ww/merx', [
             'error.merx.initializePayment' => 'The payment could not be initialized.',
             'error.merx.noPaymentMethod' => 'No payment method provided.',
             'error.merx.fieldsvalidation' => 'Field validation failed.',
-            'error.merx.emptycart' => 'Cart is empty.',
+            'error.merx.emptycart' => 'The cart is empty.',
             'error.merx.completePayment' => 'The payment could not be completed.',
             'error.merx.paymentCanceled' => 'You canceled the payment.',
             'error.merx.cart.add' => 'Item "{id}" could not be added to cart.',

@@ -33,7 +33,7 @@ class Cart {
         // overwrite default language variables
         if (this.lang === 'en') {
             this.i18n = {
-                'cart.empty': 'Cart is empty',
+                'cart.empty': 'The cart is empty',
                 'cart.item.remove': 'Remove',
                 'cart.included-vat': 'Included VAT',
                 'cart.vat-included': 'VAT incl.',

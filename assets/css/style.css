@@ -100,7 +100,7 @@ a:not(.button a):hover {
     width: 100%;
     position: fixed;
     top: 0;
-    padding: var(--main-margin);
+    padding: var(--inner-margin);
     z-index: 9;
 }
 
@@ -108,7 +108,7 @@ a:not(.button a):hover {
     width: 100%;
     position: relative;
     bottom: 0;
-    padding: var(--main-margin);
+    padding: var(--inner-margin);
     z-index: 8;
 }
 
@@ -293,7 +293,7 @@ a:not(.button a):hover {
     display: flex;
     flex-direction: column;
     gap: 80px;
-    padding: 176px 40px 80px 40px
+    padding: var(--main-margin);
 }
 
 .slider {
@@ -321,12 +321,12 @@ a:not(.button a):hover {
 .slider-header {
     position: absolute;
     top: 0;
-    padding: var(--main-margin);
+    padding: var(--inner-margin);
 }
 
 .slider-content {
     position: relative;
-    padding: 176px 40px 80px 40px
+    padding: var(--main-margin);
 }
 
 .slider-content-grid {
@@ -363,6 +363,18 @@ a:not(.button a):hover {
 .item.--unfiltered {
     display: none;
 } */
+
+.item.--open {
+    grid-column: 1 / 5;
+}
+
+.item.--open .item-preview {
+    display: none;
+}
+
+.item.--open .item-page {
+    display: grid;
+}
 
 .item-preview .item-cover,
 .item-preview .text-title {
@@ -439,8 +451,26 @@ a:not(.button a):hover {
 }
 
 .item-gallery {
-    height: min-content;
+    /* height: min-content;
+    position: sticky; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.item-gallery-wrapper {
+    /* height: min-content;
     position: sticky;
+    background: var(--color-white); */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.item-gallery-wrapper img {
+    width: 100%;
 }
 
 .item-gallery-caption {
@@ -470,8 +500,6 @@ a:not(.button a):hover {
 .description-header-ui {
     display: flex;
     gap: 4px;
-    height: min-content;
-    position: sticky;
 }
 
 .tooltip {
@@ -532,12 +560,12 @@ a:not(.button a):hover {
 .cart-header {
     width: 100%;
     position: absolute;
-    padding: var(--main-margin);
+    padding: var(--inner-margin);
 }
 
 .cart-content {
     display: block;
-    padding: 176px 40px;
+    padding: 160px 40px;
 }
 
 .cart-content-wrapper {

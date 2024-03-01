@@ -3,19 +3,43 @@ const documentHeight = () => {
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
 };
 
-const headerHeight = () => {
-    const header = document.querySelector("header");
-    const stickyElements = document.querySelectorAll(".item-gallery, .description-header-ui");
-    stickyElements.forEach(element => {
-        element.style.top = `${header.offsetHeight}px`;
-    });
-}
+// const headerHeight = () => {
+//     const header = document.querySelector("header");
+//     const stickyElements = document.querySelectorAll(".item-gallery-wrapper");
+//     stickyElements.forEach(element => {
+//         element.style.top = `${header.offsetHeight}px`;
+//     });
+// };
+
+const handleHeaderOnScroll = () => {
+    const topBar = document.querySelector(".header");
+    const innerMenu = document.querySelector(".inner-menu");
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        if (scrollTop < lastScrollTop) {
+            innerMenu.style.display = "block";
+            gsap.to(".inner-nav-wrapper", {
+                autoAlpha: 1,
+                delay: 0.25,
+                duration: 0.15,
+            });
+        } else {
+            gsap.to(".inner-nav-wrapper", {
+                autoAlpha: 0,
+                delay: 0.25,
+                duration: 0.15,
+                onComplete: () => innerMenu.style.display = "none",
+            });
+        };
+        lastScrollTop = scrollTop;
+    }, false);
+};
 
 const shutterEffect = () => {
     const element = document.querySelector(".hero-layer:last-of-type");
     const toShopButton = document.getElementById("to-shop");
     const toProjectsButton = document.getElementById("to-projects");
-    const pageHeading = document.querySelector(".static-button");
     let oldx = 0;
 
     gsap.set([toShopButton, toProjectsButton], {
@@ -24,27 +48,6 @@ const shutterEffect = () => {
 
     const toProjectsButtonPos = toProjectsButton.getBoundingClientRect().left - 5;
     const toShopButtonPos = toShopButton.getBoundingClientRect().right + 5;
-
-    // pageHeading.addEventListener("mouseenter", () => {
-    //     gsap.to(toShopButton, {
-    //         autoAlpha: 1,
-    //         duration: 0.5,
-    //     });
-    //     gsap.to(toProjectsButton, {
-    //         autoAlpha: 1,
-    //         duration: 0.5,
-    //     });
-    // });
-    // pageHeading.addEventListener("mouseleave", () => {
-    //     gsap.to(toShopButton, {
-    //         autoAlpha: 0,
-    //         duration: 1,
-    //     });
-    //     gsap.to(toProjectsButton, {
-    //         autoAlpha: 0,
-    //         duration: 1,
-    //     });
-    // });
 
     window.addEventListener("mousemove", (event) => {
         let wW = document.body.clientWidth;
@@ -148,11 +151,10 @@ const openGalleryItem = () => {
         const closer = item.querySelector(".item-close");
 
         opener.addEventListener("click", () => {
-            preview.style.display = "none";
-            extended.style.display = "grid";
-            item.style.gridColumn = "1 / 5";
+            [...items].filter(i => i !== item).forEach(i => i.classList.remove("--open"));
+            item.classList.add("--open");
             const itemPosition = extended.getBoundingClientRect().top;
-            const offsetPosition = itemPosition + window.scrollY - 176;
+            const offsetPosition = itemPosition + window.scrollY - 160;
             window.scrollTo({
                 top: offsetPosition,
                 behavior: "smooth",
@@ -160,9 +162,7 @@ const openGalleryItem = () => {
         });
 
         closer.addEventListener("click", () => {
-            preview.style.display = "block";
-            extended.style.display = "none";
-            item.style.gridColumn = "auto";
+            item.classList.remove("--open");
         });
     });
 };
@@ -295,16 +295,6 @@ const tooltipHandler = () => {
     };
 };
 
-
-// const closeCartAction = () => {
-//     const buttonCloseCart = document.querySelector(".cart-close");
-//     if (buttonCloseCart) {
-//         buttonCloseCart.addEventListener('click', () => {
-//             document.querySelector(".details-cart").removeAttribute('open');
-//         });
-//     };
-// };
-
 const langInnerHTML = () => {
     const langButton = document.querySelector(".lang-button");
     if (langButton) {
@@ -325,55 +315,11 @@ const langInnerHTML = () => {
     };
 };
 
-// const handleFilters = () => {
-//     const filterButtons = document.querySelectorAll(".category-button");
-//     const items = document.querySelectorAll(".item");
-//     const filtersClearButton = document.querySelector(".no-category-button");
-
-//     const applyFilters = (filter) => {
-//         window.scrollTo(0, 0);
-//         const filterName = filter.dataset.category;
-//         items.forEach(item => {
-//             const itemCategory = item.dataset.category;
-//             if (itemCategory.includes(filterName)) {
-//                 item.classList.remove("--unfiltered");
-//                 item.classList.add("--filtered");
-//             } else {
-//                 item.classList.add("--unfiltered");
-//                 item.classList.remove("--filtered");
-//             };
-//         });
-//     };
-
-//     const removeFilters = () => {
-//         filterButtons.forEach(filter => {
-//             filter.classList.remove("--current");
-//         });
-//         items.forEach(item => {
-//             item.classList.remove("--unfiltered");
-//             item.classList.add("--filtered");
-//         });
-//     }
-
-//     filterButtons.forEach(filter => {
-//         filter.addEventListener("click", () => {
-//             [...filterButtons].filter(i => i !== filter).forEach(i => i.classList.remove("--current"));
-//             filtersClearButton.classList.remove("--current");
-//             filter.classList.add("--current");
-//             applyFilters(filter);
-//         });
-//     });
-
-//     filtersClearButton.addEventListener("click", () => {
-//         filtersClearButton.classList.add("--current");
-//         removeFilters();
-//     });
-// };
-
 window.addEventListener("load", () => {
-    // history.scrollRestoration = "manual";
+    history.scrollRestoration = "manual";
     documentHeight();
-    headerHeight();
+    handleHeaderOnScroll();
+    // headerHeight();
     sliderOpener();
     langInnerHTML();
     tooltipHandler();
@@ -381,5 +327,5 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", () => {
     documentHeight();
-    headerHeight();
+    // headerHeight();
 });

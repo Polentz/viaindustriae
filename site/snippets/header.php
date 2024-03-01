@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </menu>
-            <menu class="hinner-menu">
+            <menu class="inner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
                         <form class="search-wrapper" action="<?= $page->url() ?>" autocomplete="off">
@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </menu>
-            <menu class="hinner-menu">
+            <menu class="inner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
                         <a href="<?= $page->parent()->url() ?>" class="button no-category-button --current"><?= t('all') ?></a>

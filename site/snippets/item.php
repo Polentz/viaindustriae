@@ -34,7 +34,6 @@
                         <?php if ($file->caption()->isNotEmpty()) : ?>
                             <?= $file->caption() ?>
                         <?php endif ?>
-                        <nav class="gallery-pagination">1 2 3 4</nav>
                     </figcaption>
                 </figure>
             <?php endforeach ?>

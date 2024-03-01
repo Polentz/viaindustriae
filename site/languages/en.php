@@ -26,7 +26,7 @@ return [
 
       'cart' => 'Cart',
       'cart.continue-shopping' => 'Continue shopping',
-      'cart.empty' => 'Cart is empty.',
+      'cart.empty' => 'The cart is empty.',
       'cart.item.remove' => 'Remove',
       'cart.included-vat' => 'Included VAT',
       'cart.vat-included' => 'VAT incl.',
