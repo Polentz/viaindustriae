@@ -1,8 +1,14 @@
-title: Publishing
+title: 
+  en: Publishing
+  it: Publishing
+create:
+  status: unlisted
 
 sections:
   items:
-    label: false
+    label: 
+      en: Items
+      it: Libri
     type: pages
     layout: cards
     info: false
@@ -12,4 +18,5 @@ sections:
       cover: true
       ratio: 1/1
       back: black
+      query: page.cover.toFile()
     sortable: true

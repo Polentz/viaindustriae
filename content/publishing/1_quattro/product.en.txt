@@ -1,0 +1,37 @@
+Title: Quattro
+
+----
+
+Gallery:
+
+- file://cV7p6HjZ356EkHa8
+- file://lhGaf6T3R9HcHODT
+- file://HOqjcmcKcfyTfw9t
+
+----
+
+Cover: - file://cV7p6HjZ356EkHa8
+
+----
+
+Header: Luca Pucci
+
+----
+
+Info: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
+
+----
+
+Description:
+
+----
+
+Category: Libri d'artista
+
+----
+
+Blocks: [{"content":{"text":"<p>Ogni anno, al Carnevale di Sant’Eraclio (Foligno, PG), sfilano carri allegorici. Vengono fatti in cartapesta usando tre tipi di giornale: bianco (La Nazione), giallo (Il Sole 24 Ore), rosa (La Gazzetta dello Sport). <em>Quattro </em>prova ad aggiungere un quarto colore. <em>Quattro</em> può essere acquistato con o senza multiplo in edizione limitata.</p>"},"id":"b9997279-4570-4934-b466-edb52e7aeb03","isHidden":false,"type":"text"},{"content":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna condimentum mattis pellentesque. Venenatis tellus in metus vulputate eu scelerisque. Dui sapien eget mi proin sed libero enim sed faucibus. Elementum nibh tellus molestie nunc non blandit massa enim nec. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Dictumst vestibulum rhoncus est pellentesque. A condimentum vitae sapien pellentesque habitant morbi. Donec massa sapien faucibus et molestie. A diam maecenas sed enim ut sem viverra aliquet. Et pharetra pharetra massa massa ultricies mi quis.</p><p>Molestie nunc non blandit massa enim nec dui. Dui sapien eget mi proin sed libero. Tellus orci ac auctor augue. Nec dui nunc mattis enim ut. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Elit duis tristique sollicitudin nibh sit amet commodo. Amet cursus sit amet dictum. Velit dignissim sodales ut eu. Sed cras ornare arcu dui vivamus arcu. Neque vitae tempus quam pellentesque nec nam aliquam sem et. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc.</p>"},"id":"495c5fe9-9f89-4ffd-ae71-44e55e2c06c0","isHidden":false,"type":"text"}]
+
+----
+
+Caption: 

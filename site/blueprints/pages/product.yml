@@ -1,4 +1,6 @@
-title: Book
+title: 
+  en: Book
+  it: Libro
 
 columns:
   main:
@@ -9,26 +11,45 @@ columns:
         type: fields
         fields:
           gallery:
-            label: Gallery
+            label:
+              en: Gallery
+              it: Galleria immagini
             type: files
             multiple: true
+            translate: false
             image:
               icon: true
               ratio: 4/3
               back: white
               cover: true
           cover:
-            label: Cover
+            label: 
+              en: Thumbnail
+              it: Anteprima
             type: files
             multiple: false
+            translate: false
             image:
               icon: true
               ratio: 4/3
               back: white
               cover: true
           header:
+            label:
+              en: Author(s)
+              it: Autore/i
             type: text
+          panelTitle: 
+            label:
+              en: Title
+              it: Titolo
+            type: text
+            placeholder: "{{ page.title }}"
+            disabled: true
           info:
+            label:
+              en: Information
+              it: Informazioni
             type: writer
             marks:
               - bold
@@ -38,9 +59,17 @@ columns:
               - clear
             nodes: false
           description:
-            type: blocks
-            fieldsets:
-              - text
+            label:
+              en: Text
+              it: Testo
+            type: writer
+            marks:
+              - bold
+              - italic
+              - link
+              - email
+              - clear
+            nodes: false
   sidebar:
     width: 1/3
     sections:
@@ -48,8 +77,15 @@ columns:
         label: false
         type: fields
         fields:
-          extends: fields/product-standards
           category:
+            label:
+              en: Category
+              it: Categoria
             type: tags
+            max: 1
+            options:
+              type: query
+              query: page.siblings.pluck("category", ",", true)
+          extends: fields/product-standards
 
 

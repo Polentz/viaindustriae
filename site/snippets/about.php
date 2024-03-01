@@ -21,7 +21,9 @@
                     </div>
                 </div>
                 <div class="slider-content-text description-text">
-                    <?= $site->about()->toBlocks() ?>
+                    <?php if ($site->about()->isNotEmpty()) : ?>
+                        <?= $site->about() ?>
+                    <?php endif ?>
                 </div>
                 <div class="close-ui slider-close">
                     <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">

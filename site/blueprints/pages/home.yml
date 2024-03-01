@@ -1,27 +1,49 @@
-title: Home
+title: 
+  en: Home
+  it: Home
 
-sections:
-  content:
-    label: false
-    type: fields
-    fields:
-      heroLeft:
-        label: Publishing Image
-        width: 1/2
-        type: files
-        multiple: false
-        image:
-          icon: true
-          ratio: 4/3
-          back: white
-          cover: true
-      heroRight:
-        label: Projects Image
-        width: 1/2
-        type: files
-        multiple: false
-        image:
-          icon: true
-          ratio: 4/3
-          back: white
-          cover: true
+columns:
+  publishing:
+    width: 1/2
+    sections:
+      publishing:
+        label: false
+        type: fields
+        fields:
+          heroLeft:
+            label: 
+              en: Publishing image
+              it: Immagine Publishing
+            type: files
+            layout: cards
+            size: huge
+            link: false
+            text: "Cover"
+            multiple: false
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true
+  projects:
+    width: 1/2
+    sections:
+      projects:
+        label: false
+        type: fields
+        fields:
+          heroRight:
+            label: 
+              en: Projects Image
+              it: Immagine Progetti
+            type: files
+            layout: cards
+            size: huge
+            link: false
+            text: "Cover"
+            multiple: false
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true

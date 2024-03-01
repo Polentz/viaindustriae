@@ -1,4 +1,6 @@
-title: Project
+title: 
+  en: Project
+  it: Progetto
 
 
 columns:
@@ -10,26 +12,45 @@ columns:
         type: fields
         fields:
           gallery:
-            label: Gallery
+            label:
+              en: Gallery
+              it: Galleria immagini
             type: files
             multiple: true
+            translate: false
             image:
               icon: true
               ratio: 4/3
               back: white
               cover: true
           cover:
-            label: Cover
+            label: 
+              en: Thumbnail
+              it: Anteprima
             type: files
             multiple: false
+            translate: false
             image:
               icon: true
               ratio: 4/3
               back: white
               cover: true
           header:
+            label:
+              en: Header
+              it: Intestazione
             type: text
+          panelTitle: 
+            label:
+              en: Title
+              it: Titolo
+            type: text
+            placeholder: "{{ page.title }}"
+            disabled: true
           info:
+            label:
+              en: Information
+              it: Informazioni
             type: writer
             marks:
               - bold
@@ -38,10 +59,18 @@ columns:
               - email
               - clear
             nodes: false
-          blocks:
-            type: blocks
-            fieldsets:
-              - text
+          description:
+            label:
+              en: Text
+              it: Testo
+            type: writer
+            marks:
+              - bold
+              - italic
+              - link
+              - email
+              - clear
+            nodes: false
   sidebar:
     width: 1/3
     sections:
@@ -50,6 +79,13 @@ columns:
         type: fields
         fields:
           category:
+            label:
+              en: Category
+              it: Categoria
             type: tags
+            max: 1
+            options:
+              type: query
+              query: page.siblings.pluck("category", ",", true)
 
 

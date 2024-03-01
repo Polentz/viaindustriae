@@ -1,6 +1,6 @@
 title: 
-  en: Projects
-  it: Progetti
+  en: Agenda
+  it: Agenda
 create:
   status: unlisted
 
@@ -8,15 +8,14 @@ sections:
   items:
     label: 
       en: Items
-      it: Progetti
+      it: Eventi
     type: pages
     layout: cards
     info: false
     template:
-      - project
+      - event
     image:
       cover: true
       ratio: 1/1
       back: black
-      query: page.cover.toFile()
     sortable: true

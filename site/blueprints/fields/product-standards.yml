@@ -19,10 +19,10 @@ fields:
   stock:
     label:
       en: Stock
-      de: Verfügbare Produkte
+      it: Quantità disponibile
     type: number
     placeholder:
-      en: infinite
-      de: unendlich
+      en: 0
+      it: 0
     translate: false
     width: 1/3

@@ -3,30 +3,39 @@ title: Site
 tabs:
   pages:
     label:
-      en: Website
-      it: Website
+      en: Website pages
+      it: Pagine del sito web
     icon: page
     sections:
       home:
+        label:
+          en: Home
+          it: Home
         type: pages
         max: 1
         template:
           - home
       mainPages:
-        label: Main pages
+        label: 
+          en: Main pages
+          it: Pagine principali
         type: pages
-        max: 2
+        max: 3
         template:
           - shop
           - projects
+          - agenda
       pages:
+        label:
+          en: Other pages
+          it: Altre pagine
         type: pages
         template:
           - page
   about:
     label:
-      en: About
-      it: Info
+      en: Contacts and biography
+      it: Contatti e biografia
     icon: info
     columns:
       main:
@@ -61,9 +70,14 @@ tabs:
                 label:
                   en: Biography
                   it: Biografia
-                type: blocks
-                fieldsets:
-                  - text
+                type: writer
+                marks:
+                  - bold
+                  - italic
+                  - link
+                  - email
+                  - clear
+                nodes: false
   orders:
     icon: draft
     label:
