@@ -1,6 +1,8 @@
 window.addEventListener("load", () => {
-    searchFeature();
     itemWidth();
+    searchFeature();
+    openGalleryItem();
+    tooltipHandler();
 });
 
 window.addEventListener("resize", () => {

@@ -12,6 +12,18 @@ columns:
         label: false
         type: fields
         fields:
+          gallery:
+            label:
+              en: Gallery
+              it: Galleria immagini
+            type: files
+            multiple: true
+            translate: false
+            image:
+              icon: true
+              ratio: 4/3
+              back: white
+              cover: true
           quoteText:
             label: 
               en: Text preview
@@ -34,7 +46,31 @@ columns:
             label: 
               en: Date
               it: Data
-            type: text         
+            type: text    
+          info:
+            label:
+              en: Information
+              it: Informazioni
+            type: writer
+            marks:
+              - bold
+              - italic
+              - link
+              - email
+              - clear
+            nodes: false
+          description:
+            label:
+              en: Text
+              it: Testo
+            type: writer
+            marks:
+              - bold
+              - italic
+              - link
+              - email
+              - clear
+            nodes: false     
   sidebar:
     width: 1/3
     sections:

@@ -30,7 +30,9 @@
         <?php if ($results->isNotEmpty()) : ?>
             <section class="items-grid">
                 <?php foreach ($results->sortBy('category', 'desc') as $result) : ?>
-                    <?php snippet('event', ['page' => $result], slots: false) ?>
+                    <?php snippet('item', ['page' => $result], slots: true) ?>
+                        <?php slot('agenda') ?>
+                        <?php endslot() ?>
                     <?php endsnippet() ?>
                 <?php endforeach ?>
             </section>
@@ -40,7 +42,9 @@
     <?php else : ?>
         <section class="items-grid">
             <?php foreach ($items->sortBy('category', 'desc') as $item) : ?>
-                <?php snippet('event', ['page' => $item], slots: false) ?>
+                <?php snippet('item', ['page' => $item], slots: true) ?>
+                    <?php slot('agenda') ?>
+                    <?php endslot() ?>
                 <?php endsnippet() ?>
             <?php endforeach ?>
         </section>
@@ -62,3 +66,6 @@
 <?php endsnippet() ?>
 
 <?php snippet('foot') ?>
+
+<!-- https://getkirby.com/docs/reference/objects/cms/pages/filter-by -->
+<!-- https://getkirby.com/docs/cookbook/content/filtering#filter-page-collections-by-a-single-field -->

@@ -2,18 +2,29 @@
     --color-page: #a7dea7;
 }
 
-.item-cover {
+/* .item-cover {
     font-size: 24px;
     font-weight: 500;
     line-height: 110%;
     padding: 16px;
-    background: transparent;
     display: flex;
     flex-direction: column;
     justify-content: center;
+} */
+
+.item-cover-headline {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 110%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-white);
 }
 
-.item-preview .item-cover,
-.item-preview .text-title {
-    cursor: unset;
+.item-page {
+    display: none;
 }

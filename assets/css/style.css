@@ -90,7 +90,6 @@ a:not(.button a):hover {
 }
 
 .text-caption {
-    /* font-family: Georgia, serif; */
     font-size: 12px;
     font-weight: 400;
     line-height: 130%;
@@ -376,8 +375,7 @@ a:not(.button a):hover {
     display: grid;
 }
 
-.item-preview .item-cover,
-.item-preview .text-title {
+.item-preview .item-cover {
     cursor: pointer;
 }
 
@@ -405,6 +403,11 @@ a:not(.button a):hover {
     transition: opacity .5s ease-in-out, transform .5s ease-in-out;
 }
 
+.item-cover-headline {
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
 .item-cover figcaption {
     width: 100%;
     position: absolute;
@@ -420,7 +423,11 @@ a:not(.button a):hover {
 
 .item-cover:hover img {
     opacity: .75;
-    transform: translate3d(0, 0, 200px);
+    transform: translate3d(0, -10px, 200px);
+}
+
+.item-cover:hover .item-cover-headline {
+    opacity: .5;
 }
 
 .item-cover:hover figcaption {
@@ -451,8 +458,6 @@ a:not(.button a):hover {
 }
 
 .item-gallery {
-    /* height: min-content;
-    position: sticky; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -460,9 +465,6 @@ a:not(.button a):hover {
 }
 
 .item-gallery-wrapper {
-    /* height: min-content;
-    position: sticky;
-    background: var(--color-white); */
     display: flex;
     flex-direction: column;
     align-items: flex-end;

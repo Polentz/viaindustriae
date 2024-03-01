@@ -3,14 +3,6 @@ const documentHeight = () => {
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
 };
 
-// const headerHeight = () => {
-//     const header = document.querySelector("header");
-//     const stickyElements = document.querySelectorAll(".item-gallery-wrapper");
-//     stickyElements.forEach(element => {
-//         element.style.top = `${header.offsetHeight}px`;
-//     });
-// };
-
 const itemWidth = () => {
     const items = document.querySelectorAll(".item");
     items.forEach(item => {
@@ -21,7 +13,6 @@ const itemWidth = () => {
 }
 
 const handleHeaderOnScroll = () => {
-    const topBar = document.querySelector(".header");
     const innerMenu = document.querySelector(".inner-menu");
     let lastScrollTop = 0;
     window.addEventListener("scroll", () => {
