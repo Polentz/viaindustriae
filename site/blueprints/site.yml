@@ -13,6 +13,7 @@ tabs:
           it: Home
         type: pages
         max: 1
+        sortable: false
         template:
           - home
       mainPages:
@@ -21,6 +22,7 @@ tabs:
           it: Pagine principali
         type: pages
         max: 3
+        sortable: false
         template:
           - shop
           - projects

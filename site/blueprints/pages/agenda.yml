@@ -3,6 +3,10 @@ title:
   it: Agenda
 create:
   status: unlisted
+delete: false
+duplicate: false
+move: false
+sort: false
 
 image:
   icon: calendar

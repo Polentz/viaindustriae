@@ -1,6 +1,10 @@
 title: 
   en: Home
   it: Home
+delete: false
+duplicate: false
+move: false
+sort: false
 
 image:
   icon: home

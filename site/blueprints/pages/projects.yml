@@ -3,6 +3,10 @@ title:
   it: Progetti
 create:
   status: unlisted
+delete: false
+duplicate: false
+move: false
+sort: false
 
 image:
   icon: bookmark

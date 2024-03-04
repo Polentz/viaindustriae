@@ -3,6 +3,10 @@ title:
   it: Publishing
 create:
   status: unlisted
+delete: false
+duplicate: false
+move: false
+sort: false
 
 image:
   icon: store
@@ -16,6 +20,7 @@ sections:
     type: pages
     layout: cards
     info: false
+    search: true
     template:
       - product
     image:
