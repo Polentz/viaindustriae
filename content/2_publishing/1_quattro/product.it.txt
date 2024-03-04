@@ -18,7 +18,7 @@ Header: Luca Pucci
 
 ----
 
-Titleee: 
+Paneltitle: 
 
 ----
 
@@ -42,7 +42,11 @@ Tax: reduced
 
 ----
 
-Stock: 5
+Stock: 1
+
+----
+
+Titleee: 
 
 ----
 

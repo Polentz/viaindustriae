@@ -36,14 +36,13 @@
                     <?php endif ?>
                     <div class="description-header-info-wrapper">
                         <?php if ($kirby->language()->code() == 'it') : ?>
-                            <p class="price text-subtitle"><?= $page->price() ?> €</p>
+                            <p class="price text-subtitle"><?= $page->price() ?> Euro</p>
                         <?php elseif ($kirby->language()->code() == 'en') : ?>
-                            <p class="price text-subtitle">€ <?= $page->price() ?></p>
+                            <p class="price text-subtitle">Euro <?= $page->price() ?></p>
                         <?php endif ?>
                     </div>
                 </div>
                 <div class="description-header-ui">
-                    <!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_copy_clipboard2 -->
                     <div class="tooltip">
                         <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
                         <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>

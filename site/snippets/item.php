@@ -81,9 +81,9 @@
                 <p class="text"><?= $page->title() ?></p>
                 <?php if ($slots->product()) : ?>
                     <?php if ($kirby->language()->code() == 'it') : ?>
-                        <p class="item-price text-title"><?= $page->price() ?> €</p>
+                        <p class="item-price text-title"><?= $page->price() ?> Euro</p>
                     <?php elseif ($kirby->language()->code() == 'en') : ?>
-                        <p class="item-price text-title">€ <?= $page->price() ?></p>
+                        <p class="item-price text-title">Euro <?= $page->price() ?></p>
                     <?php endif ?>
                 <?php endif ?>
             </div>
@@ -118,9 +118,9 @@
                     <?php if ($slots->product()) : ?>
                         <div class="description-header-info-wrapper">
                             <?php if ($kirby->language()->code() == 'it') : ?>
-                            <p class="price text"><?= $page->price() ?> €</p>
+                            <p class="price text"><?= $page->price() ?> Euro</p>
                             <?php elseif ($kirby->language()->code() == 'en') : ?>
-                                <p class="price text">€ <?= $page->price() ?></p>
+                                <p class="price text">Euro <?= $page->price() ?></p>
                             <?php endif ?>
                         </div>
                     <?php endif ?>

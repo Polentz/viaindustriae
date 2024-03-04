@@ -61,8 +61,8 @@ return [
         'stock.not-available.1' => 'È rimasto solo un articolo di “{productTitle}”.',
         'stock.not-available.count' => 'Sono rimasti solo articoli {availableStock} di “{productTitle}”.',
     
-        'order.invoice' => 'Fattura',
-        'order.invoice-number' => 'Numero di fattura',
+        'order.invoice' => 'Ordine',
+        'order.invoice-number' => "Numero d'ordine",
         'order.date' => 'Data',
         'order.shipping' => 'Spedizione',
         'order.shipping.text' => "L'ordine verrà spedito nei prossimi giorni.",

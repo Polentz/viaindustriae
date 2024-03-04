@@ -2,6 +2,7 @@ label: field.price
 type: number
 step: .01
 min: 0
-before: "{{ kirby.option('ww.merx.currencySymbol') }}"
+# before: "{{ kirby.option('ww.merx.currencySymbol') }}"
+before: Euro
 required: true
 translate: false

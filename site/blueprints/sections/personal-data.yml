@@ -8,15 +8,32 @@ fields:
       en: Email
       it: E-mail
     type: email
-    default: mail@example.com
+    placeholder: mail@example.com
     required: true
     translate: false
   name:
     label:
-      en: Name
+      en: First Name
       it: Nome
     type: text
-    default: Marta Doe
+    placeholder:
+      en: First Name
+      it: Nome    
+    # default: Marta Doe
+    required: true
+    translate: false
+    validate:
+      minLength: 3
+      maxLength: 160
+  surname:
+    label:
+      en: Last Name
+      it: Cognome
+    type: text
+    placeholder:
+      en: Last Name
+      it: Cognome 
+    # default: Marta Doe
     required: true
     translate: false
     validate:
@@ -35,7 +52,7 @@ fields:
       en: Street
       it: Via/Piazza
     type: text
-    default: Milkyway 1
+    # default: Milkyway 1
     required: true
     translate: false
     validate:
@@ -46,7 +63,7 @@ fields:
       en: Postal Code
       it: CAP
     type: text
-    default: 12345
+    # default: 12345
     width: 1/3
     required: true
     translate: false
@@ -55,34 +72,34 @@ fields:
       en: City
       it: Città
     type: text
-    default: Ducktown
+    # default: Ducktown
     width: 2/3
     required: true
     translate: false
     validate:
       minLength: 3
       maxLength: 160
-  country: # ISO 3166
+  country:
     label:
       en: Country
       it: Paese
     type: text
-    default: DE
+    # default: DE
     placeholder:
-      en: US
-      it: IT
+      en: Germany
+      it: Italia
     required: true
     validate:
       alpha: true
-      minLength: 2
-      maxLength: 2
+      # minLength: 2
+      # maxLength: 2
     translate: false
-  headlineShipping:
-    type: headline
-    label:
-      en: Shipping
-      it: Spedizione
-    numbered: false
+  # headlineShipping:
+  #   type: headline
+  #   label:
+  #     en: Shipping
+  #     it: Spedizione
+  #   numbered: false
   billingAddressIsShippingAddress:
     default: true
     label:

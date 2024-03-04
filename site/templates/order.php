@@ -14,66 +14,41 @@
 ?>
 <?php snippet('head') ?>
 
-  <?php snippet('header') ?>
+<?php snippet('header', slots: true) ?>
+    <?php slot('order') ?>
+    <?php endslot() ?>
+<?php endsnippet() ?> 
 
-  <main class="order">
-    <div class="grid">
-      <h1 data-width="1/1">
-        <?= $page->title() ?>
-      </h1>
-      <p data-width="1/1">
-        <strong><?= t('order.date') ?> <?= $page->invoiceDate()->toIntlDate() ?></strong>
-      </p>
-      <p class="text" data-width="2/3">
-        <?= $page->name() ?><br>
-        <?php if ($page->organization()->isNotEmpty()): ?>
-          <?= $page->organization() ?><br>
-        <?php endif; ?>
-        <?= $page->streetAddress() ?><br>
-        <?= $page->postalCode() ?> <?= $page->city() ?><br>
-        <?= $page->country() ?><br>
-      </p>
-      <div data-width="1/1">
-        <?php snippet('cart', ['cart' => $page->cart()]); ?>
+  <main class="main content order">
+    <div class="order-recap">
+
+      <div class="order-recap-wrapper">
+        <h1 class="text-title">
+          <?= $page->title() ?><br>          
+          <?= $page->invoiceDate()->toIntlDate() ?>
+        </h1>
       </div>
-      <div class="text" data-width="1/2">
-        <h2><?= t('order.payment') ?></h2>
-        <p><?= tt('order.payment.text', compact('paymentMethod')) ?></p>
-        <?php if ($page->paymentMethod()->toString() === 'prepayment'): ?>
-          <?php if ($page->paymentComplete()->toBool() === true): ?>
-            <p><?= tt('order.payment.text.paid.date', ['datetime' => $page->paidDate()->toIntlDate()]) ?></p>
-          <?php else: ?>
-            <p>
-              <?= t('order.payment.text.not-yet-paid') ?><br>
-              <?= tt('order.payment.text.invoice', compact('sum')) ?>
-            </p>
-            <table class="table">
-              <tr>
-                <th><?= t('order.invoice.recipient') ?></th>
-                <td><?= $site->title() ?></td>
-              </tr>
-              <tr>
-                <th><?= t('order.invoice.iban') ?></th>
-                <td><?= formatIBAN('DE0000000000000000') ?></td>
-              </tr>
-              <tr>
-                <th><?= t('order.invoice.sum') ?></th>
-                <td><?= $sum ?></td>
-              </tr>
-              <tr>
-                <th><?= t('order.invoice.purpose') ?></th>
-                <td><?= $page->title() ?></td>
-              </tr>
-            </table>
-            <p></p>
-          <?php endif; ?>
-        <?php endif; ?>
+
+      <div class="order-recap-wrapper">
+        <p class="text-subtitle">
+          <?= $page->name() ?> <?= $page->surname() ?><br>
+          <?php if ($page->organization()->isNotEmpty()): ?>
+            <?= $page->organization() ?><br>
+          <?php endif ?>
+          <?= $page->streetAddress() ?><br>
+          <?= $page->postalCode() ?> <?= $page->city() ?><br>
+          <?= $page->country() ?><br>
+        </p>
       </div>
-      <div class="text" data-width="1/2">
-        <h2><?= t('order.shipping-address') ?></h2>
-        <p>
+
+      <div class="order-recap-wrapper order-recap-headline">
+        <h2 class="text-title"><?= t('order.shipping-address') ?></h2>
+      </div>
+
+      <div class="order-recap-wrapper text-subtitle">
+        <p class="text-subtitle">
           <?php if ($page->billingAddressIsShippingAddress()->toBool() === true): ?>
-            <?= $page->name() ?><br>
+            <?= $page->name() ?> <?= $page->surname() ?><br>
             <?php if ($page->organization()->isNotEmpty()): ?>
               <?= $page->organization() ?><br>
             <?php endif; ?>
@@ -91,7 +66,45 @@
           <?php endif; ?>
         </p>
       </div>
+
+      <div class="order-recap-wrapper order-recap-headline">
+        <h2 class="text-title"><?= t('order.payment') ?></h2>
+      </div>
+      
+      <div class="order-recap-wrapper text-subtitle">
+        <p><?= tt('order.payment.text', compact('paymentMethod')) ?></p>
+        <?php if ($page->paymentMethod()->toString() === 'prepayment'): ?>
+          <?php if ($page->paymentComplete()->toBool() === true): ?>
+            <p><?= tt('order.payment.text.paid.date', ['datetime' => $page->paidDate()->toIntlDate()]) ?></p>
+          <?php else: ?>
+            <p>
+              <?= t('order.payment.text.not-yet-paid') ?><br>
+              <?= tt('order.payment.text.invoice', compact('sum')) ?>
+            </p>
+            <table class="table text-title">
+              <tr>
+                <th><?= t('order.invoice.recipient') ?></th>
+                <td><?= $site->title() ?></td>
+              </tr>
+              <tr>
+                <th><?= t('order.invoice.iban') ?></th>
+                <td><?= formatIBAN('DE0000000000000000') ?></td>
+              </tr>
+              <tr>
+                <th><?= t('order.invoice.sum') ?></th>
+                <td><?= $sum ?></td>
+              </tr>
+              <tr>
+                <th><?= t('order.invoice.purpose') ?></th>
+                <td><?= $page->title() ?></td>
+              </tr>
+            </table>
+          <?php endif ?>
+        <?php endif ?>
+      </div>
     </div>
+
+    <?php snippet('cart', ['cart' => $page->cart()]) ?>
   </main>
 
   <?php snippet('footer') ?>

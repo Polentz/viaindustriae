@@ -59,7 +59,8 @@ Kirby::plugin('ww/merx', [
         'successPage' => 'success',
         'ordersPage' => 'orders',
         'currency' => 'EUR',
-        'currencySymbol' => '€',
+        // 'currencySymbol' => '€',
+        'currencySymbol' => 'Euro',
         'production' => false,
     ],
     'templates' => [
@@ -135,7 +136,7 @@ Kirby::plugin('ww/merx', [
             'field.paymentComplete' => 'Pagamento completo',
             'field.price' => 'Prezzo',
             'field.tax' => 'Imposta %',
-            'field.items' => 'Carrello',
+            'field.items' => 'Articoli acquistati',
             'field.quantity' => 'Quantità',
             'field.overview' => 'Panoramica',
             'field.order' => 'Ordine',

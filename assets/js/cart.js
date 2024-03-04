@@ -150,7 +150,6 @@ class Cart {
 
         if (data.quantity === 0) {
             this.element.innerHTML = `
-
             <div class="cart-header">
                 <div class="main-menu">
                     <div class="main-nav-wrapper">
@@ -159,7 +158,6 @@ class Cart {
                     </div>
                 </div>
             </div>
-
             <div class="cart-content">
                 <div class="cart-content-wrapper">
                     <ul class="cart-item">

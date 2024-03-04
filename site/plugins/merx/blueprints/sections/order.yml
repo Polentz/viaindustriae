@@ -46,7 +46,7 @@ fields:
         Invoice Date: {{ page.invoiceDate }}<br>
         Paid Date: {{ page.paidDate }}<br>
       it: >
-        Numero fattura: {{ page.invoiceNumber }}<br>
+        Numero d'ordine: {{ page.invoiceNumber }}<br>
         Totale: {{ page.formattedSum }}<br>
-        Data fattura: {{ page.invoiceDate }}<br>
+        Data ordine: {{ page.invoiceDate }}<br>
         Data pagamento: {{ page.paidDate }}<br>

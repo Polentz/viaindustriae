@@ -35,18 +35,17 @@
 ?>
 <div
   class="field"
-  data-width="<?= $field['width'] ?>"
   data-name="<?= $field['name'] ?>"
   <?php if (array_key_exists('when', $field)) : ?>
     data-when='<?= json_encode($field['when']) ?>'
-  <?php endif; ?>
+  <?php endif ?>
   data-type="<?= $field['type'] ?>"
 >
-  <label for="<?= $field['name'] ?>">
+  <label for="<?= $field['name'] ?>" class="text-title">
     <?= $field['label'] ?>
     <?php if ($field['required']): ?>
       <abbr title="<?= I18n::translate('field.required') ?>">*</abbr>
-    <?php endif; ?>
+    <?php endif ?>
   </label>
   <input
     <?= Html::attr([
@@ -64,8 +63,8 @@
     ]) ?>
   >
   <?php if (isset($field['help'])): ?>
-    <div class="color-gray-600 text-s">
+    <div class="text-caption">
       <?= $field['help'] ?>
     </div>
-  <?php endif; ?>
+  <?php endif ?>
 </div>

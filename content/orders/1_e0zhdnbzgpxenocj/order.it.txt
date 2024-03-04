@@ -1,24 +1,28 @@
-Email: mail@example.com
+Email: giuliapolenta@gmail.com
 
 ----
 
-Name: Marta Doe
+Name: Giulia
 
 ----
 
-Streetaddress: Milkyway 1
+Surname: Polenta
 
 ----
 
-Postalcode: 12345
+Streetaddress: Forster Strasse 50
 
 ----
 
-City: Ducktown
+Postalcode: 10999
 
 ----
 
-Country: DE
+City: Berlin
+
+----
+
+Country: Germany
 
 ----
 
@@ -37,37 +41,37 @@ Stripepaymentintentid:
 Items:
 
 - 
-  key: page://TYFEUZNaz7pgQHBI
-  id: page://TYFEUZNaz7pgQHBI
+  title: Quattro
   quantity: 1
   price: 16
-  tax: 1.0467289719626
-  title: Quattro
+  id: page://TYFEUZNaz7pgQHBI
+  key: page://TYFEUZNaz7pgQHBI
   taxrate: 7
   template: product
   uid: quattro
+  tax: "1.0467289719626"
   sum: 16
   sumtax: "1.0467289719626"
 - 
-  key: shipping
-  id: shipping
+  title: Spedizioni
   quantity: 1
   price: 5
-  tax: 0
-  title: shipping
+  id: shipping
+  key: shipping
   taxrate: 0
   template: shipping
   uid: shipping
+  tax: 0
   sum: 5
   sumtax: 0
 
 ----
 
-Invoicedate: 2024-03-04T08:49:50+00:00
+Invoicedate: 2024-03-04T16:13:27+00:00
 
 ----
 
-Uuid: 4iDqvUFp2e5z3GZ9
+Uuid: ukvrZXhpSoZyqtVE
 
 ----
 

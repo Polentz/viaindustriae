@@ -12,6 +12,13 @@ const itemWidth = () => {
     });
 }
 
+const headerHeight = () => {
+    const header = document.querySelector(".header");
+    const cart = document.querySelector(".cart");
+    cart.style.top = `${header.offsetHeight}px`;
+    console.log(header.offsetHeight)
+}
+
 const handleHeaderOnScroll = () => {
     const innerMenu = document.querySelector(".inner-menu");
     let lastScrollTop = 0;

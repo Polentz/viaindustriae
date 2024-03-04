@@ -18,9 +18,4 @@
  *  }
  */
 ?>
-<h2
-  class="field"
-  data-width="<?= $field['width'] ?>"
->
-  <?= $field['label'] ?>
-</h2>
+<h2 class="field text-subtitle"><?= $field['label'] ?></h2>

@@ -132,7 +132,7 @@
                             <?php if ($agenda->isOpen()) : ?>
                                 <p class="button nav-button --current"><?= $agenda->title() ?></p>
                             <?php else : ?>
-                                <a class="button nav-button " href="<?= $agenda->url() ?>"><?= $agenda->title() ?></a>
+                                <a class="button nav-button" href="<?= $agenda->url() ?>"><?= $agenda->title() ?></a>
                             <?php endif ?>
                         <?php endforeach ?>
                     </div>
@@ -161,6 +161,33 @@
                                 </svg>
                             </a>
                         </form>
+                    </div>
+                </div>
+            </menu>
+        <?php endif ?>
+
+        <?php if ($slots->order()) : ?>
+            <menu class="main-menu">
+                <div class="main-nav">
+                    <div class="main-nav-wrapper">
+                        <a class="button nav-button" href="<?= page('home')->url() ?>"><?= $site->title() ?></a>
+                        <?php foreach ($site->children()->filterby('template', 'shop') as $shop) : ?>
+                            <a class="button nav-button" href="<?= $shop->url() ?>"><?= $shop->title() ?></a>
+                        <?php endforeach ?>
+                    </div>
+                </div>
+                <div class="main-nav">
+                    <div class="main-nav-wrapper">                        
+                        <details class="details-cart" open>
+                            <summary class="button nav-button cart-button --current" data-action="toggle-cart">
+                                <p><?= t('cart.to-checkout') ?></p>
+                            </summary>
+                        </details>
+                        <?php if ($kirby->language()->code() == 'it') : ?>
+                            <a class="button nav-button lang-button" href="<?= $page->url('en') ?>" hreflang="en">It</a>
+                        <?php elseif ($kirby->language()->code() == 'en') : ?>
+                            <a class="button nav-button lang-button" href="<?= $page->url('it') ?>" hreflang="it">En</a>
+                        <?php endif ?>     
                     </div>
                 </div>
             </menu>

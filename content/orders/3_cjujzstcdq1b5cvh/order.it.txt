@@ -1,0 +1,90 @@
+Email: giuliapolenta@gmail.com
+
+----
+
+Name: Giulia
+
+----
+
+Surname: Polenta
+
+----
+
+Streetaddress: Via San Giovanni, 91
+
+----
+
+Postalcode: 60020
+
+----
+
+City: Polverigi
+
+----
+
+Country: Italy
+
+----
+
+Billingaddressisshippingaddress: true
+
+----
+
+Paymentmethod: prepayment
+
+----
+
+Stripepaymentintentid: 
+
+----
+
+Items:
+
+- 
+  title: Contenuto Rimosso. Il fuoco nel Quadrato
+  quantity: 1
+  price: 15
+  id: page://LkI7KZv4K0GqGIpX
+  key: page://LkI7KZv4K0GqGIpX
+  taxrate: 0
+  template: product
+  uid: contenuto-rimosso-il-fuoco-nel-quadrato
+  tax: 0
+  sum: 15
+  sumtax: 0
+- 
+  title: Quattro
+  quantity: 1
+  price: 16
+  id: page://TYFEUZNaz7pgQHBI
+  key: page://TYFEUZNaz7pgQHBI
+  taxrate: 7
+  template: product
+  uid: quattro
+  tax: "1.0467289719626"
+  sum: 16
+  sumtax: "1.0467289719626"
+- 
+  title: Spedizioni
+  quantity: 1
+  price: 5
+  id: shipping
+  key: shipping
+  taxrate: 0
+  template: shipping
+  uid: shipping
+  tax: 0
+  sum: 5
+  sumtax: 0
+
+----
+
+Invoicedate: 2024-03-04T16:31:00+00:00
+
+----
+
+Uuid: YZOQiHx4HVkNVuq0
+
+----
+
+Paymentcomplete: false

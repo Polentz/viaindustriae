@@ -1,4 +1,51 @@
+:root {
+    --color-page: #baa0de;
+}
+
+.order {
+    flex-direction: row;
+    gap: 40px;
+}
+
 .cart {
-    left: auto;
-    right: 0;
+    /* position: static;
+    flex: 1 1;
+    height: auto; */
+    position: static;
+    flex: 1 1;
+    height: fit-content;
+    position: sticky;
+    top: 160px;
+}
+
+.cart-content {
+    padding: 40px;
+}
+
+.cart-header {
+    display: none;
+}
+
+.order-recap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1 1;
+    padding: 40px;
+    border: solid 1px var(--color-page);
+}
+
+.order-recap-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.table th,
+.table td {
+    text-align: start;
+}
+
+.table td {
+    padding-left: 24px;
 }

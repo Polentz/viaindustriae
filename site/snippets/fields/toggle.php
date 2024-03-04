@@ -28,11 +28,10 @@
 ?>
 <div
   class="field"
-  data-width="<?= $field['width'] ?>"
   data-name="<?= $field['name'] ?>"
   <?php foreach ($field['when'] ?? [] as $key => $value) : ?>
     data-when-<?= $key ?>="<?= $value ?>"
-  <?php endforeach; ?>
+  <?php endforeach ?>
   data-type="checkbox"
 >
   <input
@@ -51,15 +50,15 @@
       'value' => 'true',
     ]) ?>
   >
-  <label for="<?= $field['name'] ?>">
+  <label for="<?= $field['name'] ?>" class="text-title">
     <?= $field['label'] ?>
     <?php if ($field['required']): ?>
       <abbr title="<?= I18n::translate('field.required') ?>">*</abbr>
-    <?php endif; ?>
+    <?php endif ?>
   </label>
   <?php if (isset($field['help'])): ?>
-    <div class="color-gray-600 text-s">
+    <div class="text-caption">
       <?= $field['help'] ?>
     </div>
-  <?php endif; ?>
+  <?php endif ?>
 </div>
