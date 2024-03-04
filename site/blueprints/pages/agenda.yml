@@ -4,6 +4,10 @@ title:
 create:
   status: unlisted
 
+image:
+  icon: calendar
+  query: false
+
 sections:
   items:
     label: 
@@ -16,7 +20,6 @@ sections:
       - event
     image:
       cover: false
-      icon: false
       ratio: 1/1
       back: "#a7dea7"
     sortable: true

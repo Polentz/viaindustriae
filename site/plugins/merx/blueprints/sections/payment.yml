@@ -13,8 +13,8 @@ fields:
     text:
       -
         en: "No"
-        de: Nein
+        it: "No"
       -
         en: "Yes"
-        de: Ja
+        it: "Sì"
     translate: false

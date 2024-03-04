@@ -33,6 +33,8 @@
     </section>
 </main>
 
+<?= snippet('about') ?>
+
 <?php snippet('footer', slots: true) ?>
     <?php slot('home') ?>
     <?php endslot() ?>

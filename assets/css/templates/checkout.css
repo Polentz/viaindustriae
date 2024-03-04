@@ -8,6 +8,10 @@
     }
 }
 
+/* .cart {
+    display: none;
+} */
+
 .checkout {
     display: grid;
     row-gap: 2rem;
@@ -50,9 +54,9 @@
         align-items: start;
     }
 
-    .checkout .cart {
+    /* .checkout .cart {
         position: sticky;
         top: var(--spacing-m);
         grid-row-end: span 2;
-    }
+    } */
 }

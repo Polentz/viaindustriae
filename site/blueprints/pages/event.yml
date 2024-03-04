@@ -4,6 +4,10 @@ title:
 create:
   status: unlisted
 
+image:
+  icon: false
+  query: false
+
 columns:
   main:
     width: 2/3

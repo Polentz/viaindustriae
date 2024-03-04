@@ -4,6 +4,8 @@ title:
 create:
   status: unlisted
 
+image:
+  icon: false
 
 columns:
   main:

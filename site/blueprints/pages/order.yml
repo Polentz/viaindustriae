@@ -29,7 +29,7 @@ tabs:
   personalData:
     label:
       en: Personal Data
-      de: Persönliche Daten
+      it: Dati personali
     icon: user
     sections:
       personalData: sections/personal-data

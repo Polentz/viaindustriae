@@ -2,6 +2,10 @@ title:
   en: Home
   it: Home
 
+image:
+  icon: home
+  query: false
+
 columns:
   publishing:
     width: 1/2

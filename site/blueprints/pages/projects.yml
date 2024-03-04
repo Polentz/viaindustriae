@@ -4,6 +4,10 @@ title:
 create:
   status: unlisted
 
+image:
+  icon: bookmark
+  query: false
+
 sections:
   items:
     label: 

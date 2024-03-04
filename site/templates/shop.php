@@ -65,6 +65,8 @@
     <?php endif ?>
 </main>
 
+<?= snippet('about') ?>
+
 <?php snippet('footer', slots: true) ?>
     <?php slot('page') ?>
     <?php endslot() ?>

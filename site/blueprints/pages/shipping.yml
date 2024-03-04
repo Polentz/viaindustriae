@@ -20,15 +20,15 @@ fields:
     required: false
     label:
       en: Free shipping from
-      de: Kostenloser Versand ab
+      it: Spedizione gratuita da
     placeholder:
       en: Always free shipping
-      de: Immer kostenloser Versand
+      it: Spedizione sempre gratuita
     width: 1/3
   info:
     type: info
     text:
       en: >
         The shipping cost of {{ page.price.toFormattedPrice }} (price) will be automatically added to the cart as long as the amount is below {{ page.freeShipping.toFormattedPrice }} (Free shipping from).
-      de: >
-        Die Versandkosten von {{ page.price.toFormattedPrice }} (Preis) werden dem Warenkorb automatisch hinzugefügt, so lange der Betrag von {{ page.freeShipping.toFormattedPrice }} (Kostenloser Versand ab) unterschritten ist.
+      it: >
+        Il costo di spedizione di {{ page.price.toFormattedPrice }} (prezzo) verrà aggiunto automaticamente al carrello, purché l'importo sia inferiore a {{ page.freeShipping.toFormattedPrice }}. (spedizione gratuita da).

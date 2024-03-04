@@ -22,8 +22,6 @@
   <?php endif; ?>
 
   <main class="checkout content">
-    <!-- <h1><?= $page->title() ?></h1> -->
-
     <div class="cart" id="cart" data-variant="checkout"></div>
 
     <form class="grid" method="post" id="checkout-form" action="/api/shop/checkout">

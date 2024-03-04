@@ -1,5 +1,3 @@
-<?= snippet('about') ?>
-    
 <footer class="footer">
     <?php if ($slots->home()) : ?>
         <menu class="main-menu">

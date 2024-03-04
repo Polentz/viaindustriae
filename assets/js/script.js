@@ -318,14 +318,8 @@ const langInnerHTML = () => {
 window.addEventListener("load", () => {
     history.scrollRestoration = "manual";
     documentHeight();
-    handleHeaderOnScroll();
-    // headerHeight();
-    sliderOpener();
-    langInnerHTML();
-    tooltipHandler();
 });
 
 window.addEventListener("resize", () => {
     documentHeight();
-    // headerHeight();
 });
