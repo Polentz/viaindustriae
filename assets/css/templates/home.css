@@ -22,10 +22,10 @@
     color: var(--color-black);
 }
 
-.nav-button#to-shop,
+/* .nav-button#to-shop,
 .nav-button#to-projects {
     visibility: hidden;
-}
+} */
 
 .static-button {
     cursor: ew-resize;

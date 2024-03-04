@@ -42,9 +42,9 @@ const shutterEffect = () => {
     const toProjectsButton = document.getElementById("to-projects");
     let oldx = 0;
 
-    gsap.set([toShopButton, toProjectsButton], {
-        autoAlpha: 0,
-    });
+    // gsap.set([toShopButton, toProjectsButton], {
+    //     autoAlpha: 0,
+    // });
 
     const toProjectsButtonPos = toProjectsButton.getBoundingClientRect().left - 5;
     const toShopButtonPos = toShopButton.getBoundingClientRect().right + 5;

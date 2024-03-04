@@ -12,15 +12,19 @@
 ?>
 <?php snippet('head') ?>
 
-  <?php snippet('header') ?>
+  <?php snippet('header', slots: true) ?>
+      <?php slot('home') ?>
+      <?php endslot() ?>
+  <?php endsnippet() ?>
+
   <?php if ($message): ?>
     <div class="global-message"><?= $message ?></div>
   <?php endif; ?>
 
-  <main class="checkout">
-    <h1><?= $page->title() ?></h1>
+  <main class="checkout content">
+    <!-- <h1><?= $page->title() ?></h1> -->
 
-    <div class="cart" id="cart" data-variant="checkout" data-theme="dark"></div>
+    <div class="cart" id="cart" data-variant="checkout"></div>
 
     <form class="grid" method="post" id="checkout-form" action="/api/shop/checkout">
       <?php foreach ($fields as $field) : ?>
@@ -78,6 +82,9 @@
     <?php endif; ?>
   </main>
 
-  <?php snippet('footer') ?>
+<?php snippet('footer', slots: true) ?>
+  <?php slot('page') ?>
+  <?php endslot() ?>
+<?php endsnippet() ?>
 
-<?php snippet('foot') ?>
+<?= snippet('foot') ?>

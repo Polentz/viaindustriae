@@ -404,8 +404,7 @@ a:not(.button a):hover {
 }
 
 .item-cover-headline {
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
+    transition: color .35s ease-in-out;
 }
 
 .item-cover figcaption {
@@ -427,7 +426,7 @@ a:not(.button a):hover {
 }
 
 .item-cover:hover .item-cover-headline {
-    opacity: .5;
+    color: var(--color-neutral);
 }
 
 .item-cover:hover figcaption {

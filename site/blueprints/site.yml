@@ -13,6 +13,7 @@ tabs:
           it: Home
         type: pages
         max: 1
+        image: false
         template:
           - home
       mainPages:
@@ -20,6 +21,7 @@ tabs:
           en: Main pages
           it: Pagine principali
         type: pages
+        image: false
         max: 3
         template:
           - shop
@@ -30,6 +32,7 @@ tabs:
           en: Other pages
           it: Altre pagine
         type: pages
+        image: false
         template:
           - page
   about:
