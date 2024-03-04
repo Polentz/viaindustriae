@@ -80,11 +80,7 @@
                 <p class="text-title"><?= $page->header() ?></p>
                 <p class="text"><?= $page->title() ?></p>
                 <?php if ($slots->product()) : ?>
-                    <?php if ($kirby->language()->code() == 'it') : ?>
-                        <p class="item-price text-title"><?= $page->price() ?> Euro</p>
-                    <?php elseif ($kirby->language()->code() == 'en') : ?>
-                        <p class="item-price text-title">Euro <?= $page->price() ?></p>
-                    <?php endif ?>
+                    <p class="item-price text-title">€ <?= $page->price() ?></p>
                 <?php endif ?>
             </div>
         </div>
@@ -117,11 +113,7 @@
                     <?php endif ?>
                     <?php if ($slots->product()) : ?>
                         <div class="description-header-info-wrapper">
-                            <?php if ($kirby->language()->code() == 'it') : ?>
-                            <p class="price text"><?= $page->price() ?> Euro</p>
-                            <?php elseif ($kirby->language()->code() == 'en') : ?>
-                                <p class="price text">Euro <?= $page->price() ?></p>
-                            <?php endif ?>
+                            <p class="item-price text-title">€ <?= $page->price() ?></p>
                         </div>
                     <?php endif ?>
                 </div>

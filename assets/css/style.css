@@ -87,12 +87,13 @@ a:not(.button a):hover {
 .text-subtitle {
     font-size: 14px;
     font-weight: 400;
+    line-height: 120%;
 }
 
 .text-caption {
     font-size: 12px;
     font-weight: 400;
-    line-height: 130%;
+    line-height: 120%;
 }
 
 .header {
@@ -108,7 +109,13 @@ a:not(.button a):hover {
     position: relative;
     bottom: 0;
     padding: var(--inner-margin);
+    background: var(--color-page);
+    /* border-top: solid 1px var(--color-black); */
     z-index: 8;
+}
+
+.footer .main-menu {
+    padding-top: 160px;
 }
 
 .button {
@@ -566,7 +573,7 @@ a:not(.button a):hover {
 
 .cart-content {
     display: block;
-    padding: 160px 40px;
+    padding: var(--main-margin);
 }
 
 .cart-content-wrapper {

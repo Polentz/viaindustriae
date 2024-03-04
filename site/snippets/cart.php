@@ -31,18 +31,18 @@
                 <?php endif ?>
               </li>
               <li class="cart-item text-subtitle"><?= $item['quantity'] ?></li>
-              <li class="cart-item text-subtitle"><?= $item['price'] ?> Euro</li>
+              <li class="cart-item text-subtitle">€ <?= $item['price'] ?></li>
             </ul>
         <?php endforeach ?>
     </div>
     <div class="cart-content-wrapper">
         <div class="cart-sum">
             <p class="text-title"><?= t('cart.shipping') ?></p>
-            <p class="text-subtitle"><?= $shippingPrice === 0 ? t('cart.free-shipping') : $shippingPrice ?> Euro</p>
+            <p class="text-subtitle">€ <?= $shippingPrice === 0 ? t('cart.free-shipping') : $shippingPrice ?></p>
         </div>
         <div class="cart-sum">
             <p class="text-title"><?= t('cart.sum') ?></p>
-            <p class="text-subtitle"><?= $cart->getSum() ?> Euro</p>
+            <p class="text-subtitle">€ <?= $cart->getSum() ?></p>
         </div>
     </div>
   </div>  

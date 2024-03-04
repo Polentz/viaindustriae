@@ -41,18 +41,6 @@ Stripepaymentintentid:
 Items:
 
 - 
-  title: Contenuto Rimosso. Il fuoco nel Quadrato
-  quantity: 1
-  price: 15
-  id: page://LkI7KZv4K0GqGIpX
-  key: page://LkI7KZv4K0GqGIpX
-  taxrate: 0
-  template: product
-  uid: contenuto-rimosso-il-fuoco-nel-quadrato
-  tax: 0
-  sum: 15
-  sumtax: 0
-- 
   title: Quattro
   quantity: 1
   price: 16
@@ -79,11 +67,11 @@ Items:
 
 ----
 
-Invoicedate: 2024-03-04T16:31:00+00:00
+Invoicedate: 2024-03-04T17:39:24+00:00
 
 ----
 
-Uuid: YZOQiHx4HVkNVuq0
+Uuid: bHDiO29Ed0z1Kxvs
 
 ----
 

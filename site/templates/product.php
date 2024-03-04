@@ -35,11 +35,7 @@
                         <div class="description-header-info-wrapper text-caption"><?= $page->info() ?></div>
                     <?php endif ?>
                     <div class="description-header-info-wrapper">
-                        <?php if ($kirby->language()->code() == 'it') : ?>
-                            <p class="price text-subtitle"><?= $page->price() ?> Euro</p>
-                        <?php elseif ($kirby->language()->code() == 'en') : ?>
-                            <p class="price text-subtitle">Euro <?= $page->price() ?></p>
-                        <?php endif ?>
+                        <p class="price text-subtitle">€ <?= $page->price() ?></p>
                     </div>
                 </div>
                 <div class="description-header-ui">

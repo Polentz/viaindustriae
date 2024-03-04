@@ -10,19 +10,19 @@ Surname: Polenta
 
 ----
 
-Streetaddress: Forster Strasse 50
+Streetaddress: Via San Giovanni, 91
 
 ----
 
-Postalcode: 10999
+Postalcode: 60020
 
 ----
 
-City: Berlin
+City: Polverigi
 
 ----
 
-Country: Germany
+Country: Italy
 
 ----
 
@@ -41,17 +41,17 @@ Stripepaymentintentid:
 Items:
 
 - 
-  title: Quattro
+  title: Contenuto Rimosso. Il fuoco nel Quadrato
   quantity: 1
-  price: 16
-  id: page://TYFEUZNaz7pgQHBI
-  key: page://TYFEUZNaz7pgQHBI
-  taxrate: 7
+  price: 15
+  id: page://LkI7KZv4K0GqGIpX
+  key: page://LkI7KZv4K0GqGIpX
+  taxrate: 0
   template: product
-  uid: quattro
-  tax: "1.0467289719626"
-  sum: 16
-  sumtax: "1.0467289719626"
+  uid: contenuto-rimosso-il-fuoco-nel-quadrato
+  tax: 0
+  sum: 15
+  sumtax: 0
 - 
   title: Spedizioni
   quantity: 1
@@ -67,11 +67,11 @@ Items:
 
 ----
 
-Invoicedate: 2024-03-04T16:13:27+00:00
+Invoicedate: 2024-03-04T19:42:30+00:00
 
 ----
 
-Uuid: ukvrZXhpSoZyqtVE
+Uuid: ImS7oLYZe9qzysEb
 
 ----
 

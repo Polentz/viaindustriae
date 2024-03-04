@@ -59,8 +59,7 @@ Kirby::plugin('ww/merx', [
         'successPage' => 'success',
         'ordersPage' => 'orders',
         'currency' => 'EUR',
-        // 'currencySymbol' => '€',
-        'currencySymbol' => 'Euro',
+        'currencySymbol' => '€',
         'production' => false,
     ],
     'templates' => [

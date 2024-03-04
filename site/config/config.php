@@ -7,8 +7,6 @@ return [
     'panel' => [
         'css' => 'assets/css/panel.css'
     ],
-
-    // DA QUI COPIATO DA MERX:
     
     /**
      * This array is used to generate the tax field (in percent) for every product.

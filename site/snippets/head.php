@@ -45,12 +45,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <?= js('assets/js/script.js') ?>
     <?= js('assets/js/cart.js', ['defer' => true]) ?>
-    <?php if (in_array($page->intendedTemplate()->name(), ['agenda', 'home', 'product', 'projects', 'shop', 'order'])) : ?>
-        <?= js('assets/js/templates/agenda.js') ?>
+    <?php if ($page->intendedTemplate()->name() === 'home') : ?>
         <?= js('assets/js/templates/home.js') ?>
-        <?= js('assets/js/templates/product.js', ['defer' => true]) ?>
-        <?= js('assets/js/templates/projects.js') ?>
+    <?php endif ?>
+    <?php if ($page->intendedTemplate()->name() === 'shop') : ?>
         <?= js('assets/js/templates/shop.js', ['defer' => true]) ?>
+    <?php endif ?>
+    <?php if ($page->intendedTemplate()->name() === 'product') : ?>
+        <?= js('assets/js/templates/product.js', ['defer' => true]) ?>
+    <?php endif ?>
+    <?php if ($page->intendedTemplate()->name() === 'agenda') : ?>
+        <?= js('assets/js/templates/agenda.js') ?>
+    <?php endif ?>
+    <?php if ($page->intendedTemplate()->name() === 'projects') : ?>
+        <?= js('assets/js/templates/projects.js') ?>
     <?php endif ?>
     <?php if ($page->intendedTemplate()->name() === 'checkout') : ?>
         <?= js('assets/js/templates/checkout.js', ['defer' => true]) ?>

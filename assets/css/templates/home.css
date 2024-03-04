@@ -97,4 +97,5 @@
 
 .footer {
     position: absolute;
+    border-top: none;
 }

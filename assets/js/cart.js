@@ -197,9 +197,13 @@ class Cart {
                         <p class="text-subtitle">${data.sum}</p>
                     </div>
                 </div>
-                <div class="cart-content-wrapper">
-                    ${(this.element.dataset.variant !== 'checkout') ? `<a href="${data.checkoutUrl}" class="button checkout-button">${i18n['cart.to-checkout']}</a>` : ''}
-                </div>
+                
+                    ${(this.element.dataset.variant !== 'checkout') ? `
+                    <div class="cart-content-wrapper">
+                    <a href="${data.checkoutUrl}" class="button checkout-button">${i18n['cart.to-checkout']}</a>
+                    </div>`
+                    : ''}
+                
             </div>
         `;
 

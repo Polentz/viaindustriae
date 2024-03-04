@@ -3,20 +3,24 @@
 }
 
 .checkout {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
 
 .cart {
-    position: static;
-    flex: 1 1;
-    height: fit-content;
     position: sticky;
     top: 160px;
+    width: 100%;
+    height: fit-content;
 }
 
 .cart-content {
     padding: 40px;
+}
+
+.cart-content-wrapper:last-child {
+    border-bottom: solid 1px var(--color-black);
 }
 
 .cart-header {
@@ -33,12 +37,6 @@
 .checkout-form abbr {
     text-decoration: none;
 }
-
-/* .checkout-form .field[data-type="email"],
-.checkout-form .field[data-type="text"] {
-    display: flex;
-    flex-direction: column;
-} */
 
 .checkout-form input[type="email"],
 .checkout-form input[type="text"] {

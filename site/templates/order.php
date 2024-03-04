@@ -77,18 +77,15 @@
           <?php if ($page->paymentComplete()->toBool() === true): ?>
             <p><?= tt('order.payment.text.paid.date', ['datetime' => $page->paidDate()->toIntlDate()]) ?></p>
           <?php else: ?>
-            <p>
-              <?= t('order.payment.text.not-yet-paid') ?><br>
-              <?= tt('order.payment.text.invoice', compact('sum')) ?>
-            </p>
+            <p><?= t('order.payment.text.not-yet-paid') ?> <?= tt('order.payment.text.invoice', compact('sum')) ?></p>
             <table class="table text-title">
               <tr>
                 <th><?= t('order.invoice.recipient') ?></th>
-                <td><?= $site->title() ?></td>
+                <td><?= $site->recipient() ?></td>
               </tr>
               <tr>
                 <th><?= t('order.invoice.iban') ?></th>
-                <td><?= formatIBAN('DE0000000000000000') ?></td>
+                <td><?= $site->iban() ?></td>
               </tr>
               <tr>
                 <th><?= t('order.invoice.sum') ?></th>
@@ -107,6 +104,9 @@
     <?php snippet('cart', ['cart' => $page->cart()]) ?>
   </main>
 
-  <?php snippet('footer') ?>
+  <?php snippet('footer', slots: true) ?>
+    <?php slot('page') ?>
+    <?php endslot() ?>
+  <?php endsnippet() ?>
 
 <?php snippet('foot') ?>
