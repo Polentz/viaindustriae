@@ -21,8 +21,6 @@ document.querySelectorAll('.product').forEach((productElement) => new Product(pr
 window.addEventListener("load", () => {
     handleHeaderOnScroll();
     searchFeature();
-    filterButtonsStyle();
-    openGalleryItem();
     sliderOpener();
 });
 

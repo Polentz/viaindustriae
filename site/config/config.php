@@ -116,9 +116,10 @@ return [
         'ww.merx.completePayment:after' => function (OrderPage $orderPage) {
             /**
              * Update stock
+             * rimettere "option('debug') !== true" in production
              * https://merx.wagnerwagner.de/cookbooks/stock-management
              */
-            if (option('debug') !== true) {
+            if (option('debug') !== false) {
                 foreach($orderPage->cart() as $cartItem) {
                     $productPage = page($cartItem['id']);
                     if ($productPage && $productPage->stock()->isNotEmpty()) {

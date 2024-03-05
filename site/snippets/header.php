@@ -5,6 +5,11 @@
         ->children()
         ->listed()
         ->pluck('category', null, true);
+
+    $siblings = $page
+        ->siblings()
+        ->listed()
+        ->pluck('category', null, true);
 ?>
 
 <header class="header">
@@ -79,6 +84,22 @@
             <menu class="inner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
+                        <?php if ($slots->subpage()) : ?>
+                            <form class="search-wrapper" action="<?= $page->parent()->url() ?>" autocomplete="off">
+                                <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
+                                <input type="search" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
+                                <a href="<?= $page->parent()->url() ?>" type="reset" class="search-reset close-ui">
+                                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 1L1 13M1 1L13 13"/>
+                                    </svg>
+                                </a>
+                            </form>
+                            <div class="button nav-button --current"><?= $page->title() ?></div>
+                            <a href="<?= $page->parent()->url() ?>" class="button no-category-button"><?= t('all') ?></a>
+                            <?php foreach ($siblings as $category) : ?>
+                                <a class="button category-button" href="<?= $page->parent()->url() ?>?filter=<?= $category ?>"><?= $category ?></a>
+                            <?php endforeach ?>
+                        <?php else : ?>
                         <form class="search-wrapper" action="<?= $page->url() ?>" autocomplete="off">
                             <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
                             <input type="search" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
@@ -92,6 +113,7 @@
                         <?php foreach ($categories as $category) : ?>
                             <a class="button category-button" href="<?= $page->url() ?>?filter=<?= $category ?>"><?= $category ?></a>
                         <?php endforeach ?>
+                        <?php endif ?>
                     </div>
                 </div>
             </menu>

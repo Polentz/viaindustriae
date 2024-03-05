@@ -73,3 +73,4 @@
 
 <!-- https://getkirby.com/docs/reference/objects/cms/pages/filter-by -->
 <!-- https://getkirby.com/docs/cookbook/content/filtering#filter-page-collections-by-a-single-field -->
+<!-- https://getkirby.com/docs/cookbook/extensions/use-placeholders -->
