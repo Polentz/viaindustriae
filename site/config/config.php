@@ -119,7 +119,7 @@ return [
              * rimettere "option('debug') !== true" in production
              * https://merx.wagnerwagner.de/cookbooks/stock-management
              */
-            if (option('debug') !== false) {
+            if (option('debug') !== true) {
                 foreach($orderPage->cart() as $cartItem) {
                     $productPage = page($cartItem['id']);
                     if ($productPage && $productPage->stock()->isNotEmpty()) {

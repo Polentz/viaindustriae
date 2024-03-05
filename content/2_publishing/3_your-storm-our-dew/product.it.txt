@@ -1,0 +1,57 @@
+Title: Your Storm Our Dew
+
+----
+
+Gallery: - file://XZquWd5VOMTqCUR8
+
+----
+
+Cover: - file://XZquWd5VOMTqCUR8
+
+----
+
+Header: Andrea Martinucci
+
+----
+
+Paneltitle: 
+
+----
+
+Info: <p>A cura di Lisa Andreani, Maria Vittoria Di Sabatino.<br>Partner della ricerca Partner Iuno. Realizzato grazie al sostegno di Regione Lazio, Vitamina G (2022). Promosso da LIMBO FILMS ETS</p><p>184 pp.<br>19×27 cm<br>ita/en<br>2023</p><p>ISBN 978-88-97753-99-5</p>
+
+----
+
+Description: <p>Turbomondi (Stratigrafia) racchiude il percorso realizzato da Andrea Martinucci tra il 2020 e il 2023, dedicato ad una ricerca su mondi sospesi popolati da creature che investigano la loro integrità in una continua evoluzione tra di loro. Turbomondi, raccolta di trattamenti cinematografici dell’artista e della sceneggiatrice Laura Sinceri, ha preso la forma di una sceneggiatura cinematografica unica che a partire dal 2021 è stata affidata a dodici figure che l’hanno interpretata per un tempo specifico, consentendo loro di scrivere commenti, fare osservazioni, rimuovere pagine, disegnare o addirittura distruggere parti di essa. La stratificazione di voci e impressioni diverse che ridefinisce virtualmente il significato del testo originale, viene trasformata in un archivio personale e pubblicazione che traccia l’evoluzione per seguire e la trasformazione plurale dei suoi contenuti. Contributi al progetto di Alice, Lisa Andreani, Maria Vittoria Di Sabatino, Aurelio Di Virgilio, Francesca Ferrari, Giulia Geromel, Marialaura Grandolfo, Pietro Librizzi, Zeno Piovesan, Cecilia Saita, Carla Subrizi, Cosimo Rizzo.</p>
+
+----
+
+Category: Cataloghi
+
+----
+
+Price: 20
+
+----
+
+Tax: reduced
+
+----
+
+Stock: 10
+
+----
+
+Titleee: 
+
+----
+
+Blocks: [{"content":{"text":"<p>Ogni anno, al Carnevale di Sant’Eraclio (Foligno, PG), sfilano carri allegorici. Vengono fatti in cartapesta usando tre tipi di giornale: bianco (La Nazione), giallo (Il Sole 24 Ore), rosa (La Gazzetta dello Sport). <em>Quattro </em>prova ad aggiungere un quarto colore. <em>Quattro</em> può essere acquistato con o senza multiplo in edizione limitata.</p>"},"id":"b9997279-4570-4934-b466-edb52e7aeb03","isHidden":false,"type":"text"},{"content":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna condimentum mattis pellentesque. Venenatis tellus in metus vulputate eu scelerisque. Dui sapien eget mi proin sed libero enim sed faucibus. Elementum nibh tellus molestie nunc non blandit massa enim nec. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Dictumst vestibulum rhoncus est pellentesque. A condimentum vitae sapien pellentesque habitant morbi. Donec massa sapien faucibus et molestie. A diam maecenas sed enim ut sem viverra aliquet. Et pharetra pharetra massa massa ultricies mi quis.</p><p>Molestie nunc non blandit massa enim nec dui. Dui sapien eget mi proin sed libero. Tellus orci ac auctor augue. Nec dui nunc mattis enim ut. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Elit duis tristique sollicitudin nibh sit amet commodo. Amet cursus sit amet dictum. Velit dignissim sodales ut eu. Sed cras ornare arcu dui vivamus arcu. Neque vitae tempus quam pellentesque nec nam aliquam sem et. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc.</p>"},"id":"495c5fe9-9f89-4ffd-ae71-44e55e2c06c0","isHidden":false,"type":"text"}]
+
+----
+
+Uuid: jYbKqyKa1cdCj7OK
+
+----
+
+Caption: 

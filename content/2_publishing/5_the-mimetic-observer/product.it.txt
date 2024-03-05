@@ -1,0 +1,57 @@
+Title: The Mimetic Observer
+
+----
+
+Gallery: - file://efVr0po4C7VZZhAs
+
+----
+
+Cover: - file://efVr0po4C7VZZhAs
+
+----
+
+Header: Cleo Fariselli
+
+----
+
+Paneltitle: 
+
+----
+
+Info: <p>Ed. Viaindustriae publishing in coedition con Central Institute for the Catalog and Documentation ICCD. A cura di Peter Lang, Alessandro Coco. Coordinato da Giorgio di Noto.<br>Fotografie di Carlotta Valente con la collaborazione di Joaquin Paredes.<br>Testi di Giulio Ferroni, Carlo Birrozzi.</p><p>128 pp.<br>20×23 cm<br>ita/en</p><p>2023<br>ISBN 978-88-97753-93-3</p>
+
+----
+
+Description: <p>On the occasion of the 700 years since the death of Dante Alighieri, the Central Institute for the Catalog (ICCD) and Documentation proposes the project The Mimetic Observer, the result of a profound analysis and reflection that looks at the world of the Poet in a completely new way: focuses on the objects, landscapes and other natural elements that Dante Alighieri deals with in his major work. The exhibition and the book bring together 27 photographic works created by Carlotta Valente, with the collaboration of Joaquin Paredes, on the theme of light and Dante's imagery in the Divine Comedy. </p><p>The luminous and photographic narration comes to life through a meticulous reconstruction of images and optical illusions taken from the three songs, with the help of the first analog photographic processes, alternating silver salt printing on matte paper, cyanotype on glass, and daguerreotype on metal plates. The photographs are organized in three series of nine images which take up Dante's canticles and are in turn presented according to a different and precise intensity of light (Hell/darkness, Purgatory/light, Paradise/glow). The book opens with a text by Giulio Ferroni. </p><p>The project was supported by the National Committee for the celebrations of the 700th anniversary of the death of Dante Alighieri. The photographs of the animals were created thanks to the collaboration of the Civic Museum of Zoology of Rome.</p>
+
+----
+
+Category: Cataloghi
+
+----
+
+Price: 30
+
+----
+
+Tax: reduced
+
+----
+
+Stock: 10
+
+----
+
+Titleee: 
+
+----
+
+Blocks: [{"content":{"text":"<p>Ogni anno, al Carnevale di Sant’Eraclio (Foligno, PG), sfilano carri allegorici. Vengono fatti in cartapesta usando tre tipi di giornale: bianco (La Nazione), giallo (Il Sole 24 Ore), rosa (La Gazzetta dello Sport). <em>Quattro </em>prova ad aggiungere un quarto colore. <em>Quattro</em> può essere acquistato con o senza multiplo in edizione limitata.</p>"},"id":"b9997279-4570-4934-b466-edb52e7aeb03","isHidden":false,"type":"text"},{"content":{"text":"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna condimentum mattis pellentesque. Venenatis tellus in metus vulputate eu scelerisque. Dui sapien eget mi proin sed libero enim sed faucibus. Elementum nibh tellus molestie nunc non blandit massa enim nec. Dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu. Dictumst vestibulum rhoncus est pellentesque. A condimentum vitae sapien pellentesque habitant morbi. Donec massa sapien faucibus et molestie. A diam maecenas sed enim ut sem viverra aliquet. Et pharetra pharetra massa massa ultricies mi quis.</p><p>Molestie nunc non blandit massa enim nec dui. Dui sapien eget mi proin sed libero. Tellus orci ac auctor augue. Nec dui nunc mattis enim ut. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Elit duis tristique sollicitudin nibh sit amet commodo. Amet cursus sit amet dictum. Velit dignissim sodales ut eu. Sed cras ornare arcu dui vivamus arcu. Neque vitae tempus quam pellentesque nec nam aliquam sem et. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc.</p>"},"id":"495c5fe9-9f89-4ffd-ae71-44e55e2c06c0","isHidden":false,"type":"text"}]
+
+----
+
+Uuid: zMKQSmJgap86qpoI
+
+----
+
+Caption: 

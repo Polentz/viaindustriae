@@ -53,7 +53,7 @@
             <section class="pagination">
                 <nav class="pagination-nav">
                     <?php foreach ($pagination->range($range) as $r) : ?>
-                        <a class="text-caption<?= $pagination->page() === $r ? ' --current' : '' ?>" href="<?= $pagination->pageURL($r) ?>"><?= $r ?></a>
+                        <a class="text-title<?= $pagination->page() === $r ? ' --current' : '' ?>" href="<?= $pagination->pageURL($r) ?>"><?= $r ?></a>
                     <?php endforeach ?>
                 </nav>
             </section>
