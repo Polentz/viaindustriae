@@ -2,7 +2,6 @@ window.addEventListener("load", () => {
     itemWidth();
     handleHeaderOnScroll();
     searchFeature();
-    openGalleryItem();
     sliderOpener();
 });
 

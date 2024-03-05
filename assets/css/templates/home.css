@@ -7,9 +7,14 @@
     background: var(--color-white);
 }
 
+.site-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .nav-button:hover {
     background: var(--color-green);
-    /* color: var(--color-white); */
 }
 
 .nav-button#to-shop:hover {
@@ -21,11 +26,6 @@
     background: var(--color-projects);
     color: var(--color-black);
 }
-
-/* .nav-button#to-shop,
-.nav-button#to-projects {
-    visibility: hidden;
-} */
 
 .static-button {
     cursor: ew-resize;

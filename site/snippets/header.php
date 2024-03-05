@@ -23,7 +23,7 @@
                         <?php endforeach ?>
                     </div>
                 </div>
-                <div class="main-menu">
+                <div class="main-nav site-title">
                     <div class="main-nav-wrapper">
                         <h1 class="button static-button"><?= $site->title() ?></h1>
                     </div>
@@ -208,8 +208,26 @@
                         <?php foreach ($site->children()->filterby('template', 'shop') as $shop) : ?>
                             <a class="button nav-button" href="<?= $shop->url() ?>"><?= $shop->title() ?></a>
                         <?php endforeach ?>
+                        <?php foreach ($site->children()->filterby('template', 'projects') as $projects) : ?>
+                            <?php if ($projects->isOpen()) : ?>
+                                <h1 class="button nav-button --current"><?= $projects->title() ?></h1>
+                            <?php else : ?>
+                                <a class="button nav-button" href="<?= $projects->url() ?>"><?= $projects->title() ?></a>
+                            <?php endif ?>
+                        <?php endforeach ?>
+                    </div>
+                    <div class="main-nav-wrapper">
+                        <a class="button nav-button info-button">Info</a>
+                        <?php foreach ($site->children()->filterby('template', 'agenda') as $agenda) : ?>
+                            <?php if ($agenda->isOpen()) : ?>
+                                <p class="button nav-button --current"><?= $agenda->title() ?></p>
+                            <?php else : ?>
+                                <a class="button nav-button " href="<?= $agenda->url() ?>"><?= $agenda->title() ?></a>
+                            <?php endif ?>
+                        <?php endforeach ?>
                     </div>
                 </div>
+                
                 <div class="main-nav">
                     <div class="main-nav-wrapper">                        
                         <details class="details-cart" open>

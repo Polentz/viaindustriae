@@ -38,7 +38,7 @@ Tax:
 
 ----
 
-Stock: 5
+Stock: 4
 
 ----
 

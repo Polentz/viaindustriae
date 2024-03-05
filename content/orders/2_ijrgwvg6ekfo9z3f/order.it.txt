@@ -1,0 +1,78 @@
+Email: giuliapolenta@gmail.com
+
+----
+
+Name: Giulia
+
+----
+
+Surname: Polenta
+
+----
+
+Streetaddress: Forster Strasse 50
+
+----
+
+Postalcode: 10999
+
+----
+
+City: Berlin
+
+----
+
+Country: Germany
+
+----
+
+Billingaddressisshippingaddress: true
+
+----
+
+Paymentmethod: prepayment
+
+----
+
+Stripepaymentintentid: 
+
+----
+
+Items:
+
+- 
+  title: Contenuto Rimosso. Il fuoco nel Quadrato
+  quantity: 1
+  price: 15
+  id: page://LkI7KZv4K0GqGIpX
+  key: page://LkI7KZv4K0GqGIpX
+  taxrate: 0
+  template: product
+  uid: contenuto-rimosso-il-fuoco-nel-quadrato
+  tax: 0
+  sum: 15
+  sumtax: 0
+- 
+  title: Spedizioni
+  quantity: 1
+  price: 5
+  id: shipping
+  key: shipping
+  taxrate: 0
+  template: shipping
+  uid: shipping
+  tax: 0
+  sum: 5
+  sumtax: 0
+
+----
+
+Invoicedate: 2024-03-05T16:16:50+00:00
+
+----
+
+Uuid: YkrLl88aHQAmnQvC
+
+----
+
+Paymentcomplete: false
