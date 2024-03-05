@@ -8,7 +8,7 @@
 }
 
 .nav-button:hover {
-    background: var(--color-neutral);
+    background: var(--color-green);
     /* color: var(--color-white); */
 }
 

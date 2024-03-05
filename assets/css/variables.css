@@ -8,15 +8,13 @@
     /* --color-projects: #f56868; */
     /* --color-projects: #FFA863; */
     --color-projects: #7ba3dd;
-    /* --color-neutral: #64FF64; */
-    --color-neutral: #a7dea7;
+    /* --color-green: #64FF64; */
+    --color-green: #a7dea7;
     --main-margin: 160px 40px;
     --inner-margin: 16px 40px;
-
-    /* --text-size: 14px;
-    --caption-size: 12px; */
-    --button-padding: 7px 24px 5px 24px;
-    --button-size: 12px;
+    /* --button-padding: 7px 24px 5px 24px; */
+    --button-padding: 6px 24px 6px 24px;
+    --button-size: 14px;
     --button-radius: 40px;
     --header-height: 88px;
 }

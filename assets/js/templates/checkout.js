@@ -211,6 +211,5 @@ class Checkout {
 document.querySelectorAll('.checkout').forEach((productElement) => new Checkout(productElement));
 
 window.addEventListener("load", () => {
-  langInnerHTML();
   headerHeight();
 });

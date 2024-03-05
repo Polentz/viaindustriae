@@ -271,10 +271,11 @@ const filterButtonsStyle = () => {
 };
 
 const tooltipHandler = () => {
-    const tooltipButton = document.querySelector(".tooltip-button");
-    const tooltipText = document.querySelector(".tooltip-text");
+    const tooltips = document.querySelectorAll(".tooltip");
+    tooltips.forEach(tooltip => {
+        const tooltipButton = tooltip.querySelector(".tooltip-button");
+        const tooltipText = tooltip.querySelector(".tooltip-text");
 
-    if (tooltipButton) {
         const url = tooltipButton.dataset.url;
         tooltipButton.addEventListener("click", () => {
             navigator.clipboard.writeText(url);
@@ -298,7 +299,7 @@ const tooltipHandler = () => {
                 onComplete: () => tooltipText.style.display = "none"
             });
         });
-    };
+    });
 };
 
 const langInnerHTML = () => {
@@ -324,6 +325,8 @@ const langInnerHTML = () => {
 window.addEventListener("load", () => {
     history.scrollRestoration = "manual";
     documentHeight();
+    langInnerHTML();
+    tooltipHandler();
 });
 
 window.addEventListener("resize", () => {

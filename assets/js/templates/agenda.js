@@ -4,8 +4,6 @@ window.addEventListener("load", () => {
     searchFeature();
     openGalleryItem();
     sliderOpener();
-    langInnerHTML();
-    tooltipHandler();
 });
 
 window.addEventListener("resize", () => {

@@ -22,7 +22,7 @@ Paneltitle:
 
 ----
 
-Info: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
+Info: <p>44 pp.<br>7×29 cm</p><p>Ita<br>2020</p>
 
 ----
 

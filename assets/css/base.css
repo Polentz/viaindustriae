@@ -195,6 +195,6 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 *::selection {
-    color: var(--color-neutral);
+    color: var(--color-green);
     background-color: var(--color-white);
 }

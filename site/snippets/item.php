@@ -99,23 +99,12 @@
                 </figure>
             <?php endforeach ?>
         </div>
+        
         <div class="item-description">
             <div class="description-header">
-                <div class="description-header-info">
-                    <div class="description-header-info-wrapper">
-                        <p class="text-title"><?= $page->header() ?></p>
-                        <p class="text"><?= $page->title() ?></p>
-                    </div>
-                    <?php if ($page->info()->isNotEmpty()): ?>
-                        <div class="description-header-info-wrapper text-caption">
-                            <?= $page->info() ?>
-                        </div>
-                    <?php endif ?>
-                    <?php if ($slots->product()) : ?>
-                        <div class="description-header-info-wrapper">
-                            <p class="item-price text-title">€ <?= $page->price() ?></p>
-                        </div>
-                    <?php endif ?>
+                <div class="description-header-text">
+                    <p class="text-title"><?= $page->header() ?></p>
+                    <p class="text"><?= $page->title() ?></p>
                 </div>
                 <div class="description-header-ui">
                     <div class="tooltip">
@@ -125,13 +114,24 @@
                     <?php if ($slots->product()) : ?>
                         <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
                     <?php endif ?>
-
                 </div>
             </div>
             <div class="description-text">
-                <?php if ($page->description()->isNotEmpty()) : ?>
-                    <?= $page->description() ?>        
+                <?php if ($page->info()->isNotEmpty()): ?>
+                    <div class="description-text-info text-caption">
+                        <?= $page->info() ?>
+                    </div>
+                    <?php if ($slots->product()) : ?>
+                        <div class="description-text-info text-title">
+                            <p class="item-price">€ <?= $page->price() ?></p>
+                        </div>
+                    <?php endif ?>
                 <?php endif ?>
+                <div class="description-text-copy">
+                    <?php if ($page->description()->isNotEmpty()) : ?>
+                        <?= $page->description() ?>        
+                    <?php endif ?>
+                </div>
             </div>
         </div>
         <div class="close-ui item-close">

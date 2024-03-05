@@ -14,11 +14,11 @@ Header: Chiara Trivelli
 
 ----
 
-Titleee: 
+Paneltitle: 
 
 ----
 
-Info: <p>Promotore della pubblicazione/Promoted by Comitato 30 luglio<br>Progetto sostenuto da/Supported by Comune di Lorenzago di Cadore, Magnifica Comunità di Cadore, Regione Veneto<br>Con il contributo del/Supported by Consorzio dei Comuni del Bacino Imbrifero Montano del Piave appartenenti alla Provincia di Belluno<br>176 pp., 16×23 cm, ita<br>2023<br>ISBN 978-88-97753-94-0</p>
+Info: <p>Promotore della pubblicazione: Comitato 30 luglio. Progetto sostenuto da: Comune di Lorenzago di Cadore, Magnifica Comunità di Cadore, Regione Veneto. Con il contributo del Consorzio dei Comuni del Bacino Imbrifero Montano del Piave appartenenti alla Provincia di Belluno.</p><p>176 pp., 16×23 cm, ita<br>2023</p><p>ISBN 978-88-97753-94-0</p>
 
 ----
 
@@ -39,6 +39,10 @@ Tax:
 ----
 
 Stock: 5
+
+----
+
+Titleee: 
 
 ----
 
