@@ -18,13 +18,14 @@ sections:
       en: Items
       it: Progetti
     type: pages
-    layout: cards
-    info: false
+    layout: cardlets
     template:
       - project
+    info: '{{ page.category }}'
+    search: true
+    sortable: true
     image:
       cover: true
       ratio: 1/1
-      back: black
+      back: '#7ba3dd'
       query: page.cover.toFile()
-    sortable: true

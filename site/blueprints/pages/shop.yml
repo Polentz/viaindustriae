@@ -18,14 +18,14 @@ sections:
       en: Items
       it: Libri
     type: pages
-    layout: cards
-    info: false
-    search: true
+    layout: cardlets
     template:
       - product
+    info: '{{ page.category }}'
+    search: true
+    sortable: true
     image:
       cover: true
       ratio: 1/1
-      back: black
+      back: '#baa0de'
       query: page.cover.toFile()
-    sortable: true

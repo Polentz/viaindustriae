@@ -16,8 +16,8 @@ return [
      * /site/models/product-variant.php
      */
     'taxRates' => [
-        'reduced' => 7,
-        'default' => 19,
+        'reduced' => 4,
+        'default' => 22,
     ],
 
     /**
@@ -52,6 +52,7 @@ return [
     ],
 
     'hooks' => [
+
         'page.create:after' => function ($page) {
             /**
              * Product variant pages have a generated title.
@@ -132,20 +133,3 @@ return [
     ],
 
 ];
-
-function sendConfirmationMail($orderPage) {
-    kirby()->email([
-      'from' => 'giuliapolenta@gmail.com',
-      'to' => (string)$orderPage->email(),
-      'subject' => 'Thank’s for your order!',
-      'body'=> 'Dear ' . $orderPage->name() . ', you have paid ' . formatPrice($orderPage->cart()->getSum()),
-    ]);
-  }
-  
-  return [
-    'hooks' => [
-      'ww.merx.completePayment:after' => function ($orderPage) {
-        sendConfirmationMail($orderPage);
-      },
-    ],
-  ];

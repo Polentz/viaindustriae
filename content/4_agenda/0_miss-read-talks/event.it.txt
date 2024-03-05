@@ -2,11 +2,15 @@ Title: Miss Read Talks
 
 ----
 
+Gallery: 
+
+----
+
 Quotetext: Why I Make Documentaries Book presentation by Kazuhiro Soda
 
 ----
 
-Header: MISS READ / Gerichtstrasse 45, 13347 Berlino
+Header: Gerichtstrasse 45, 13347 Berlino
 
 ----
 
@@ -15,6 +19,14 @@ Paneltitle:
 ----
 
 Eventdate: 14 febbraio 2024, ore 18:30
+
+----
+
+Info: 
+
+----
+
+Description: 
 
 ----
 

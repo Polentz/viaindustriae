@@ -18,12 +18,13 @@ sections:
       en: Items
       it: Eventi
     type: pages
-    layout: cards
-    info: false
+    layout: cardlets
     template:
       - event
+    info: '{{ page.category }}'
+    sortBy: category desc
+    search: true
     image:
       cover: false
       ratio: 1/1
       back: "#a7dea7"
-    sortable: true

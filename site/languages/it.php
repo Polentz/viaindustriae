@@ -54,6 +54,7 @@ return [
         'product.stock.info.1' => 'Ne rimane solo uno',
         'product.stock.info' => 'Solo {stock} disponibili',
         'product.stock.sold-out' => 'Non disponibile',
+        'product.sold-out' => 'Esaurito',
         'product.amount' => 'Importo',
         'product.color' => 'Colore',
     

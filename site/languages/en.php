@@ -54,6 +54,7 @@ return [
       'product.stock.info.1' => 'Only one product left',
       'product.stock.info' => 'Only {stock} available',
       'product.stock.sold-out' => 'Currently not available',
+      'product.sold-out' => 'Sold out',
       'product.amount' => 'Amount',
       'product.color' => 'Color',
   

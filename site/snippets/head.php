@@ -55,7 +55,8 @@
     <?php if ($page->intendedTemplate()->name() === 'product') : ?>
         <?= js('assets/js/templates/product.js', ['defer' => true]) ?>
     <?php endif ?>
-    <?php if ($page->intendedTemplate()->name() === 'agenda') : ?>
+    <?php if (in_array($page->intendedTemplate()->name(), ['agenda', 'past', 'upcoming'])) : ?>
+        <?= css('assets/css/templates/agenda.css') ?>
         <?= js('assets/js/templates/agenda.js') ?>
     <?php endif ?>
     <?php if ($page->intendedTemplate()->name() === 'projects') : ?>
@@ -66,6 +67,7 @@
         <?= js('assets/js/templates/conditional-fields.js', ['defer' => true]) ?>
     <?php endif ?>
     <?php if ($page->intendedTemplate()->name() === 'order') : ?>
+        <?= css('assets/css/templates/checkout.css') ?>
         <?= js('assets/js/templates/order.js', ['defer' => true]) ?>
     <?php endif ?>
 </head>

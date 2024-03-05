@@ -1,8 +1,9 @@
 :root {
-    --color-page: #baa0de;
+    --color-page: var(--color-green);
 }
 
-.checkout {
+.checkout,
+.order {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -13,6 +14,8 @@
     top: 160px;
     width: 100%;
     height: fit-content;
+    background: var(--color-page);
+    z-index: 7;
 }
 
 .cart-content {
@@ -60,4 +63,31 @@
 
 .checkout-form .button {
     align-self: center;
+}
+
+.order-recap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px;
+    border: solid 1px var(--color-page);
+}
+
+.order-recap-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.table {
+    margin-top: 16px;
+}
+
+.table th,
+.table td {
+    text-align: start;
+}
+
+.table td {
+    padding-left: 24px;
 }

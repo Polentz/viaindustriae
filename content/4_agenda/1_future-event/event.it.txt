@@ -1,0 +1,37 @@
+Title: Future event
+
+----
+
+Gallery: 
+
+----
+
+Quotetext: This is an upcoming event
+
+----
+
+Header: Somewhere
+
+----
+
+Paneltitle: 
+
+----
+
+Eventdate: 24 maggio 2024
+
+----
+
+Info: 
+
+----
+
+Description: 
+
+----
+
+Category: 2024-05-24
+
+----
+
+Uuid: 9JxCyvHykv8JKNov

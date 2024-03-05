@@ -1,19 +1,10 @@
 <?php 
+    $query   = get('q');
+
     $categories = $page
         ->children()
         ->listed()
         ->pluck('category', null, true);
-
-    $query   = get('q');
-    
-    // $pastEvents = $page
-    //     ->children()
-    //     ->listed()
-    //     ->filter(fn ($child) => $child->date()->toDate() < time());
-    // $futureEvents = $page
-    //     ->children()
-    //     ->listed()
-    //     ->filter(fn ($child) => $child->date()->toDate() > time());
 ?>
 
 <header class="header">
@@ -152,15 +143,36 @@
             <menu class="inner-menu">
                 <div class="inner-nav">
                     <div class="inner-nav-wrapper">
-                        <form class="search-wrapper" action="<?= $page->url() ?>" autocomplete="off">
-                            <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
-                            <input type="search" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
-                            <a href="<?= $page->url() ?>" type="reset" class="search-reset close-ui">
-                                <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13 1L1 13M1 1L13 13"/>
-                                </svg>
-                            </a>
-                        </form>
+                        <?php if ($slots->filtered()) : ?>
+                            <form class="search-wrapper" action="<?= $page->parent()->url() ?>" autocomplete="off">
+                                <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
+                                <input type="search" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
+                                <a href="<?= $page->parent()->url() ?>" type="reset" class="search-reset close-ui">
+                                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 1L1 13M1 1L13 13"/>
+                                    </svg>
+                                </a>
+                            </form>
+                            <a href="<?= $page->parent()->url() ?>" class="button no-category-button"><?= t('all') ?></a>
+                        <?php else : ?>
+                            <form class="search-wrapper" action="<?= $page->url() ?>" autocomplete="off">
+                                <label for="search" class="button nav-button search-bar"><?= t('search') ?></label>
+                                <input type="search" class="search-input" name="q" value="<?= $query ?>" placeholder="<?= t('search') ?>">
+                                <a href="<?= $page->url() ?>" type="reset" class="search-reset close-ui">
+                                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 1L1 13M1 1L13 13"/>
+                                    </svg>
+                                </a>
+                            </form>
+                            <div class="button no-category-button --current"><?= t('all') ?></div>
+                        <?php endif ?>
+                        <?php foreach ($site->grandchildren()->unlisted()->filterby('template', 'in', ['past', 'upcoming']) as $events) : ?>
+                            <?php if ($events->isOpen()) : ?>
+                                <h1 class="button nav-button --current"><?= $events->title() ?></h1>
+                            <?php else : ?>
+                                <a class="button nav-button" href="<?= $events->url() ?>"><?= $events->title() ?></a>
+                            <?php endif ?>
+                        <?php endforeach ?>
                     </div>
                 </div>
             </menu>

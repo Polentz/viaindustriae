@@ -1,5 +1,5 @@
 :root {
-    --color-page: #baa0de;
+    --color-page: var(--color-shop);
 }
 
 .item-page {

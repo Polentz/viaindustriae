@@ -42,7 +42,7 @@ Tax: reduced
 
 ----
 
-Stock: 1
+Stock: 0
 
 ----
 

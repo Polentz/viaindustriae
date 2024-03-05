@@ -1,1 +1,45 @@
 Title: Viaindustriae
+
+----
+
+Contact: [{"content":{"title":"VIAINDUSTRIAE <br>Associazione Culturale","text":"Via Delle Industrie, 9<br>Sant'Eraclio, 06034 Foligno PG<br>Italia"},"id":"0970ce55-36ca-4678-80de-f17352523602","isHidden":false,"type":"contactblock"},{"content":{"title":"CONTATTI","text":"Richieste generali e proposte:<br>info@viaindustriae.it"},"id":"b3e5d73f-f9dc-4399-880e-3ab472a9b723","isHidden":false,"type":"contactblock"},{"content":{"title":"DISTRIBUZIONE","text":"Italia: Libro Co<br>International: Idea Books"},"id":"830c0c1e-387a-44a5-8541-b62bbfd3f18c","isHidden":false,"type":"contactblock"}]
+
+----
+
+Newsletter: https://loremipsum.io/
+
+----
+
+Facebook: https://loremipsum.io/
+
+----
+
+Instagram: https://loremipsum.io/
+
+----
+
+About: <p>Viaindustriae è un’associazione culturale e casa editrice con sede a Foligno, PG, Italia. Fondata nel 2005, promuove progetti e ricerche artistiche che spaziano da mostre museografiche, installazioni site-specific, azioni pubbliche, residenze d’artista e pubblicazioni di vari formati. Negli ultimi dieci anni, l’attività editoriale si è consolidata fino a diventare il principale campo d’azione dell’associazione. Viaindustriae pubblica libri d’artista, libri di ricerca sperimentale, studi territoriali, cataloghi di mostre, cataloghi monografici – tra le altre forme di editoria, utilizzando utilizza la pratica editoriale come strumento di produzione, didattica e sperimentazione artistica. I libri hanno formati diversi che non seguono gli standard di una pratica editoriale canonica ma piuttosto le esigenze e le specificità di ogni progetto. Viaindustriae considera la pratica editoriale come atto di traduzione che richiede una trasformazione dell’opera d’arte o visiva in una nuova forma, dove l’opera stessa sviluppa nuove possibilità e significati; per questo ogni libro diventa una piattaforma autonoma e non solo un’occasione di trasferimento di contenuti.</p><p>Tra le pubblicazioni più significative: <em>Why I Make Documentaries. On Observational Filmmaking</em> (2023), <em>I am Gonzo. My Dirty Italian Zines Fuck Serious Scientific Books</em> (2021), <em>YES YES YES Revolutionary Press in Italy 1966-1977 from Mondo Beat to Zut</em> (2020), <em>Manufatto in Situ 10 landscapes: documentary / inventory / utopia</em> (2017), <em>Hermann Nitsch atlas. Texts/writings/documents (2017), Sportification. Eurovisions, Performativity and Playgrounds (2017), ED/MN Edited by Maurizio Nannucci. Editions and Multiples 1967/2016 (2016), YES YES YES ALTERNATIVE PRESS ’66-’77 form Provo to Punk (2014), UltraUltraRed (2014), BIBLIOTHÈQUE D’UN AMATEUR. Richard Prince’s Publications 1981-2014, Sound Pages, John Cage’s publications (2012),</em> <em>Happy Fashion. Companies, Styles and Anti-fashion (2012), Artist’s books by Sol Lewitt (2009).</em></p>
+
+----
+
+Subscribetext: Newsletter
+
+----
+
+Subscribelink: 
+
+----
+
+Fbtext: FB
+
+----
+
+Fblink: 
+
+----
+
+Igtext: IG
+
+----
+
+Iglink: 

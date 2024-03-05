@@ -2,19 +2,20 @@
     --doc-height: 100%;
     --color-black: #000000;
     --color-white: #ffffff;
-    /* --color-shop: #69bff5; */
-    /* --color-shop: #8063FF; */
     --color-shop: #baa0de;
-    /* --color-projects: #f56868; */
-    /* --color-projects: #FFA863; */
     --color-projects: #7ba3dd;
-    /* --color-green: #64FF64; */
     --color-green: #a7dea7;
     --main-margin: 160px 40px;
     --inner-margin: 16px 40px;
-    /* --button-padding: 7px 24px 5px 24px; */
     --button-padding: 6px 24px 6px 24px;
     --button-size: 14px;
     --button-radius: 40px;
     --header-height: 88px;
 }
+
+
+/* --color-shop: #69bff5; */
+/* --color-shop: #8063FF; */
+/* --color-projects: #f56868; */
+/* --color-projects: #FFA863; */
+/* --color-green: #64FF64; */

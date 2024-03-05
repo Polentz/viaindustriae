@@ -3,6 +3,7 @@ title:
   it: Evento
 create:
   status: unlisted
+num: '{{ page.created.toDate("dmY") }}'
 
 image:
   icon: false

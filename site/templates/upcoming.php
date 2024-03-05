@@ -1,19 +1,21 @@
 <?php 
-    $query = get('q');
-    $filterBy = get('filter');
+    $query   = get('q');
 
     $results = $page
-        ->children()
+        ->siblings()
         ->listed()
         ->when($query, function($query) {
             return $this->search($query, 'header|title|category', ['words' => true ]);
         });
-
+    
     $items = $page
-        ->children()
+        ->siblings()
         ->listed()
+        ->filter(function ($child) {
+            return $child->category()->toDate() > strtotime('today');
+        })
         ->paginate(16);
-
+    
     $pagination = $items->pagination();
     $totalPages = $pagination->pages();
     $range = $totalPages;
@@ -23,6 +25,8 @@
 
 <?php snippet('header', slots: true) ?>
     <?php slot('agenda') ?>
+    <?php endslot() ?>
+    <?php slot('filtered') ?>
     <?php endslot() ?>
 <?php endsnippet() ?>
 
