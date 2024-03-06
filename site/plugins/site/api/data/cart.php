@@ -25,13 +25,14 @@ return function ($status = 'ok', $code = 200) {
     $items = array_map(function ($item) {
         $productPage = page($item['id']);
         // overwrite title for product variants
-        if ($item['template'] === 'product-variant') {
-            $item['title'] = (string)$productPage->parent()->title();
-            $item['variant'] = (string)$productPage->variantName();
-        } else {
-            // overwrite title with title of current language
-            $item['title'] = (string)$productPage->title();
-        }
+        // if ($item['template'] === 'product-variant') {
+        //     $item['title'] = (string)$productPage->parent()->title();
+        //     $item['variant'] = (string)$productPage->variantName();
+        // } else {
+        //     // overwrite title with title of current language
+        //     $item['title'] = (string)$productPage->title();
+        // }
+        $item['title'] = (string)$productPage->title();
         // if we want to show the product image in the cart, we need a url to the thumb file.
 
         // if ($thumb = $productPage->thumb()->toFile()) {

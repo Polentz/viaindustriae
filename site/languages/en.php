@@ -18,6 +18,7 @@ return [
       'allProjects' => 'All projects',
       'allEvents' => 'All events',
       'buy' => 'Buy',
+      'open' => 'Open',
       'share' => 'Share',
       'tooltip' => 'Link copied!',
       

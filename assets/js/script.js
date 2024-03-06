@@ -274,7 +274,6 @@ const tooltipHandler = () => {
     tooltips.forEach(tooltip => {
         const tooltipButton = tooltip.querySelector(".tooltip-button");
         const tooltipText = tooltip.querySelector(".tooltip-text");
-
         const url = tooltipButton.dataset.url;
         tooltipButton.addEventListener("click", () => {
             navigator.clipboard.writeText(url);

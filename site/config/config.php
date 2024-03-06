@@ -13,11 +13,10 @@ return [
      * Used in
      * /site/blueprints/fields/product-standards.yml
      * /site/models/product.php
-     * /site/models/product-variant.php
      */
     'taxRates' => [
-        'reduced' => 4,
-        'default' => 22,
+        'reduced' => 7,
+        'default' => 19,
     ],
 
     /**
@@ -52,21 +51,6 @@ return [
     ],
 
     'hooks' => [
-
-        'page.create:after' => function ($page) {
-            /**
-             * Product variant pages have a generated title.
-             * We want to use the title entered in creation dialog for variantName
-             * and remove the title field.
-             * See /site/models/product-variant.php
-             */
-            if ($page->intendedTemplate()->name() === 'product-variant') {
-                $page->update([
-                    'variantName' => $page->content()->title(),
-                    'title' => null,
-                ]);
-            }
-        },
         'page.update:after' => function ($newPage, $oldPage) {
             if ($newPage->intendedTemplate()->name() === 'order' && $newPage->isListed()) {
                 /**
@@ -116,7 +100,6 @@ return [
         'ww.merx.completePayment:after' => function (OrderPage $orderPage) {
             /**
              * Update stock
-             * rimettere "option('debug') !== true" in production
              * https://merx.wagnerwagner.de/cookbooks/stock-management
              */
             if (option('debug') !== true) {

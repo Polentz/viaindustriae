@@ -30,7 +30,7 @@ Price: 25
 
 ----
 
-Tax: 4
+Tax: reduced
 
 ----
 

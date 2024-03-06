@@ -117,12 +117,17 @@
                     <div class="description-header-text">
                         <p class="text-title"><?= $page->header() ?></p>
                         <p class="text"><?= $page->title() ?></p>
+                        <?php if ($slots->product()) : ?>
+                        <p class="item-price text-title">€ <?= $page->price() ?></p>
+                    <?php endif ?>
                     </div>
                     <div class="description-header-ui">
-                        <div class="tooltip">
-                            <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
-                            <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>
-                        </div>
+                        <a class="button action-button" href="<?= $page->url() ?>" target="_blank" rel="noopener noreferrer">
+                            <?= t('open') ?> 
+                            <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 12.615L12.6616 0.960161M1.33836 0.61499H13V12.2698"/>
+                            </svg>
+                        </a>
                         <?php if ($slots->product()) : ?>
                             <?php if($page->stock() > '0') : ?>
                                 <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
@@ -136,15 +141,14 @@
                 <div class="description-text">
                     <?php if ($page->itemInfo()->isNotEmpty()): ?>
                         <div class="description-text-info text-caption">
-                            <?= $page->itemInfo() ?>
+                            <?= $page->itemInfo()->kt() ?>
                         </div>
                     <?php endif ?>
-                    <?php if ($slots->product()) : ?>
-                        <div class="description-text-info text-title">
-                            <p class="item-price">€ <?= $page->price() ?></p>
+                    <?php if ($page->category()->isNotEmpty()): ?>
+                        <div class="description-text-info text-caption">
+                            <p>Categoria: <span><?= $page->category() ?></span></p>
                         </div>
                     <?php endif ?>
-
                     <?php if ($page->description()->isNotEmpty()) : ?>
                         <div class="description-text-copy">
                             <?= $page->description() ?>    

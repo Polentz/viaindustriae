@@ -19,94 +19,96 @@
     <?php endslot() ?>
 <?php endsnippet() ?> 
 
-  <main class="main content order">
-    <div class="order-recap">
+<main class="main content order">
+  <div class="order-recap">
 
-      <div class="order-recap-wrapper">
-        <h1 class="text-title">
-          <?= $page->title() ?><br>          
-          <?= $page->invoiceDate()->toIntlDate() ?>
-        </h1>
-      </div>
+    <div class="order-recap-wrapper">
+      <h1 class="text-title">
+        <?= $page->title() ?><br>          
+        <?= $page->invoiceDate()->toIntlDate() ?>
+      </h1>
+    </div>
 
-      <div class="order-recap-wrapper">
-        <p class="text-subtitle">
+    <div class="order-recap-wrapper">
+      <p class="text-subtitle">
+        <?= $page->name() ?> <?= $page->surname() ?><br>
+        <?php if ($page->organization()->isNotEmpty()): ?>
+          <?= $page->organization() ?><br>
+        <?php endif ?>
+        <?= $page->streetAddress() ?><br>
+        <?= $page->postalCode() ?> <?= $page->city() ?><br>
+        <?= $page->country() ?><br>
+      </p>
+    </div>
+
+    <div class="order-recap-wrapper order-recap-headline">
+      <h2 class="text-title"><?= t('order.shipping-address') ?></h2>
+    </div>
+
+    <div class="order-recap-wrapper text-subtitle">
+      <p class="text-subtitle">
+        <?php if ($page->billingAddressIsShippingAddress()->toBool() === true): ?>
           <?= $page->name() ?> <?= $page->surname() ?><br>
           <?php if ($page->organization()->isNotEmpty()): ?>
             <?= $page->organization() ?><br>
-          <?php endif ?>
+          <?php endif; ?>
           <?= $page->streetAddress() ?><br>
           <?= $page->postalCode() ?> <?= $page->city() ?><br>
-          <?= $page->country() ?><br>
-        </p>
-      </div>
-
-      <div class="order-recap-wrapper order-recap-headline">
-        <h2 class="text-title"><?= t('order.shipping-address') ?></h2>
-      </div>
-
-      <div class="order-recap-wrapper text-subtitle">
-        <p class="text-subtitle">
-          <?php if ($page->billingAddressIsShippingAddress()->toBool() === true): ?>
-            <?= $page->name() ?> <?= $page->surname() ?><br>
-            <?php if ($page->organization()->isNotEmpty()): ?>
-              <?= $page->organization() ?><br>
-            <?php endif; ?>
-            <?= $page->streetAddress() ?><br>
-            <?= $page->postalCode() ?> <?= $page->city() ?><br>
-            <?= $page->country() ?>
-          <?php else: ?>
-            <?= $page->shippingName() ?><br>
-            <?php if ($page->shippingOrganization()->isNotEmpty()): ?>
-              <?= $page->shippingOrganization() ?><br>
-            <?php endif; ?>
-            <?= $page->shippingStreetAddress() ?><br>
-            <?= $page->shippingPostalCode() ?> <?= $page->shippingCity() ?><br>
-            <?= $page->shippingCountry() ?>
+          <?= $page->country() ?>
+        <?php else: ?>
+          <?= $page->shippingName() ?><br>
+          <?php if ($page->shippingOrganization()->isNotEmpty()): ?>
+            <?= $page->shippingOrganization() ?><br>
           <?php endif; ?>
-        </p>
-      </div>
-
-      <div class="order-recap-wrapper order-recap-headline">
-        <h2 class="text-title"><?= t('order.payment') ?></h2>
-      </div>
-      
-      <div class="order-recap-wrapper text-subtitle">
-        <p><?= tt('order.payment.text', compact('paymentMethod')) ?></p>
-        <?php if ($page->paymentMethod()->toString() === 'prepayment'): ?>
-          <?php if ($page->paymentComplete()->toBool() === true): ?>
-            <p><?= tt('order.payment.text.paid.date', ['datetime' => $page->paidDate()->toIntlDate()]) ?></p>
-          <?php else: ?>
-            <p><?= t('order.payment.text.not-yet-paid') ?> <?= tt('order.payment.text.invoice', compact('sum')) ?></p>
-            <table class="table text-title">
-              <tr>
-                <th><?= t('order.invoice.recipient') ?></th>
-                <td><?= $site->recipient() ?></td>
-              </tr>
-              <tr>
-                <th><?= t('order.invoice.iban') ?></th>
-                <td><?= $site->iban() ?></td>
-              </tr>
-              <tr>
-                <th><?= t('order.invoice.sum') ?></th>
-                <td><?= $sum ?></td>
-              </tr>
-              <tr>
-                <th><?= t('order.invoice.purpose') ?></th>
-                <td><?= $page->title() ?></td>
-              </tr>
-            </table>
-          <?php endif ?>
-        <?php endif ?>
-      </div>
+          <?= $page->shippingStreetAddress() ?><br>
+          <?= $page->shippingPostalCode() ?> <?= $page->shippingCity() ?><br>
+          <?= $page->shippingCountry() ?>
+        <?php endif; ?>
+      </p>
     </div>
 
-    <?php snippet('cart', ['cart' => $page->cart()]) ?>
-  </main>
+    <div class="order-recap-wrapper order-recap-headline">
+      <h2 class="text-title"><?= t('order.payment') ?></h2>
+    </div>
+    
+    <div class="order-recap-wrapper text-subtitle">
+      <p><?= tt('order.payment.text', compact('paymentMethod')) ?></p>
+      <?php if ($page->paymentMethod()->toString() === 'prepayment'): ?>
+        <?php if ($page->paymentComplete()->toBool() === true): ?>
+          <p><?= tt('order.payment.text.paid.date', ['datetime' => $page->paidDate()->toIntlDate()]) ?></p>
+        <?php else: ?>
+          <p><?= t('order.payment.text.not-yet-paid') ?> <?= tt('order.payment.text.invoice', compact('sum')) ?></p>
+          <table class="table text-title">
+            <tr>
+              <th><?= t('order.invoice.recipient') ?></th>
+              <td><?= $site->recipient() ?></td>
+            </tr>
+            <tr>
+              <th><?= t('order.invoice.iban') ?></th>
+              <td><?= $site->iban() ?></td>
+            </tr>
+            <tr>
+              <th><?= t('order.invoice.sum') ?></th>
+              <td><?= $sum ?></td>
+            </tr>
+            <tr>
+              <th><?= t('order.invoice.purpose') ?></th>
+              <td><?= $page->title() ?></td>
+            </tr>
+          </table>
+        <?php endif ?>
+      <?php endif ?>
+    </div>
+  </div>
 
-  <?php snippet('footer', slots: true) ?>
-    <?php slot('page') ?>
-    <?php endslot() ?>
-  <?php endsnippet() ?>
+  <?php snippet('cart', ['cart' => $page->cart()]) ?>
+</main>
+
+<?= snippet('about') ?>
+
+<?php snippet('footer', slots: true) ?>
+  <?php slot('page') ?>
+  <?php endslot() ?>
+<?php endsnippet() ?>
 
 <?php snippet('foot') ?>

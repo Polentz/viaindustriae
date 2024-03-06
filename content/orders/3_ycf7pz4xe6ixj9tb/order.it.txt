@@ -1,0 +1,78 @@
+Email: giuliapolenta@gmail.com
+
+----
+
+Name: Giulia
+
+----
+
+Surname: Polenta
+
+----
+
+Streetaddress: Via San Giovanni, 91
+
+----
+
+Postalcode: 60020
+
+----
+
+City: Polverigi
+
+----
+
+Country: Italy
+
+----
+
+Billingaddressisshippingaddress: true
+
+----
+
+Paymentmethod: prepayment
+
+----
+
+Stripepaymentintentid: 
+
+----
+
+Items:
+
+- 
+  title: Quattro
+  quantity: 3
+  price: 22
+  id: page://TYFEUZNaz7pgQHBI
+  key: page://TYFEUZNaz7pgQHBI
+  taxrate: 7
+  template: product
+  uid: quattro
+  tax: "1.4392523364486"
+  sum: 66
+  sumtax: "4.3177570093458"
+- 
+  title: Spedizioni
+  quantity: 1
+  price: 5
+  id: shipping
+  key: shipping
+  taxrate: 7
+  template: shipping
+  uid: shipping
+  tax: "0.32710280373832"
+  sum: 5
+  sumtax: "0.32710280373832"
+
+----
+
+Invoicedate: 2024-03-06T11:51:53+00:00
+
+----
+
+Uuid: T5ClrQggDLQTHPCI
+
+----
+
+Paymentcomplete: false

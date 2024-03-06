@@ -12,25 +12,27 @@
 ?>
 <?php snippet('head') ?>
 
-  <?php snippet('header', slots: true) ?>
-      <?php slot('order') ?>
-      <?php endslot() ?>
-  <?php endsnippet() ?>
+<?php snippet('header', slots: true) ?>
+    <?php slot('order') ?>
+    <?php endslot() ?>
+<?php endsnippet() ?>
 
-  <?php if ($message): ?>
-    <div class="global-message"><?= $message ?></div>
-  <?php endif ?>
+<?php if ($message): ?>
+  <div class="global-message"><?= $message ?></div>
+<?php endif ?>
 
-  <main class="main content checkout">
-    <form method="post" class="checkout-form" id="checkout-form" action="/api/shop/checkout">
-      <?php foreach ($fields as $field) : ?>
-        <?= snippet(['fields/' . $field['type'], 'fields/text'], compact('field')) ?>
-      <?php endforeach ?>
-      <?php snippet('payment-methods') ?>
-      <button type="submit" class="button action-button"><?= t('product.add-to-cart') ?></button>
-    </form>
-    <div class="cart" id="cart" data-variant="checkout"></div>
-  </main>
+<main class="main content checkout">
+  <form method="post" class="checkout-form" id="checkout-form" action="/api/shop/checkout">
+    <?php foreach ($fields as $field) : ?>
+      <?= snippet(['fields/' . $field['type'], 'fields/text'], compact('field')) ?>
+    <?php endforeach ?>
+    <?php snippet('payment-methods') ?>
+    <button type="submit" class="button action-button"><?= t('product.add-to-cart') ?></button>
+  </form>
+  <div class="cart" id="cart" data-variant="checkout"></div>
+</main>
+
+<?= snippet('about') ?>
 
 <?php snippet('footer', slots: true) ?>
   <?php slot('page') ?>

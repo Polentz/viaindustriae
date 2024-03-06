@@ -18,6 +18,7 @@ return [
         'allProjects' => 'Tutti i progetti',
         'allEvents' => 'Tutti gli eventi',
         'buy' => 'Compra',
+        'open' => 'Apri',
         'share' => 'Condividi',
         'tooltip' => 'Link copiato!',
 

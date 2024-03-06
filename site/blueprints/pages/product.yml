@@ -87,40 +87,6 @@ columns:
             options:
               type: query
               query: page.siblings.pluck('category', ',', true)
-          price:
-            label:
-              en: Price
-              it: Prezzo
-            type: number
-            step: .01
-            min: 0
-            # before: "{{ kirby.option('ww.merx.currencySymbol') }}"
-            required: true
-            translate: false
-          tax:
-            label:
-              en: Tax rate
-              it: IVA %
-            type: select
-            options:
-              - value: '4'
-                text: 4%
-              - value: '22'
-                text: 22%
-            # options: query
-            # query:
-            #   fetch: kirby.option('taxRates')
-            #   text: "{{ arrayItem.value }} % ({{ arrayItem.key }})"
-            #   value: "{{ arrayItem.key }}"
-            translate: false
-          stock:
-            label:
-              en: Stock
-              it: Quantità disponibile
-            type: number
-            placeholder:
-              en: 0
-              it: 0
-            translate: false
+          extends: fields/product-standards
 
 

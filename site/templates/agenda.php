@@ -1,6 +1,5 @@
 <?php 
     $query = get('q');
-    $filterBy = get('filter');
 
     $results = $page
         ->children()

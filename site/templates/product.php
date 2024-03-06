@@ -29,6 +29,7 @@
                 <div class="description-header-text">
                     <p class="text-title"><?= $page->header() ?></p>
                     <p class="text"><?= $page->title() ?></p>
+                    <p class="item-price text-title">€ <?= $page->price() ?></p>
                 </div>
                 <div class="description-header-ui">
                     <div class="tooltip">
@@ -49,9 +50,11 @@
                         <?= $page->itemInfo() ?>
                     </div>
                 <?php endif ?>
-                <div class="description-text-info text-title">
-                    <p class="item-price">€ <?= $page->price() ?></p>
-                </div>
+                <?php if ($page->category()->isNotEmpty()): ?>
+                    <div class="description-text-info text-caption">
+                        <p>Categoria: <span><?= $page->category() ?></span></p>
+                    </div>
+                <?php endif ?>
                 <?php if ($page->description()->isNotEmpty()) : ?>
                     <div class="description-text-copy">
                         <?= $page->description() ?>    

@@ -46,7 +46,7 @@ columns:
             type: text
             placeholder: "{{ page.title }}"
             disabled: true
-          info:
+          itemInfo:
             label:
               en: Information
               it: Informazioni

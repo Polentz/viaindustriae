@@ -37,9 +37,14 @@
             </div>
             
             <div class="description-text">
-                <?php if ($page->info()->isNotEmpty()): ?>
+                <?php if ($page->itemInfo()->isNotEmpty()): ?>
                     <div class="description-text-info text-caption">
-                        <?= $page->info() ?>
+                        <?= $page->itemInfo() ?>
+                    </div>
+                <?php endif ?>
+                <?php if ($page->category()->isNotEmpty()): ?>
+                    <div class="description-text-info text-caption">
+                        <p>Categoria: <span><?= $page->category() ?></span></p>
                     </div>
                 <?php endif ?>
                 <?php if ($page->description()->isNotEmpty()) : ?>

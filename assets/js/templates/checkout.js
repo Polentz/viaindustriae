@@ -212,4 +212,5 @@ document.querySelectorAll('.checkout').forEach((productElement) => new Checkout(
 
 window.addEventListener("load", () => {
   headerHeight();
+  sliderOpener();
 });

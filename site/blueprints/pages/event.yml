@@ -52,7 +52,7 @@ columns:
               en: Date
               it: Data
             type: text    
-          info:
+          itemInfo:
             label:
               en: Information
               it: Informazioni
