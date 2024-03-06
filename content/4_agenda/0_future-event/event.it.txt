@@ -10,7 +10,7 @@ Quotetext: This is an upcoming event
 
 ----
 
-Header: Somewhere
+Header: 24 maggio 2024
 
 ----
 
@@ -18,11 +18,11 @@ Paneltitle:
 
 ----
 
-Eventdate: 24 maggio 2024
+Eventdate: 
 
 ----
 
-Info: 
+Iteminfo: 
 
 ----
 
@@ -31,6 +31,10 @@ Description:
 ----
 
 Category: 2024-05-24
+
+----
+
+Info: 
 
 ----
 

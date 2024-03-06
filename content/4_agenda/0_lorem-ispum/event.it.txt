@@ -2,11 +2,15 @@ Title: Lorem ispum
 
 ----
 
+Gallery: 
+
+----
+
 Quotetext: Lorem ipsum dolor sit amet
 
 ----
 
-Header: Lorem ipsum dolor sit amet
+Header: 1 febbraio 2024
 
 ----
 
@@ -14,7 +18,15 @@ Paneltitle:
 
 ----
 
-Eventdate: 1 febbraio 2024
+Eventdate: 
+
+----
+
+Iteminfo: 
+
+----
+
+Description: 
 
 ----
 

@@ -2,11 +2,15 @@ Title: AMAZZONIA
 
 ----
 
+Gallery: 
+
+----
+
 Quotetext: AMAZZONIA, bookshop temporaneo 2023
 
 ----
 
-Header: VIAINDUSTRIAE
+Header: 22 dicembre 2023, dalle 17:30 alle 20:30
 
 ----
 
@@ -14,7 +18,15 @@ Paneltitle:
 
 ----
 
-Eventdate: 22 dicembre 2023, dalle 17:30 alle 20:30
+Eventdate: 
+
+----
+
+Iteminfo: 
+
+----
+
+Description: 
 
 ----
 

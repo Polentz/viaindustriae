@@ -10,7 +10,7 @@ Quotetext: A long time ago in a galaxy far, far away
 
 ----
 
-Header: Outer space
+Header: 2020
 
 ----
 
@@ -18,11 +18,11 @@ Paneltitle:
 
 ----
 
-Eventdate: 2020
+Eventdate: 
 
 ----
 
-Info: 
+Iteminfo: 
 
 ----
 
@@ -31,6 +31,10 @@ Description:
 ----
 
 Category: 2020-03-05
+
+----
+
+Info: 
 
 ----
 

@@ -10,7 +10,7 @@ Quotetext: Why I Make Documentaries Book presentation by Kazuhiro Soda
 
 ----
 
-Header: Gerichtstrasse 45, 13347 Berlino
+Header: 14 febbraio 2024, ore 18:30
 
 ----
 
@@ -18,11 +18,11 @@ Paneltitle:
 
 ----
 
-Eventdate: 14 febbraio 2024, ore 18:30
+Eventdate: 
 
 ----
 
-Info: 
+Iteminfo: 
 
 ----
 
@@ -31,6 +31,10 @@ Description:
 ----
 
 Category: 2024-02-17
+
+----
+
+Info: 
 
 ----
 
