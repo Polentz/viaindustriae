@@ -2,7 +2,10 @@ Title: Contenuto Rimosso. Il fuoco nel quadrato
 
 ----
 
-Gallery: - file://mq4hFKJhO22vFMCM
+Gallery:
+
+- file://mq4hFKJhO22vFMCM
+- file://Ywxj4daVwwRDmM8q
 
 ----
 

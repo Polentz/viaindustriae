@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
     itemHeight();
-    handleHeaderOnScroll();
+    // handleHeaderOnScroll();
     searchFeature();
     filterButtonsStyle();
     openGalleryItem();
@@ -9,5 +9,5 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", () => {
     itemHeight();
-    handleHeaderOnScroll();
+    // handleHeaderOnScroll();
 });

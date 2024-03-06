@@ -15,8 +15,8 @@ return [
      * /site/models/product.php
      */
     'taxRates' => [
-        'reduced' => 7,
-        'default' => 19,
+        'reduced' => 4,
+        'default' => 22,
     ],
 
     /**

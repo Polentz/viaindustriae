@@ -2,7 +2,10 @@ Title: The Mimetic Observer
 
 ----
 
-Gallery: - file://efVr0po4C7VZZhAs
+Gallery:
+
+- file://efVr0po4C7VZZhAs
+- file://5HPpfkAEsAzUFYNa
 
 ----
 

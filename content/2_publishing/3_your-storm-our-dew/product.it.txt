@@ -2,7 +2,10 @@ Title: Your Storm Our Dew
 
 ----
 
-Gallery: - file://XZquWd5VOMTqCUR8
+Gallery:
+
+- file://XZquWd5VOMTqCUR8
+- file://zdQoWALApxHfOpOP
 
 ----
 

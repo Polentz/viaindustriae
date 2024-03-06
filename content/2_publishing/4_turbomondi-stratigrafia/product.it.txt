@@ -2,7 +2,10 @@ Title: Turbomondi (Stratigrafia)
 
 ----
 
-Gallery: - file://bE7a28bgZUzK2gPA
+Gallery:
+
+- file://bE7a28bgZUzK2gPA
+- file://EX29eyTRP5YLOoE4
 
 ----
 

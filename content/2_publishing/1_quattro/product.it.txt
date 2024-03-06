@@ -2,7 +2,10 @@ Title: Quattro
 
 ----
 
-Gallery: - file://cV7p6HjZ356EkHa8
+Gallery:
+
+- file://cV7p6HjZ356EkHa8
+- file://sQItU5pnGwMJGZA0
 
 ----
 

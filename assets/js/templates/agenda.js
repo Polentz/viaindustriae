@@ -1,11 +1,11 @@
 window.addEventListener("load", () => {
     itemHeight();
-    handleHeaderOnScroll();
+    // handleHeaderOnScroll();
     searchFeature();
     sliderOpener();
 });
 
 window.addEventListener("resize", () => {
     itemHeight();
-    handleHeaderOnScroll();
+    // handleHeaderOnScroll();
 });

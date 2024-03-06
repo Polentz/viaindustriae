@@ -98,18 +98,21 @@
 
         <div class="item-page <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
             <div class="item-gallery">
-                <?php foreach ($page->gallery()->toFiles() as $file) : ?>
-                    <?php if ($file->isNotEmpty()) : ?>
-                        <figure class="item-gallery-wrapper">
-                            <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $file->alt() ?>" />
-                            <figcaption class="item-gallery-caption text-caption">
-                                <?php if ($file->caption()->isNotEmpty()) : ?>
-                                    <?= $file->caption() ?>
-                                <?php endif ?>
-                            </figcaption>
-                        </figure>
-                    <?php endif ?>
-                <?php endforeach ?>
+                <div class="carousel">
+                    <?php foreach ($page->gallery()->toFiles() as $file) : ?>
+                        <?php if ($file->isNotEmpty()) : ?>
+                            <figure class="item-gallery-wrapper">
+                                <img src="<?= $file->crop(1200, 850, 72)->url() ?>" alt="<?= $file->alt() ?>" />
+                                <figcaption>
+                                    <?php if ($file->caption()->isNotEmpty()) : ?>
+                                        <?= $file->caption() ?>
+                                    <?php endif ?>
+                                </figcaption>
+                            </figure>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                </div>
+                <div class="carousel-nav"></div>
             </div>
             
             <div class="item-description">
