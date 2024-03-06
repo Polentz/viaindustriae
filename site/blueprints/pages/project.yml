@@ -27,18 +27,13 @@ columns:
               ratio: 4/3
               back: white
               cover: true
-          cover:
-            label: 
-              en: Thumbnail
-              it: Anteprima
-            type: files
-            multiple: false
-            translate: false
-            image:
-              icon: true
-              ratio: 4/3
-              back: white
-              cover: true
+          galleryInfo:
+            type: info
+            text:
+              en: >
+                The first two images appear on the page {{ page.parent.title }}.
+              it: >
+                Le prime due immagini compaiono nella pagina {{ page.parent.title }}.
           header:
             label:
               en: Header

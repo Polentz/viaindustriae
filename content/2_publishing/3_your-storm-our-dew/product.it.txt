@@ -6,10 +6,6 @@ Gallery: - file://XZquWd5VOMTqCUR8
 
 ----
 
-Cover: - file://XZquWd5VOMTqCUR8
-
-----
-
 Header: Andrea Martinucci
 
 ----
@@ -18,7 +14,7 @@ Paneltitle:
 
 ----
 
-Info: <p>A cura di Lisa Andreani, Maria Vittoria Di Sabatino.<br>Partner della ricerca Partner Iuno. Realizzato grazie al sostegno di Regione Lazio, Vitamina G (2022). Promosso da LIMBO FILMS ETS</p><p>184 pp.<br>19×27 cm<br>ita/en<br>2023</p><p>ISBN 978-88-97753-99-5</p>
+Iteminfo: <p>A cura di Lisa Andreani, Maria Vittoria Di Sabatino.<br>Partner della ricerca Partner Iuno. Realizzato grazie al sostegno di Regione Lazio, Vitamina G (2022). Promosso da LIMBO FILMS ETS</p><p>184 pp.<br>19×27 cm<br>ita/en<br>2023</p><p>ISBN 978-88-97753-99-5</p>
 
 ----
 
@@ -34,7 +30,7 @@ Price: 20
 
 ----
 
-Tax: reduced
+Tax: 4
 
 ----
 

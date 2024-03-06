@@ -3,7 +3,7 @@ const documentHeight = () => {
     doc.style.setProperty("--doc-height", `${window.innerHeight}px`);
 };
 
-const itemWidth = () => {
+const itemHeight = () => {
     const items = document.querySelectorAll(".item");
     items.forEach(item => {
         const itemCover = item.querySelector(".item-cover");
@@ -245,23 +245,22 @@ const searchFeature = () => {
 };
 
 const filterButtonsStyle = () => {
-    const filterLocation = "?filter="
+    const filterLocation = "?filter=";
     const buttons = document.querySelectorAll(".category-button");
     const items = document.querySelectorAll(".item");
     const clearButton = document.querySelector(".no-category-button");
 
     if (window.location.href.includes(filterLocation)) {
         clearButton.classList.remove("--current");
+
         buttons.forEach(btn => {
             const categoryName = btn.innerHTML;
-            items.forEach(item => {
-                const itemCategory = item.dataset.category;
-                if (itemCategory.includes(categoryName)) {
-                    btn.classList.add("--current");
-                } else {
-                    btn.classList.remove("--current");
-                };
-            });
+            const url = escape(categoryName);
+            if (window.location.href.includes(url)) {
+                btn.classList.add("--current");
+            } else {
+                btn.classList.remove("--current");
+            };
         });
     } else {
         clearButton.addEventListener("click", (e) => {

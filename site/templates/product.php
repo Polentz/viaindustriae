@@ -11,14 +11,16 @@
     <div class="item-page <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
         <div class="item-gallery">
             <?php foreach ($page->gallery()->toFiles() as $file) : ?>
-                <figure class="item-gallery-wrapper">
-                    <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $file->alt() ?>" />
-                    <figcaption class="item-gallery-caption text-caption">
-                        <?php if ($file->caption()->isNotEmpty()) : ?>
-                            <?= $file->caption() ?>
-                        <?php endif ?>
-                    </figcaption>
-                </figure>
+                <?php if ($file->isNotEmpty()) : ?>
+                    <figure class="item-gallery-wrapper">
+                        <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $file->alt() ?>" />
+                        <figcaption class="item-gallery-caption text-caption">
+                            <?php if ($file->caption()->isNotEmpty()) : ?>
+                                <?= $file->caption() ?>
+                            <?php endif ?>
+                        </figcaption>
+                    </figure>
+                <?php endif ?>
             <?php endforeach ?>
         </div>
 
@@ -42,9 +44,9 @@
             </div>
             
             <div class="description-text">
-                <?php if ($page->info()->isNotEmpty()): ?>
+                <?php if ($page->itemInfo()->isNotEmpty()): ?>
                     <div class="description-text-info text-caption">
-                        <?= $page->info() ?>
+                        <?= $page->itemInfo() ?>
                     </div>
                 <?php endif ?>
                 <div class="description-text-info text-title">

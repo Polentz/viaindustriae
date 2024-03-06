@@ -6,10 +6,6 @@ Gallery: - file://bE7a28bgZUzK2gPA
 
 ----
 
-Cover: - file://bE7a28bgZUzK2gPA
-
-----
-
 Header: Cleo Fariselli
 
 ----
@@ -18,7 +14,7 @@ Paneltitle:
 
 ----
 
-Info: <p>A cura di Bianca Stoppani.<br>Progetto prodotto da Almanac Projects.<br>Testi di Lucia Aspesi, Cleo Fariselli, Chus Martínez, Guido Santandrea</p><p>128 pp.<br>19×29,5 cm<br>ita/eng<br>2023</p><p>ISBN 978-88-97753-42-1</p>
+Iteminfo: <p>A cura di Bianca Stoppani.<br>Progetto prodotto da Almanac Projects.<br>Testi di Lucia Aspesi, Cleo Fariselli, Chus Martínez, Guido Santandrea</p><p>128 pp.<br>19×29,5 cm<br>ita/eng<br>2023</p><p>ISBN 978-88-97753-42-1</p>
 
 ----
 
@@ -34,7 +30,7 @@ Price: 25
 
 ----
 
-Tax: reduced
+Tax: 4
 
 ----
 

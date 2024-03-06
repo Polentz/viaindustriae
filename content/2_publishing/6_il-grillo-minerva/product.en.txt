@@ -2,27 +2,27 @@ Title: Quattro
 
 ----
 
-Gallery:
-
-- file://cV7p6HjZ356EkHa8
-- file://lhGaf6T3R9HcHODT
-- file://HOqjcmcKcfyTfw9t
-
-----
-
 Header: Luca Pucci
 
 ----
 
-itemInfo: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
+Paneltitle: 
 
 ----
 
-Description:
+Iteminfo: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
+
+----
+
+Description: 
 
 ----
 
 Category: Libri d'artista
+
+----
+
+Titleee: 
 
 ----
 

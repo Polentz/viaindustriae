@@ -4,13 +4,12 @@ Title: A Week From Monday
 
 Gallery:
 
-- file://HWirUVqxgghWa0lq
-- file://UL2fImRhryRBY8PU
 - file://h8j79CYDdPkYlId9
+- file://UL2fImRhryRBY8PU
 
 ----
 
-Cover: - file://h8j79CYDdPkYlId9
+Cover: 
 
 ----
 

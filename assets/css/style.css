@@ -400,9 +400,13 @@ a:not(.button a):hover {
     position: relative;
     margin-bottom: 4px;
     border: solid 1px var(--color-page);
+    background: var(--color-page);
+}
+
+.item-cover figure {
+    position: relative;
     overflow: hidden;
     perspective: 2000px;
-    background: var(--color-page);
 }
 
 .item-cover img {
@@ -412,6 +416,18 @@ a:not(.button a):hover {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+}
+
+.item-cover img:nth-child(1) {
+    position: relative;
+    z-index: 2;
+}
+
+.item-cover img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .item-cover-headline {
@@ -431,8 +447,8 @@ a:not(.button a):hover {
     z-index: 2;
 }
 
-.item-cover:hover img {
-    opacity: .75;
+.item-cover:hover img:nth-child(1) {
+    opacity: 0;
     transform: translate3d(0, 0, 100px);
 }
 

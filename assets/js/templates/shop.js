@@ -19,6 +19,7 @@ class Product {
 document.querySelectorAll('.product').forEach((productElement) => new Product(productElement));
 
 window.addEventListener("load", () => {
+    itemHeight();
     handleHeaderOnScroll();
     searchFeature();
     filterButtonsStyle();
@@ -27,6 +28,7 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", () => {
+    itemHeight();
     handleHeaderOnScroll();
 });
 

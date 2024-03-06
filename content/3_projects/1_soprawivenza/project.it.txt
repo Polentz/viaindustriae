@@ -4,13 +4,12 @@ Title: SOPRAWIVENZA
 
 Gallery:
 
-- file://C6TuxPCaI8BdbhMZ
 - file://rqNa6iYAjdZdw5g5
 - file://GAqtvJgMVB7wVpPD
 
 ----
 
-Cover: - file://rqNa6iYAjdZdw5g5
+Cover: 
 
 ----
 

@@ -1,11 +1,3 @@
-<?php 
-    if ($page->category()->toDate() < strtotime('today')) {
-        $category = 'Past';
-    } else if ($page->category()->toDate() > strtotime('today')) {
-        $category = 'Upcoming';
-    };
-?>
-
 <?php if ($slots->agenda()) : ?>
 
     <div class="item" data-category="<?= $page->category() ?>">
@@ -75,21 +67,24 @@
 <?php else : ?>
     <div class="item <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
         <div class="item-preview">
-            <figure class="item-cover">
-                <?php $cover = $page->cover()->toFile() ?>
-                <img src="<?= $cover->resize(1200, null)->url() ?>" alt="<?= $cover->alt() ?>" />
-                <?php if ($slots->product()) : ?>
-                    <?php if($page->stock() > '0') : ?>
-                        <figcaption class="item-cover-caption">
-                            <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
-                        </figcaption>
-                    <?php else : ?>
-                        <figcaption class="item-cover-caption">
-                            <div class="button static-button"><?= t('product.sold-out') ?></div>
-                        </figcaption>
+            <div class="item-cover">
+                <figure class="item-cover-wrapper">
+                    <?php foreach ($page->gallery()->toFiles()->limit(2) as $preview) : ?>
+                        <img src="<?= $preview->resize(1200, null)->url() ?>" alt="<?= $preview->alt() ?>" />
+                    <?php endforeach ?>
+                    <?php if ($slots->product()) : ?>
+                        <?php if($page->stock() > '0') : ?>
+                            <figcaption class="item-cover-caption">
+                                <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>
+                            </figcaption>
+                        <?php else : ?>
+                            <figcaption class="item-cover-caption">
+                                <div class="button static-button"><?= t('product.sold-out') ?></div>
+                            </figcaption>
+                        <?php endif ?>
                     <?php endif ?>
-                <?php endif ?>
-            </figure>
+                </figure>
+            </div>
             <div class="item-info">
                 <div class="item-info-wrapper">
                     <p class="text-title"><?= $page->header() ?></p>
@@ -104,14 +99,16 @@
         <div class="item-page <?= $page->template() ?>" data-id="<?= $page->uuid() ?>" data-category="<?= $page->category() ?>">
             <div class="item-gallery">
                 <?php foreach ($page->gallery()->toFiles() as $file) : ?>
-                    <figure class="item-gallery-wrapper">
-                        <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $file->alt() ?>" />
-                        <figcaption class="item-gallery-caption text-caption">
-                            <?php if ($file->caption()->isNotEmpty()) : ?>
-                                <?= $file->caption() ?>
-                            <?php endif ?>
-                        </figcaption>
-                    </figure>
+                    <?php if ($file->isNotEmpty()) : ?>
+                        <figure class="item-gallery-wrapper">
+                            <img src="<?= $file->resize(1200, null)->url() ?>" alt="<?= $file->alt() ?>" />
+                            <figcaption class="item-gallery-caption text-caption">
+                                <?php if ($file->caption()->isNotEmpty()) : ?>
+                                    <?= $file->caption() ?>
+                                <?php endif ?>
+                            </figcaption>
+                        </figure>
+                    <?php endif ?>
                 <?php endforeach ?>
             </div>
             
@@ -137,9 +134,9 @@
                 </div>
                 
                 <div class="description-text">
-                    <?php if ($page->info()->isNotEmpty()): ?>
+                    <?php if ($page->itemInfo()->isNotEmpty()): ?>
                         <div class="description-text-info text-caption">
-                            <?= $page->info() ?>
+                            <?= $page->itemInfo() ?>
                         </div>
                     <?php endif ?>
                     <?php if ($slots->product()) : ?>

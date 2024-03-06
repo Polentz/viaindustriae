@@ -1,11 +1,11 @@
 window.addEventListener("load", () => {
-    itemWidth();
+    itemHeight();
     handleHeaderOnScroll();
     searchFeature();
     sliderOpener();
 });
 
 window.addEventListener("resize", () => {
-    itemWidth();
+    itemHeight();
     handleHeaderOnScroll();
 });

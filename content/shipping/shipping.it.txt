@@ -6,15 +6,15 @@ Price: 5
 
 ----
 
-Tax: 
-
-----
-
-Stock: 
+Tax: reduced
 
 ----
 
 Freeshipping: 100
+
+----
+
+Stock: 
 
 ----
 

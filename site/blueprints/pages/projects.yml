@@ -28,4 +28,4 @@ sections:
       cover: true
       ratio: 1/1
       back: '#7ba3dd'
-      query: page.cover.toFile()
+      query: page.gallery.toFile()

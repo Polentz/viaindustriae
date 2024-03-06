@@ -1,4 +1,5 @@
 window.addEventListener("load", () => {
+    itemHeight();
     handleHeaderOnScroll();
     searchFeature();
     filterButtonsStyle();
@@ -7,5 +8,6 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", () => {
+    itemHeight();
     handleHeaderOnScroll();
 });

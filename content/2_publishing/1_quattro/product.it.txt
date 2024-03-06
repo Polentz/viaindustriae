@@ -2,15 +2,7 @@ Title: Quattro
 
 ----
 
-Gallery:
-
-- file://cV7p6HjZ356EkHa8
-- file://lhGaf6T3R9HcHODT
-- file://HOqjcmcKcfyTfw9t
-
-----
-
-Cover: - file://cV7p6HjZ356EkHa8
+Gallery: - file://cV7p6HjZ356EkHa8
 
 ----
 
@@ -22,7 +14,7 @@ Paneltitle:
 
 ----
 
-Info: <p>44 pp.<br>7×29 cm</p><p>Ita<br>2020</p>
+Iteminfo: <p>44 pp.<br>7×29 cm</p><p>Ita<br>2020</p>
 
 ----
 
@@ -34,15 +26,15 @@ Category: Libri d'artista
 
 ----
 
-Price: 16
+Price: 22
 
 ----
 
-Tax: reduced
+Tax: 4
 
 ----
 
-Stock: 0
+Stock: 5
 
 ----
 

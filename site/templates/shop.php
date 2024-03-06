@@ -13,13 +13,14 @@
         ->children()
         ->listed()
         ->when($filterBy, function($filterBy) {
-            return $this->filterBy('category', $filterBy);
+            return $this->filterBy('category', $filterBy, ',');
         })
         ->paginate(16);
     
     $pagination = $items->pagination();
     $totalPages = $pagination->pages();
     $range = $totalPages;
+
 ?>
 
 <?= snippet('head') ?>

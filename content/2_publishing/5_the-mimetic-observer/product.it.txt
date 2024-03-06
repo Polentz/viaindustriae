@@ -6,10 +6,6 @@ Gallery: - file://efVr0po4C7VZZhAs
 
 ----
 
-Cover: - file://efVr0po4C7VZZhAs
-
-----
-
 Header: Cleo Fariselli
 
 ----
@@ -18,7 +14,7 @@ Paneltitle:
 
 ----
 
-Info: <p>Ed. Viaindustriae publishing in coedition con Central Institute for the Catalog and Documentation ICCD. A cura di Peter Lang, Alessandro Coco. Coordinato da Giorgio di Noto.<br>Fotografie di Carlotta Valente con la collaborazione di Joaquin Paredes.<br>Testi di Giulio Ferroni, Carlo Birrozzi.</p><p>128 pp.<br>20×23 cm<br>ita/en</p><p>2023<br>ISBN 978-88-97753-93-3</p>
+Iteminfo: <p>Ed. Viaindustriae publishing in coedizione con Central Institute for the Catalog and Documentation ICCD. A cura di Peter Lang, Alessandro Coco. Coordinato da Giorgio di Noto.<br>Fotografie di Carlotta Valente con la collaborazione di Joaquin Paredes.<br>Testi di Giulio Ferroni, Carlo Birrozzi.</p><p>128 pp.<br>20×23 cm<br>ita/en</p><p>2023<br>ISBN 978-88-97753-93-3</p>
 
 ----
 
@@ -34,7 +30,7 @@ Price: 30
 
 ----
 
-Tax: reduced
+Tax: 4
 
 ----
 

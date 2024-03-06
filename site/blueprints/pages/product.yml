@@ -27,18 +27,14 @@ columns:
               ratio: 4/3
               back: white
               cover: true
-          cover:
-            label: 
-              en: Thumbnail
-              it: Anteprima
-            type: files
-            multiple: false
-            translate: false
-            image:
-              icon: true
-              ratio: 4/3
-              back: white
-              cover: true
+          galleryInfo:
+            type: info
+            label: false
+            text:
+              en: >
+                The first two images appear on the page {{ page.parent.title }}.
+              it: >
+                Le prime due immagini compaiono nella griglia della pagina {{ page.parent.title }}.
           header:
             label:
               en: Author(s)
@@ -51,7 +47,7 @@ columns:
             type: text
             placeholder: "{{ page.title }}"
             disabled: true
-          info:
+          itemInfo:
             label:
               en: Information
               it: Informazioni
@@ -87,10 +83,44 @@ columns:
               en: Category
               it: Categoria
             type: tags
-            max: 1
+            # max: 1
             options:
               type: query
-              query: page.siblings.pluck("category", ",", true)
-          extends: fields/product-standards
+              query: page.siblings.pluck('category', ',', true)
+          price:
+            label:
+              en: Price
+              it: Prezzo
+            type: number
+            step: .01
+            min: 0
+            # before: "{{ kirby.option('ww.merx.currencySymbol') }}"
+            required: true
+            translate: false
+          tax:
+            label:
+              en: Tax rate
+              it: IVA %
+            type: select
+            options:
+              - value: '4'
+                text: 4%
+              - value: '22'
+                text: 22%
+            # options: query
+            # query:
+            #   fetch: kirby.option('taxRates')
+            #   text: "{{ arrayItem.value }} % ({{ arrayItem.key }})"
+            #   value: "{{ arrayItem.key }}"
+            translate: false
+          stock:
+            label:
+              en: Stock
+              it: Quantità disponibile
+            type: number
+            placeholder:
+              en: 0
+              it: 0
+            translate: false
 
 
