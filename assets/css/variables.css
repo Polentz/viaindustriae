@@ -13,6 +13,17 @@
     --header-height: 88px;
 }
 
+@-moz-document url-prefix() {
+    :root {
+        --button-padding: 8px 24px 4px 24px;
+    }
+}
+
+_::-webkit-full-page-media,
+_:future,
+:root {
+    --button-padding: 8px 24px 4px 24px;
+}
 
 /* --color-shop: #69bff5; */
 /* --color-shop: #8063FF; */

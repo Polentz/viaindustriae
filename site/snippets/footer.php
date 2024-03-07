@@ -6,7 +6,7 @@
                     <div class="button static-button">© <?= $site->title() ?> 2024</div>
                 </div>
                 <div class="main-nav-wrapper">
-                    <a class="button nav-button info-button">Info</a>
+                    <button class="button nav-button info-button">Info</button>
                     <?php foreach ($site->children()->filterby('template', 'agenda') as $agenda) : ?>
                         <?php if ($agenda->isOpen()) : ?>
                             <p class="button nav-button --current"><?= $agenda->title() ?></p>

@@ -3,9 +3,13 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
+    /* text-rendering: optimizeLegibility; */
+    /* -moz-osx-font-smoothing: grayscale; */
+    /* -webkit-font-smoothing: antialiased; */
+
     -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
 }
 
 a,
@@ -187,7 +191,35 @@ button {
     border-radius: 0;
 }
 
+summary::-webkit-details-marker {
+    display: none;
+}
+
+select,
+select:active,
+select:focus,
+select:focus-within,
+select:focus-visible,
+select:target,
+select:visited {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+*::-moz-selection {
+    color: var(--color-black);
+    background-color: #64FF64;
+}
+
 *::selection {
-    color: var(--color-green);
-    background-color: var(--color-white);
+    color: var(--color-black);
+    background-color: #64FF64;
 }
