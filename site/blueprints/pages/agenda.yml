@@ -1,8 +1,8 @@
 title: 
   en: Agenda
   it: Agenda
-create:
-  status: unlisted
+# create:
+#   status: unlisted
 delete: false
 duplicate: false
 move: false

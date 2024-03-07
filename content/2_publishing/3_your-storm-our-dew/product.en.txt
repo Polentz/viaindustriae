@@ -1,16 +1,16 @@
-Title: Quattro
+Title: Your Storm Our Dew
 
 ----
 
-Header: Luca Pucci
+Header: Andrea Martinucci
 
 ----
 
-Paneltitle: 
+itemTitle: 
 
 ----
 
-itemInfo: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
+Iteminfo: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
 
 ----
 

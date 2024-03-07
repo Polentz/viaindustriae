@@ -14,7 +14,7 @@ Header: 24 maggio 2024
 
 ----
 
-Paneltitle: 
+itemTitle: 
 
 ----
 

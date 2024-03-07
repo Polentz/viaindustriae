@@ -27,7 +27,7 @@ tabs:
           - shop
           - projects
           - agenda
-      pages:
+      footerPages:
         label:
           en: Other pages
           it: Altre pagine
@@ -88,6 +88,7 @@ tabs:
     sections:
       orders:
         extends: sections/orders
+        status: listed
   shopSettings:
     label:
       en: Shop Settings
@@ -97,13 +98,28 @@ tabs:
       main:
         width: 2/3    
         sections:
-          checkoutPage:
-            headline:
-              en: Checkout Page
-              it: Checkout
-            type: pages
-            template: checkout
-            max: 1
+          shopSettings:
+            type: fields
+            fields:
+              maxAmount:
+                label:
+                  en: Max Amount per Product
+                  it: Numero massimo di copie acquistabili per prodotto
+                type: number
+                min: 1
+                translate: false
+                # width: 1/2
+              amountInfo:
+                label: false
+                type: info
+                text: Stabilisce quante copie possono essere acquistate alla volta. Gestisce il selettore presente nel carrello.
+          # checkoutPage:
+          #   headline:
+          #     en: Checkout Page
+          #     it: Checkout
+          #   type: pages
+          #   template: checkout
+          #   max: 1
           shippingPage:
             headline:
               en: Shipping Page
@@ -133,16 +149,16 @@ tabs:
                 minlength: 1
                 maxlength: 27
                 width: 1/2
-          shopSettings:
-            type: fields
-            fields:
-              maxAmount:
-                label:
-                  en: Max Amount per Product
-                  it: Numero massimo acquistabile per prodotto
-                type: number
-                translate: false
-                # required: true
-                width: 1/2
+          # shopSettings:
+          #   type: fields
+          #   fields:
+          #     maxAmount:
+          #       label:
+          #         en: Max Amount per Product
+          #         it: Numero massimo acquistabile per prodotto
+          #       type: number
+          #       translate: false
+          #       # required: true
+          #       width: 1/2
 
 

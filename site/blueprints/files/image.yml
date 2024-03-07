@@ -1,0 +1,34 @@
+title:
+  en: Media
+  it: Media
+accept: 
+  extension: jpg, png, jpeg
+  type: image
+  # maxsize: 375000
+
+fields:
+  caption:
+    label:
+      en: Caption
+      it: Didascalia
+    type: writer
+    marks:
+      - bold
+      - italic
+      - link
+      - email
+      - clear
+    nodes: false
+  alt:
+    label: 
+      en: Alternative text
+      it: Testo alternativo
+    type: text
+  altInfo:
+    label: false
+    type: info
+    text:
+      en: > 
+        The alternative text describes the content of the image and/or its function on the page to aid accessibility of the site by visually impaired users using screen readers.
+      it: >
+        Il testo alternativo descrive il contenuto dell'immagine e/o la sua funziona nella pagina, per favorire l'accessibilità del sito da parte di utenti ipovedenti che utilizzano lettori di schermo.

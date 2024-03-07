@@ -13,7 +13,7 @@ Header: Lorem ipsum
 
 ----
 
-Paneltitle: 
+itemTitle: 
 
 ----
 

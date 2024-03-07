@@ -22,15 +22,15 @@ About: <p>Viaindustriae è un’associazione culturale e casa editrice con sede 
 
 ----
 
+Maxamount: 3
+
+----
+
 Recipient: VIAINDUSTRIAE Associazione Culturale
 
 ----
 
 Iban: IT0000000000000000000000000
-
-----
-
-Maxamount: 3
 
 ----
 

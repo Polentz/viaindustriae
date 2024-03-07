@@ -1,11 +1,11 @@
-Title: Turbomondi (Stratigrafia)
+Title: Turbomondi
 
 ----
 
 Gallery:
 
-- file://bE7a28bgZUzK2gPA
-- file://EX29eyTRP5YLOoE4
+- file://1ccT3iF5LuIXhXN7
+- file://f3KINFBu6Lf3Ezg0
 
 ----
 
@@ -13,7 +13,7 @@ Header: Cleo Fariselli
 
 ----
 
-Paneltitle: 
+Itemtitle: Turbomondi (Stratigrafia)
 
 ----
 
@@ -21,7 +21,7 @@ Iteminfo: <p>A cura di Bianca Stoppani.<br>Progetto prodotto da Almanac Projects
 
 ----
 
-Description: <p>Questa monografia dedicata al lavoro di Cleo Fariselli, la prima nel suo percorso artistico, racconta il processo poetico e formale da cui è stato generato il progetto di immagini in movimento Your Storm Our Dew (2023), che esplora l’inconscio collettivo contemporaneo al tempo della normalizzazione degli stati di emergenza. In YSOD, l’artista trasforma coperte termiche, tute protettive, giubbotti ad alta visibilità, coni di sicurezza e megafoni in creature tanto giocose quanto inquietanti, ossia grandi pupazzi che, illuminati da lampi di luce improvvisi, escono dall’oscurità del loro habitat per poi sparirvi di nuovo poco dopo tra lo stupore di chi li sta guardando.</p><p>A completamento del film, i contributi di Lucia Aspesi, Cleo Fariselli, Chus Martinez e Guido Santandrea gettano nuova luce sulla pratica multidisciplinare dell’artista. Allo stesso tempo, esplorano le zone d’ombra del pensiero antropocentrico all’incrocio tra arte e scienza, chiedendosi in ultima analisi come il passato e il presente informino il futuro della nostra immaginazione. Esplorando la forza immaginifica degli elementi oggettuali tipici degli stati di emergenza, l’artista dà vita a un mondo a sé, illuminato dall’incessante lampeggiare delle sirene, creando un nuovo ambiente emozionale, narrativo ed estetico.</p>
+Description: 
 
 ----
 
@@ -37,7 +37,7 @@ Tax: reduced
 
 ----
 
-Stock: 10
+Stock: 3
 
 ----
 

@@ -1,0 +1,44 @@
+Title: LOOKING FOR RAINBOW
+
+----
+
+Gallery:
+
+- file://LenUNgZUQ9TeLFeH
+- file://6K97eZXKdcphj1bD
+
+----
+
+Header: Davide D’Elia
+
+----
+
+Itemtitle: LOOKING FOR RAINBOW
+
+----
+
+Iteminfo: <p>Edizione limitata di 50 copie in bundle con il libro TIEPIDO COOL</p><p>12×16,5 cm</p><p>2022</p>
+
+----
+
+Description: <p>LOOKING FOR RAINBOW è un’azione attivata da Davide D’Elia nel quartiere di Shoreditch a Londra nel 2008 per lanciare una raccolta di immagini e dati su arcobaleni o formazioni iridescenti e farne un database cui attingere per opere successive. Oggi quei volantini colorati, strumenti primari per innescare tale raccolta, tornano in un piccolo volume, in edizione limitata di 50 copie, abbinato al libro TIEPIDO COOL. </p><p>LOOKING FOR RAINBOW è un’opera cartacea e ossessiva di Davide D’Elia che racconta di una ricerca che da un volantino dalla tipica grafica “cercasi/vendesi/affittasi” muove verso un tentativo di sperimentazione pittorica servendosi del coinvolgimento di una comunità non controllata. Tiepido Cool raccoglie la ricerca artistica di Davide D’Elia degli ultimi quindici anni in un racconto per immagini che segue il criterio poetico introdotto dal titolo. Le due parole, Tiepido, italiana, e Cool, inglese, guidano il susseguirsi delle opere in un percorso che privilegia l’esperienza percettiva piuttosto che quella cronologico-biografica.</p>
+
+----
+
+Category: Libri d'artista
+
+----
+
+Price: 180
+
+----
+
+Tax: reduced
+
+----
+
+Stock: 2
+
+----
+
+Uuid: ArzPJPyjRvmdprEE

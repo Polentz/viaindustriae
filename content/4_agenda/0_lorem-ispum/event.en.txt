@@ -14,7 +14,7 @@ Header: Lorem ipsum dolor sit amet
 
 ----
 
-Paneltitle: 
+itemTitle: 
 
 ----
 

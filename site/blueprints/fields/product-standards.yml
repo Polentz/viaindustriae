@@ -19,6 +19,7 @@ fields:
       en: Stock
       it: Quantità disponibile
     type: number
+    min: 0
     placeholder:
       en: 0
       it: 0

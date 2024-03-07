@@ -1,0 +1,110 @@
+Items:
+
+- 
+  title: CARO CAMPO. DIARIO DI LAVORO
+  quantity: 1
+  price: 30
+  id: page://JZyq8szgY9Qjom3v
+  key: page://JZyq8szgY9Qjom3v
+  taxrate: 4
+  template: product
+  uid: caro-campo-diario-di-lavoro
+  tax: "1.1538461538462"
+  sum: 30
+  sumtax: "1.1538461538462"
+- 
+  title: Spedizioni
+  quantity: 1
+  price: 5
+  id: shipping
+  key: shipping
+  taxrate: 4
+  template: shipping
+  uid: shipping
+  tax: "0.19230769230769"
+  sum: 5
+  sumtax: "0.19230769230769"
+
+----
+
+Paymentmethod: prepayment
+
+----
+
+Paymentcomplete: true
+
+----
+
+Email: giuliapolenta@gmail.com
+
+----
+
+Name: Giulia
+
+----
+
+Surname: Polenta
+
+----
+
+Organization: 
+
+----
+
+Streetaddress: Forster Strasse 50
+
+----
+
+Postalcode: 10999
+
+----
+
+City: Berlin
+
+----
+
+Country: Germany
+
+----
+
+Billingaddressisshippingaddress: true
+
+----
+
+Shippingname: 
+
+----
+
+Shippingorganization: 
+
+----
+
+Shippingstreetaddress: 
+
+----
+
+Shippingpostalcode: 
+
+----
+
+Shippingcity: 
+
+----
+
+Shippingcountry: 
+
+----
+
+Stripepaymentintentid: 
+
+----
+
+Invoicedate: 2024-03-06T21:42:44+00:00
+
+----
+
+Uuid: be7fFINWFHLBr1Hw
+
+----
+
+Paiddate: 2024-03-06T21:45:25+00:00

@@ -1,4 +1,4 @@
-Title: LIBERO LIBRO
+Title: LIBERO LIBRO D'ARTISTA LIBERO
 
 ----
 
@@ -13,7 +13,7 @@ Header: Lorem ipsum
 
 ----
 
-Paneltitle: 
+Itemtitle: 
 
 ----
 

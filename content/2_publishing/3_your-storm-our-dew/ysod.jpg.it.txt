@@ -1,9 +1,5 @@
-Caption: 
+Uuid: Ut78OTIkhlqk4Asm
 
 ----
 
-Alt: 
-
-----
-
-Uuid: XZquWd5VOMTqCUR8
+Template: image

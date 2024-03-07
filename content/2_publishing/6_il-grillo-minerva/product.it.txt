@@ -4,9 +4,9 @@ Title: Il Grillo Minerva
 
 Gallery:
 
-- file://tR66jWVxyMLcNsTB
-- file://0YnI0mBQY8nMQzxB
-- file://l2iUi6V9Ki31BM6T
+- file://sDrnAO3WeNNXpzJq
+- file://kksKVW4YDhZrVRaf
+- file://yALJFT3P2gICCkOR
 
 ----
 
@@ -14,7 +14,7 @@ Header: Francesco Cavaliere
 
 ----
 
-Paneltitle: 
+Itemtitle: Il Grillo Minerva
 
 ----
 

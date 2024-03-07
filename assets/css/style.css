@@ -215,7 +215,10 @@ a:not(.button a):hover {
     background: var(--color-black);
 }
 
-.contact-button:hover,
+.contact-button:hover {
+    color: var(--color-green);
+}
+
 .checkout-button:hover {
     color: var(--color-white);
 }
@@ -460,7 +463,7 @@ a:not(.button a):hover {
     justify-content: flex-end;
     padding: 16px;
     opacity: 0;
-    transition: opacity .5s .25s ease-in-out;
+    transition: opacity .35s .25s ease-in-out;
     z-index: 2;
 }
 
@@ -477,8 +480,16 @@ a:not(.button a):hover {
     opacity: 1;
 }
 
+.item-cover-caption .static-button {
+    background: var(--color-white);
+}
+
 .item-price {
     white-space: nowrap;
+}
+
+.item-stock {
+    opacity: .35;
 }
 
 .item-info {
@@ -535,6 +546,7 @@ a:not(.button a):hover {
 
 .item-gallery-wrapper img {
     width: 100%;
+    cursor: pointer;
 }
 
 .item-gallery-wrapper figcaption {
@@ -621,12 +633,13 @@ a:not(.button a):hover {
 }
 
 .cart {
+    width: calc(50% - 56px);
+    height: var(--doc-height);
     position: fixed;
     left: 0;
     top: 0;
     background: var(--color-page);
-    width: calc(50% - 56px);
-    height: var(--doc-height);
+    pointer-events: all;
     z-index: 9;
 }
 

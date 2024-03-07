@@ -31,7 +31,7 @@
             <div class="description-header">
                 <div class="description-header-text">
                     <p class="text-title"><?= $page->header() ?></p>
-                    <p class="text"><?= $page->title() ?></p>
+                    <p class="text"><?= $page->itemTitle() ?></p>
                 </div>
                 <div class="description-header-ui">
                     <div class="tooltip">

@@ -4,8 +4,8 @@ Title: Quattro
 
 Gallery:
 
-- file://cV7p6HjZ356EkHa8
-- file://sQItU5pnGwMJGZA0
+- file://C1uxAR5hDsw1ORt0
+- file://Fg4MA2Xu9sw1vGmz
 
 ----
 
@@ -13,7 +13,7 @@ Header: Luca Pucci
 
 ----
 
-Paneltitle: 
+Itemtitle: Quattro
 
 ----
 

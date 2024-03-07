@@ -1,0 +1,44 @@
+Title: Ultras Mashup
+
+----
+
+Gallery:
+
+- file://50lwjOE1iXUlQAUb
+- file://S96MnqgnzjvHB45U
+
+----
+
+Header: Davide Tidoni
+
+----
+
+Itemtitle: Ultras Mashup
+
+----
+
+Iteminfo: <p>Ed. SARU e viaindustriae SUONO<br>vinile bianco/white vinyl<br>30×30 cm</p>
+
+----
+
+Description: <p>Ultras Mashup è una serie di tracce audio in cui le registrazioni dei cori da stadio sono mescolate con le canzoni originali sulle quali si basano. Il lavoro riflette sugli aspetti musicali della cultura dei tifosi e sulla pratica della creazione dei tifosi attraverso l’appropriazione. Il lavoro include cori che rivisitano il tema dell’opera di Giuseppe Verdi Aida, la canzone tradizionale ebraica dal Salmo 23 Gam Gam, Montagne Verdi, il successo del Festival di Sanremo 1972 di Marcella Bella, il fischiettop di Walt Disney di Robin Hood, una canzone popolare italiana del nord La Mula de Prensio, il jingle di Coca-Cola Buy The World a Coke, la canzone d’autore di Dean Martin That’s Amore, e il successo estivo degli anni ’80 L’Estate Sta Finendo dei Righeira. I cori di calcio sono stati registrati allo stadio e in trasferta come parte del mio impegno con il gruppo ultras di Brescia del 1911.</p>
+
+----
+
+Category: Sound
+
+----
+
+Price: 0
+
+----
+
+Tax: 
+
+----
+
+Stock: 0
+
+----
+
+Uuid: ZdshyQ3qhWxM5Hj0

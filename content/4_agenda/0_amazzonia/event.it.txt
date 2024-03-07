@@ -14,7 +14,7 @@ Header: 22 dicembre 2023, dalle 17:30 alle 20:30
 
 ----
 
-Paneltitle: 
+itemTitle: 
 
 ----
 

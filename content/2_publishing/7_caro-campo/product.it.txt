@@ -1,0 +1,44 @@
+Title: CARO CAMPO
+
+----
+
+Gallery:
+
+- file://cL8iwkWPRWrH9EIS
+- file://0zNcz7a77I3yajMu
+
+----
+
+Header: Luca Boffi (Alberonero)
+
+----
+
+Itemtitle: CARO CAMPO. DIARIO DI LAVORO
+
+----
+
+Iteminfo: <p>368 pp.<br>13,5×24 cm<br>ita</p><p>2023<br>ISBN 978-88-97753-97-1</p>
+
+----
+
+Description: 
+
+----
+
+Category: Libri d'artista
+
+----
+
+Price: 30
+
+----
+
+Tax: reduced
+
+----
+
+Stock: 2
+
+----
+
+Uuid: JZyq8szgY9Qjom3v

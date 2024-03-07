@@ -1,16 +1,16 @@
-Title: Quattro
+Title: Turbomondi (Stratigrafia)
 
 ----
 
-Header: Luca Pucci
+Header: Cleo Fariselli
 
 ----
 
-Paneltitle: 
+itemTitle: 
 
 ----
 
-itemInfo: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
+Iteminfo: <p>44 pp.</p><p>7×29 cm</p><p>ita</p><p>2020</p>
 
 ----
 

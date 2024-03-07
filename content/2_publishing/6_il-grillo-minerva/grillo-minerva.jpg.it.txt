@@ -1,9 +1,5 @@
-Caption: <p>This is a caption</p>
+Uuid: sDrnAO3WeNNXpzJq
 
 ----
 
-Alt: 
-
-----
-
-Uuid: tR66jWVxyMLcNsTB
+Template: image

@@ -4,8 +4,8 @@ Title: Contenuto Rimosso. Il fuoco nel quadrato
 
 Gallery:
 
-- file://mq4hFKJhO22vFMCM
-- file://Ywxj4daVwwRDmM8q
+- file://XkCA26xvMbfLWmMB
+- file://wISQ0uH1aYWHDpYC
 
 ----
 
@@ -13,7 +13,7 @@ Header: Chiara Trivelli
 
 ----
 
-Paneltitle: 
+Itemtitle: Contenuto Rimosso. Il fuoco nel quadrato
 
 ----
 

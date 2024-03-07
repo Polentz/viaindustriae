@@ -34,7 +34,7 @@
                 <div class="description-header">
                     <div class="description-header-text">
                         <p class="text-title"><?= $page->header() ?></p>
-                        <p class="text"><?= $page->title() ?></p>
+                        <p class="text"><?= $page->itemTitle() ?></p>
                     </div>
                     <div class="description-header-ui">
                         <div class="tooltip">
@@ -90,7 +90,11 @@
                     <p class="text-title"><?= $page->header() ?></p>
                     <p class="text"><?= $page->title() ?></p>
                     <?php if ($slots->product()) : ?>
-                        <p class="item-price text-title">€ <?= $page->price() ?></p>
+                        <?php if($page->stock() > '0') : ?>
+                            <p class="item-price text-title">€ <?= $page->price() ?></p>
+                        <?php else : ?>
+                            <p class="item-stock text-title"><?= t('product.sold-out') ?></p>
+                        <?php endif ?>
                     <?php endif ?>
                 </div>
             </div>
@@ -119,9 +123,13 @@
                 <div class="description-header">
                     <div class="description-header-text">
                         <p class="text-title"><?= $page->header() ?></p>
-                        <p class="text"><?= $page->title() ?></p>
+                        <p class="text"><?= $page->itemTitle() ?></p>
                         <?php if ($slots->product()) : ?>
-                        <p class="item-price text-title">€ <?= $page->price() ?></p>
+                            <?php if($page->stock() > '0') : ?>
+                                <p class="item-price text-title">€ <?= $page->price() ?></p>
+                            <?php else : ?>
+                                <p class="item-stock text-title"><?= t('product.sold-out') ?></p>
+                            <?php endif ?>
                     <?php endif ?>
                     </div>
                     <div class="description-header-ui">

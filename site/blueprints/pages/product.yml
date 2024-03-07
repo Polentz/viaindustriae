@@ -1,7 +1,17 @@
 title: 
   en: Book
   it: Libro
+# create:
+#   status: unlisted
 create:
+  title:
+    label:
+      en: Book title
+      it: Titolo del Libro
+  fields:
+    - price
+    - stock
+  redirect: false
   status: unlisted
 
 image:
@@ -20,6 +30,8 @@ columns:
               en: Gallery
               it: Galleria immagini
             type: files
+            template: image
+            uploads: image
             multiple: true
             translate: false
             image:
@@ -40,13 +52,14 @@ columns:
               en: Author(s)
               it: Autore/i
             type: text
-          panelTitle: 
+          itemTitle: 
             label:
               en: Title
               it: Titolo
             type: text
             placeholder: "{{ page.title }}"
-            disabled: true
+            default: "{{ page.title }}"
+            # disabled: true
           itemInfo:
             label:
               en: Information

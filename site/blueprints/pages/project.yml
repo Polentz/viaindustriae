@@ -1,7 +1,16 @@
 title: 
   en: Project
   it: Progetto
+# create:
+#   status: unlisted
 create:
+  title:
+    label:
+      en: Project name
+      it: Nome del progetto
+  fields:
+    - category
+  redirect: false
   status: unlisted
 
 image:
@@ -39,7 +48,7 @@ columns:
               en: Header
               it: Intestazione
             type: text
-          panelTitle: 
+          itemTitle: 
             label:
               en: Title
               it: Titolo
