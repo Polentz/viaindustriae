@@ -27,7 +27,7 @@
     color: var(--color-black);
 }
 
-.static-button {
+h1.static-button {
     cursor: ew-resize;
 }
 

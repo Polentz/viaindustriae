@@ -3,7 +3,7 @@
         <menu class="main-menu">
             <div class="main-nav">
                 <div class="main-nav-wrapper">
-                    <div class="button static-button">© <?= $site->title() ?> 2024</div>
+                    <div class="button static-button">© <?= date("Y") ?> <?= $site->title() ?></div>
                 </div>
                 <div class="main-nav-wrapper">
                     <button class="button nav-button info-button">Info</button>
@@ -37,7 +37,7 @@
         <menu class="main-menu">
             <div class="main-nav">
                 <div class="main-nav-wrapper">
-                    <div class="button static-button">© <?= $site->title() ?> 2024</div>
+                    <div class="button static-button">© <?= date("Y") ?> <?= $site->title() ?></div>
                 </div>
                 <div class="main-nav-wrapper">
                     <a class="button nav-button"><?= t('footer.tac') ?></a>

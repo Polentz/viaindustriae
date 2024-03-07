@@ -399,8 +399,19 @@ const tooltipHandler = () => {
         const tooltipButton = tooltip.querySelector(".tooltip-button");
         const tooltipText = tooltip.querySelector(".tooltip-text");
         const url = tooltipButton.dataset.url;
+        tooltipButton.onclick = () => {
+            document.execCommand("copy");
+        }
+        tooltipButton.addEventListener("copy", (event) => {
+            event.preventDefault();
+            if (event.clipboardData) {
+                event.clipboardData.setData("text/plain", url);
+                console.log(event.clipboardData.getData("text"))
+            }
+        });
         tooltipButton.addEventListener("click", () => {
-            navigator.clipboard.writeText(url);
+            // only on https: (use this in production)
+            // navigator.clipboard.writeText(url);
             gsap.set(tooltipText, {
                 opacity: 0,
             });
