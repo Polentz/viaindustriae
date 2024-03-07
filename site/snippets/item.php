@@ -38,7 +38,7 @@
                     </div>
                     <div class="description-header-ui">
                         <div class="tooltip">
-                            <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
+                            <button class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></button>
                             <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>
                         </div>
                     </div>
