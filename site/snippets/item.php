@@ -133,12 +133,16 @@
                     <?php endif ?>
                     </div>
                     <div class="description-header-ui">
-                        <a class="button action-button" href="<?= $page->url() ?>" target="_blank" rel="noopener noreferrer">
+                        <div class="tooltip">
+                            <div class="button action-button tooltip-button" data-url="<?= $page->url() ?>"><?= t('share') ?></div>
+                            <span class="tooltip-text text-caption"><?= t('tooltip') ?></span>
+                        </div>
+                        <!-- <a class="button action-button" href="<?= $page->url() ?>" target="_blank" rel="noopener noreferrer">
                             <?= t('open') ?> 
                             <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 12.615L12.6616 0.960161M1.33836 0.61499H13V12.2698"/>
                             </svg>
-                        </a>
+                        </a> -->
                         <?php if ($slots->product()) : ?>
                             <?php if($page->stock() > '0') : ?>
                                 <button class="button action-button" data-action="add-to-cart"><?= t('product.add-to-cart') ?></button>

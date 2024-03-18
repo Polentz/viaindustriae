@@ -19,7 +19,7 @@ return [
         'allEvents' => 'Tutti gli eventi',
         'buy' => 'Compra',
         'open' => 'Apri',
-        'share' => 'Condividi',
+        'share' => 'Copia il link',
         'tooltip' => 'Link copiato!',
 
         'footer.tac' => 'Termini e condizioni',

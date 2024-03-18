@@ -6,7 +6,7 @@ Price: 5
 
 ----
 
-Tax: reduced
+Tax: none
 
 ----
 
