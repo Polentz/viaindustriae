@@ -1,0 +1,21 @@
+Title: Test
+
+----
+
+Gallery: 
+
+----
+
+Category: 
+
+----
+
+Price: 5
+
+----
+
+Stock: 5
+
+----
+
+Uuid: EYigff8feXm5LRsi

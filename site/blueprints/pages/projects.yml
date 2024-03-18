@@ -1,12 +1,12 @@
 title: 
   en: Projects
   it: Progetti
-create:
-  status: unlisted
-delete: false
-duplicate: false
-move: false
-sort: false
+options:
+  delete: false
+  duplicate: false
+  changeStatus: false
+  move: false
+  sort: false
 
 image:
   icon: bookmark

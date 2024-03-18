@@ -1,8 +1,6 @@
 title: 
   en: Book
   it: Libro
-# create:
-#   status: unlisted
 create:
   title:
     label:
@@ -58,8 +56,6 @@ columns:
               it: Titolo
             type: text
             placeholder: "{{ page.title }}"
-            default: "{{ page.title }}"
-            # disabled: true
           itemInfo:
             label:
               en: Information
@@ -96,7 +92,6 @@ columns:
               en: Category
               it: Categoria
             type: tags
-            # max: 1
             options:
               type: query
               query: page.siblings.pluck('category', ',', true)

@@ -11,7 +11,7 @@ fields:
     options: query
     query:
       fetch: kirby.option('taxRates')
-      text: "{{ arrayItem.value }} % ({{ arrayItem.key }})"
+      text: "{{ arrayItem.value }} %"
       value: "{{ arrayItem.key }}"
     translate: false
   stock:

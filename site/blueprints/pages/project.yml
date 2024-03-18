@@ -1,8 +1,6 @@
 title: 
   en: Project
   it: Progetto
-# create:
-#   status: unlisted
 create:
   title:
     label:
@@ -54,7 +52,6 @@ columns:
               it: Titolo
             type: text
             placeholder: "{{ page.title }}"
-            disabled: true
           itemInfo:
             label:
               en: Information

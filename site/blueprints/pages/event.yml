@@ -10,9 +10,10 @@ create:
     - category
   redirect: false
   status: unlisted
-# create:
-#   status: unlisted
 num: '{{ page.created.toDate("dmY") }}'
+# navigation:
+#   status: all
+#   sortBy: '{{ page.category.toDate("dmY") }}'
 
 image:
   icon: false
@@ -55,7 +56,6 @@ columns:
               it: Titolo
             type: text
             placeholder: "{{ page.title }}"
-            disabled: true
           eventDate: 
             label: 
               en: Date

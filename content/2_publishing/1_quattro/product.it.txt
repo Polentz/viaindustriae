@@ -33,7 +33,7 @@ Price: 22
 
 ----
 
-Tax: reduced
+Tax: none
 
 ----
 

@@ -1,10 +1,13 @@
 title: 
   en: Home
   it: Home
-delete: false
-duplicate: false
-move: false
-sort: false
+options:
+  delete: false
+  duplicate: false
+  changeStatus: false
+  changeSlug: false
+  move: false
+  sort: false
 
 image:
   icon: home
