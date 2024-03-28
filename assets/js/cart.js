@@ -28,6 +28,7 @@ class Cart {
             'cart.shipping': 'Spedizione',
             'cart.product': 'Articolo',
             'cart.free-shipping': 'gratuita',
+            'cart.shipping-info': '(calcolata al checkout)',
             'cart.to-checkout': 'Checkout',
         };
         // overwrite default language variables
@@ -45,6 +46,7 @@ class Cart {
                 'cart.shipping': 'Shipping',
                 'cart.product': 'Item',
                 'cart.free-shipping': 'free',
+                'cart.shipping-info': '(calculated at checkout)',
                 'cart.to-checkout': 'Checkout',
             };
         }
@@ -188,21 +190,23 @@ class Cart {
                     ${createCartItems(data.items)}
                 </div>
                 <div class="cart-content-wrapper">
-                    <div class="cart-sum">
-                        <p class="text-title">${i18n['cart.shipping']}</p>
-                        <p class="text-subtitle">${data.shipping === null ? i18n['cart.free-shipping'] : data.shipping}</p>
-                    </div>
+                    ${(this.element.dataset.variant == 'checkout') ? `
+                        <div class="cart-sum">
+                            <p class="text-title">${i18n['cart.shipping']}</p>
+                            <p class="text-subtitle">${data.shipping}</p>
+                        </div>
+                    ` : ''}
                     <div class="cart-sum">
                         <p class="text-title">${i18n['cart.sum']}</p>
                         <p class="text-subtitle">${data.sum}</p>
                     </div>
                 </div>
                 
-                    ${(this.element.dataset.variant !== 'checkout') ? `
+                ${(this.element.dataset.variant !== 'checkout') ? `
                     <div class="cart-content-wrapper">
-                    <a href="${data.checkoutUrl}" class="button checkout-button">${i18n['cart.to-checkout']}</a>
-                    </div>`
-                    : ''}
+                        <a href="${data.checkoutUrl}" class="button checkout-button">${i18n['cart.to-checkout']}</a>
+                    </div>
+                ` : ''}
                 
             </div>
         `;
@@ -230,12 +234,13 @@ class Cart {
         }
     }
 
-    async update(id, quantity = 1) {
+    async update(id, quantity = 1, isShipping = false) {
         this.element.classList.add('-loading');
         try {
             return await this.request('cart', 'PATCH', {
                 id,
                 quantity,
+                isShipping,
             });
         } finally {
             this.element.classList.remove('-loading');
@@ -247,4 +252,4 @@ const cartElement = document.getElementById('cart');
 if (cartElement) {
     // Store the instance of Cart as a global variable so other scripts can make use of Cart methods.
     window.cart = new Cart(cartElement);
-}
+} 

@@ -18,4 +18,4 @@
  *  }
  */
 ?>
-<h2 class="field text-subtitle"><?= $field['label'] ?></h2>
+<h2 class="field text-title"><?= $field['label'] ?></h2>

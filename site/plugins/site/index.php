@@ -80,9 +80,9 @@ Kirby::plugin('site/site', [
         }
     ],
     'siteMethods' => [
-        'shippingPage' => function (): ?\Kirby\Cms\Page {
-            return $this->children()->template('shipping')->first();
-        },
+        // 'shippingPage' => function (): ?\Kirby\Cms\Page {
+        //     return $this->children()->template('shipping')->first();
+        // },
         'checkoutPage' => function (): ?\Kirby\Cms\Page {
             return $this->children()->template('checkout')->first();
         },

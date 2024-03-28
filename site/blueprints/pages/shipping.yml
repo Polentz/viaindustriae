@@ -1,34 +1,97 @@
 title:
   en: Shipping
   it: Spedizione
-
-status:
-  draft: true
-  unlisted: true
-
+create:
+  title:
+    label:
+      en: Title
+      it: Titolo
+  fields:
+    - price
+  redirect: false
+  status: unlisted
 options:
   duplicate: false
+  move: false
+  changeStatus: false
 
 image:
   icon: box
 
-fields:
-  extends: fields/product-standards
-  stock: false
-  freeShipping:
-    extends: fields/price
-    required: false
-    label:
-      en: Free shipping from
-      it: Spedizione gratuita da
-    placeholder:
-      en: Always free shipping
-      it: Spedizione sempre gratuita
-    width: 1/3
-  shippingInfo:
-    type: info
-    text:
-      en: >
-        The shipping cost of {{ page.price.toFormattedPrice }} will be automatically added to the cart as long as the amount is below {{ page.freeShipping.toFormattedPrice }}.
-      it: >
-        Il costo di spedizione di {{ page.price.toFormattedPrice }} verrà aggiunto automaticamente al carrello, purché l'importo sia inferiore a {{ page.freeShipping.toFormattedPrice }}.
+sections:
+  destination:
+    type: fields
+    fields:
+      countries:
+        label:
+          en: Shipping destination 
+          it: Destinazione di spedizione
+        type: multiselect
+        width: 1/2
+        required: true
+        translate: false
+        options: query
+        query:
+          fetch: kirby.option("countries")
+          text: "{{ arrayItem.value }}"
+          value: "{{ arrayItem.value }}"
+      description:
+        label:
+          en: Shipping information
+          it: Informazioni sulla spedizione
+        type: text
+        width: 1/2
+        maxlength: 50
+      price:
+        label: 
+          en: Price
+          it: Prezzo
+        type: number
+        width: 1/2
+        min: 0
+        before: "{{ kirby.option('ww.merx.currencySymbol') }}"
+        required: true
+        translate: false
+
+  # shippingCosts1:
+  #   label: Shipping Costs Italy
+  #   type: number
+  #   step: .01
+  #   min: 0
+  #   before: "{{ kirby.option('ww.merx.currencySymbol') }}"
+  #   required: true
+  #   translate: false
+  # shippingCosts2:
+  #   label: Shipping Costs International Zone 1
+  #   type: number
+  #   step: .01
+  #   min: 0
+  #   before: "{{ kirby.option('ww.merx.currencySymbol') }}"
+  #   required: true
+  #   translate: false
+  # shippingCosts3:
+  #   label: Shipping Costs International Zone 2
+  #   type: number
+  #   step: .01
+  #   min: 0
+  #   before: "{{ kirby.option('ww.merx.currencySymbol') }}"
+  #   required: true
+  #   translate: false
+
+  # freeShipping:
+  #   extends: fields/price
+  #   required: false
+  #   label:
+  #     en: Free shipping from
+  #     it: Spedizione gratuita da
+  #   placeholder:
+  #     en: Always free shipping
+  #     it: Spedizione sempre gratuita
+  #   width: 1/3
+  # shippingInfo:
+  #   type: info
+  #   text:
+  #     en: >
+  #       The shipping cost of {{ page.price.toFormattedPrice }} will be automatically added to the cart as long as the amount is below {{ page.freeShipping.toFormattedPrice }}.
+  #     it: >
+  #       Il costo di spedizione di {{ page.price.toFormattedPrice }} verrà aggiunto automaticamente al carrello, purché l'importo sia inferiore a {{ page.freeShipping.toFormattedPrice }}.

@@ -8,7 +8,10 @@ return [
         $cart = cart();
         $key = $this->requestBody('id');
         $quantity = $this->requestBody('quantity', 1);
-        checkStock(page($key), $quantity);
+        $isShipping = $this->requestBody('isShipping', false);
+        if (!$isShipping) {
+            checkStock(page($key), $quantity);
+        }
         $cart->updateItem(compact('key', 'quantity'));
         return $this->cart();
     },

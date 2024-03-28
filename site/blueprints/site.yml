@@ -27,7 +27,7 @@ tabs:
           - shop
           - projects
           - agenda
-      footerPages:
+      otherPages:
         label:
           en: Other pages
           it: Altre pagine
@@ -108,11 +108,11 @@ tabs:
                 type: number
                 min: 1
                 translate: false
-                # width: 1/2
               amountInfo:
                 label: false
                 type: info
                 text: Stabilisce quante copie possono essere acquistate alla volta. Gestisce il selettore presente nel carrello.
+                
           # checkoutPage:
           #   headline:
           #     en: Checkout Page
@@ -120,13 +120,14 @@ tabs:
           #   type: pages
           #   template: checkout
           #   max: 1
-          shippingPage:
+          es:
             headline:
-              en: Shipping Page
+              en: Shipping options
               it: Spedizioni
             type: pages
-            template: shipping
-            max: 1
+            query: kirby.collection('shipping')
+            template:
+              - shipping
       sidebar:
         width: 1/3
         sections:
@@ -149,6 +150,14 @@ tabs:
                 minlength: 1
                 maxlength: 27
                 width: 1/2
+              # test:
+              #   label: test select
+              #   type: select
+              #   options:
+              #     type: api
+              #     url: https://www.iampolenta.com/assets/media/countries.json
+              #     text: "{{ item.name }}"
+              #     value: "{{ item.name }}"
           # shopSettings:
           #   type: fields
           #   fields:

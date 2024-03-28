@@ -38,7 +38,7 @@
     <div class="cart-content-wrapper">
         <div class="cart-sum">
             <p class="text-title"><?= t('cart.shipping') ?></p>
-            <p class="text-subtitle">€ <?= $shippingPrice === 0 ? t('cart.free-shipping') : $shippingPrice ?></p>
+            <p class="text-subtitle"><?= t('cart.shipping-info') ?></p>
         </div>
         <div class="cart-sum">
             <p class="text-title"><?= t('cart.sum') ?></p>

@@ -14,9 +14,9 @@ return [
         'langCode' => 'it_IT',
         'search' => 'Cerca',
         'all' => 'Tutti',
-        'allBooks' => 'Tutti i libri',
-        'allProjects' => 'Tutti i progetti',
-        'allEvents' => 'Tutti gli eventi',
+        // 'allBooks' => 'Tutti i libri',
+        // 'allProjects' => 'Tutti i progetti',
+        // 'allEvents' => 'Tutti gli eventi',
         'buy' => 'Compra',
         'open' => 'Apri',
         'share' => 'Copia il link',
@@ -39,6 +39,7 @@ return [
         'cart.shipping' => 'Spedizione',
         'cart.product' => 'Articolo',
         'cart.free-shipping' => 'gratuita',
+        'cart.shipping-info' => '(calcolata al checkout)',
         'cart.to-checkout' => 'Checkout',
     
         'paymentMethod.creditCardSca.label' => 'Carta di credito',
@@ -61,7 +62,7 @@ return [
     
         'stock.not-available' => '“{productTitle}” non è più disponibile.',
         'stock.not-available.1' => 'È rimasto solo un articolo di “{productTitle}”.',
-        'stock.not-available.count' => 'Sono rimasti solo articoli {availableStock} di “{productTitle}”.',
+        'stock.not-available.count' => 'Sono rimasti solo {availableStock} di “{productTitle}”.',
     
         'order.invoice' => 'Ordine',
         'order.invoice-number' => "Numero d'ordine",
@@ -83,6 +84,7 @@ return [
         'order.invoice.purpose' => 'Causale',
     
         'field.payment-method' => 'Metodo di pagamento',
+        'field.select-shipping' => 'Seleziona la spedizione',
         'field.tax-rate' => "IVA %",
       ],
 ];

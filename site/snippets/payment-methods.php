@@ -2,8 +2,8 @@
 $stripePublishableKey = option('ww.merx.production') === true ? option('ww.merx.stripe.live.publishable_key') : option('ww.merx.stripe.test.publishable_key');
 $paypalPublishableKey = option('ww.merx.production') === true ? option('ww.merx.paypal.live.clientID') : option('ww.merx.paypal.sandbox.clientID');
 ?>
-<div class="payment-methods-wrapper">
-  <p class="payment-methods-title text-title"><?= t('field.paymentMethod') ?></p>
+<div class="radio-wrapper">
+  <h2 class="radio-title text-title"><?= t('field.paymentMethod') ?></h2>
 
   <?php foreach(collection('payment-methods') as $paymentMethod): ?>
     <?php

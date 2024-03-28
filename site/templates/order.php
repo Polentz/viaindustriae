@@ -29,6 +29,10 @@
       </h1>
     </div>
 
+    <div class="order-recap-wrapper order-recap-headline">
+      <h2 class="text-title"><?= t('order.shipping-address') ?></h2>
+    </div>
+
     <div class="order-recap-wrapper">
       <p class="text-subtitle">
         <?= $page->name() ?> <?= $page->surname() ?><br>
@@ -42,7 +46,7 @@
     </div>
 
     <div class="order-recap-wrapper order-recap-headline">
-      <h2 class="text-title"><?= t('order.shipping-address') ?></h2>
+      <h2 class="text-title">Indirizzo di fatturazione</h2>
     </div>
 
     <div class="order-recap-wrapper text-subtitle">

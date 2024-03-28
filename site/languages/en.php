@@ -14,9 +14,9 @@ return [
       'langCode' => 'en_US',
       'search' => 'Search',
       'all' => 'All',
-      'allBooks' => 'All books',
-      'allProjects' => 'All projects',
-      'allEvents' => 'All events',
+      // 'allBooks' => 'All books',
+      // 'allProjects' => 'All projects',
+      // 'allEvents' => 'All events',
       'buy' => 'Buy',
       'open' => 'Open',
       'share' => 'Copy link',
@@ -39,6 +39,7 @@ return [
       'cart.shipping' => 'Shipping',
       'cart.product' => 'Item',
       'cart.free-shipping' => 'free',
+      'cart.shipping-info' => '(calculated at checkout)',
       'cart.to-checkout' => 'Checkout',
   
       'paymentMethod.creditCardSca.label' => 'Credit Card',
@@ -83,6 +84,7 @@ return [
       'order.invoice.purpose' => 'Purpose',
   
       'field.payment-method' => 'Payment method',
+      'field.select-shipping' => 'Select shipping type',
       'field.tax-rate' => 'Tax rate',
     ],
   ];

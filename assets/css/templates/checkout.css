@@ -30,6 +30,7 @@
     display: none;
 }
 
+.shipping-form,
 .checkout-form {
     display: flex;
     flex-direction: column;
@@ -37,12 +38,15 @@
     flex: 1 1;
 }
 
+.shipping-form abbr,
 .checkout-form abbr {
     text-decoration: none;
 }
 
 .checkout-form input[type="email"],
-.checkout-form input[type="text"] {
+.checkout-form input[type="text"],
+.shipping-form select,
+.checkout-form select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -53,13 +57,30 @@
     border: solid 1px var(--color-black);
 }
 
-.payment-methods-title {
+.field.conditional {
+    display: none;
+}
+
+.radio-title {
     margin-bottom: 24px;
 }
 
-.field[data-type="radio"] label {
+.field[data-type="radio"] label,
+.field[data-type="radio"] label span {
     margin-left: 8px;
 }
+
+.field.text-title {
+    width: fit-content;
+    padding-bottom: 2px;
+    border-bottom: solid 1px var(--color-black);
+    /* margin-bottom: 1rem; */
+    /* align-self: center; */
+}
+
+/* .checkout-form .field.text-title {
+    margin-top: 2rem;
+} */
 
 .checkout-form .button {
     align-self: center;
@@ -90,4 +111,12 @@
 
 .table td {
     padding-left: 24px;
+}
+
+.error {
+    font-family: "anonymous-pro", monospace;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 120%;
+    color: red;
 }

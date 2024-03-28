@@ -34,6 +34,10 @@ Iban: IT0000000000000000000000000
 
 ----
 
+Test: Italy
+
+----
+
 Subscribetext: Newsletter
 
 ----
