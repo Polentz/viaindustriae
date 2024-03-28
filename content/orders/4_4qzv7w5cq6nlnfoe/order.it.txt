@@ -1,0 +1,74 @@
+Email: giuliapolenta@gmail.com
+
+----
+
+Name: Giulia
+
+----
+
+Surname: Polenta
+
+----
+
+Streetaddress: Forster Strasse 50
+
+----
+
+Postalcode: 10999
+
+----
+
+City: Berlin
+
+----
+
+Country: Germany
+
+----
+
+Paymentmethod: prepayment
+
+----
+
+Stripepaymentintentid: 
+
+----
+
+Items:
+
+- 
+  title: Quattro
+  quantity: 1
+  price: 22
+  id: page://TYFEUZNaz7pgQHBI
+  key: page://TYFEUZNaz7pgQHBI
+  taxrate: 0
+  template: product
+  uid: quattro
+  tax: 0
+  sum: 22
+  sumtax: 0
+- 
+  title: Europa
+  quantity: 1
+  price: 30
+  id: page://v0JebKxRZFjLTTT2
+  key: page://v0JebKxRZFjLTTT2
+  taxrate: 0
+  template: shipping
+  uid: europa
+  tax: 0
+  sum: 30
+  sumtax: 0
+
+----
+
+Invoicedate: 2024-03-28T18:08:08+00:00
+
+----
+
+Uuid: 13wFmqrSDj7CtMo5
+
+----
+
+Paymentcomplete: false

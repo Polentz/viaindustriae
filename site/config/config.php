@@ -412,21 +412,6 @@ return [
                 // header('Content-Security-Policy: default-src \'none\'; script-src \'self\' https://js.stripe.com; connect-src \'self\'; img-src \'self\'; style-src \'self\'; base-uri \'self\'; form-action \'self\'; child-src https://js.stripe.com');
             }
         },
-        'ww.merx.cart' => function ($cart) {
-            /**
-             * Update shipping
-             * https://merx.wagnerwagner.de/cookbooks/shipping-costs-and-discounts
-             */
-            // $site = site();
-            // if ($site->shippingPage()) {
-            //     $shippingId = $site->shippingPage()->id();
-            //     $freeShipping = $site->shippingPage()->freeShipping()->or('0')->toFloat();
-            //     $cart->remove($shippingId);
-            //     if ($cart->count() > 0 && $cart->getSum() < $freeShipping) {
-            //         $cart->add($shippingId);
-            //     }
-            // }
-        },
         'ww.merx.completePayment:after' => function (OrderPage $orderPage) {
             /**
              * Update stock
@@ -454,11 +439,18 @@ return [
                 try {
                 $destination = kirby()->request()->data();
 
+                // testare senza cookies
                 Cookie::set('shipping-destination', $destination['destination']);
                 kirby()->session()->set('shipping-destination', $destination['destination']);
-
-                 // Compara liste usando $destination e ritorna l'id del prodotto spese di spedizione assocaito a quel country in una nuova variabile chiamata $shippingId
-                $shippingId = 'page://v0JebKxRZFjLTTT2';
+                $aaa = kirby()->collection('shipping')->first();
+                $shippingId = '';
+                foreach(kirby()->collection('shipping') as $content) {
+                    $countries = $content->content()->countries();
+                    if (Str::contains($countries->value(), $destination['destination'], false)) {
+                        $shippingId = $content->content()->uuid()->value();
+                        break;
+                    }
+                }
                 return [
                     'status' => 200,
                     'shippingId' => $shippingId,

@@ -9,4 +9,6 @@ class ShippingPage extends Page
         }
         return $this->kirby()->option('taxRates')[$this->content()->tax()->toString()];
     }
+
+
 }

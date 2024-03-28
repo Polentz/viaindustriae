@@ -227,12 +227,14 @@ selectElement.addEventListener('change', async () => {
   });
   const data = await response.json();
   console.log(cart);
+  console.log(data.shippingId);
   if (data.status === 200) {
     cart.request('cart', 'POST', {
-      id: data.shippingId,
+      id: `page://${data.shippingId}`,
       quantity: 1,
       isShipping: true,
     });
+
   } else if (data.status === 400 && data.message) {
     console.log(data.message);
   };
