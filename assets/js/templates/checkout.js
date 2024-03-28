@@ -212,6 +212,12 @@ document.querySelectorAll('.checkout').forEach((productElement) => new Checkout(
 
 const selectElement = document.querySelector('select[data-action="country"]');
 selectElement.addEventListener('change', async () => {
+  if (cart.data.shippingId != '') {
+    cart.update(cart.data.shippingId, 0, true);
+  };
+  if (selectElement.value === 'Italy') {
+    return;
+  };
   const body = new FormData();
   body.append('destination', selectElement.value);
   const response = await fetch('/update-destination', {
@@ -220,11 +226,7 @@ selectElement.addEventListener('change', async () => {
     body,
   });
   const data = await response.json();
-  const cart = window.cart;
   console.log(cart);
-  if (cart.data.shippingId != '') {
-    cart.update(cart.data.shippingId, 0, true);
-  };
   if (data.status === 200) {
     cart.request('cart', 'POST', {
       id: data.shippingId,
@@ -237,11 +239,20 @@ selectElement.addEventListener('change', async () => {
 });
 
 const shippingOptions = document.querySelectorAll('.radio-wrapper[data-action="update-shipping"] input');
-shippingOptions.forEach((shippingOption) => {
+shippingOptions.forEach(shippingOption => {
   shippingOption.addEventListener('change', () => {
-    [...shippingOptions].filter(i => i !== shippingOption).forEach(i => {
-      i.removeAttribute("checked");
-      shippingOption.setAttribute("checked", "");
+    // [...shippingOptions].filter(i => i !== shippingOption).forEach(i => {
+    //   i.removeAttribute("checked");
+    //   shippingOption.setAttribute("checked", "");
+    // });
+    if (cart.data.shippingId != '') {
+      cart.update(cart.data.shippingId, 0, true);
+    };
+
+    cart.request('cart', 'POST', {
+      id: shippingOption.id,
+      quantity: 1,
+      isShipping: true,
     });
   });
 });

@@ -2,7 +2,6 @@
 	"account.changeName": "Cambia il tuo nome",
 	"account.delete": "Elimina l'account",
 	"account.delete.confirm": "Vuoi davvero eliminare il tuo account? Verrai disconnesso immediatamente. Il tuo account non potrà essere recuperato.",
-
 	"activate": "Attiva",
 	"add": "Aggiungi",
 	"alpha": "Alpha",
@@ -23,10 +22,8 @@
 	"copy.success": "{count} copied!",
 	"create": "Crea",
 	"custom": "Custom",
-
 	"date": "Data",
 	"date.select": "Scegli una data",
-
 	"day": "Giorno",
 	"days.fri": "Ve",
 	"days.mon": "Lu",
@@ -35,71 +32,52 @@
 	"days.thu": "Gi",
 	"days.tue": "Ma",
 	"days.wed": "Me",
-
 	"debugging": "Debugging",
-
 	"delete": "Elimina",
 	"delete.all": "Elimina tutti",
-
 	"dialog.fields.empty": "This dialog has no fields",
 	"dialog.files.empty": "Nessun file selezionabile",
 	"dialog.pages.empty": "Nessuna pagina selezionabile",
 	"dialog.text.empty": "This dialog does not define any text",
 	"dialog.users.empty": "Nessuno user selezionabile",
-
 	"dimensions": "Dimensioni",
 	"disable": "Disattiva",
 	"disabled": "Disabilitato",
 	"discard": "Abbandona",
-
 	"drawer.fields.empty": "This drawer has no fields",
-
 	"domain": "Dominio",
 	"download": "Scarica",
 	"duplicate": "Duplica",
-
 	"edit": "Modifica",
-
 	"email": "Email",
 	"email.placeholder": "mail@esempio.com",
-
 	"enter": "Enter",
 	"entries": "Voci",
 	"entry": "Voce",
-
 	"environment": "Ambiente",
-
 	"error": "Error",
 	"error.access.code": "Codice non valido",
 	"error.access.login": "Login invalido",
 	"error.access.panel": "Non ti è permesso accedere al pannello",
 	"error.access.view": "Non ti è permesso accedere a questa parte del pannello",
-
 	"error.avatar.create.fail": "Non è stato possibile caricare l'immagine del profilo",
 	"error.avatar.delete.fail": "Non è stato possibile eliminare l'immagine del profilo",
 	"error.avatar.dimensions.invalid": "Per favore mantieni l'altezza e la larghezza dell'immagine del profilo inferiore ai 3000 pixel",
 	"error.avatar.mime.forbidden": "L'immagine del profilo dev'essere un file JPEG o PNG",
-
 	"error.blueprint.notFound": "Non è stato possibile caricare il blueprint \"{name}\"",
-
 	"error.blocks.max.plural": "Non puoi aggiungere più di {max} blocchi",
 	"error.blocks.max.singular": "Non puoi aggiungere più di un blocco",
 	"error.blocks.min.plural": "Devi aggiungere almeno {min} blocchi",
 	"error.blocks.min.singular": "Devi aggiungere almeno un blocco",
 	"error.blocks.validation": "C'è un errore sul campo \"{field}\" nel blocco {index} che utilizza il tipo di blocco \"{fieldset}\"",
-
 	"error.cache.type.invalid": "Tipo di cache \"{type}\" non valido",
-
 	"error.email.preset.notFound": "Non è stato possibile trovare il preset email \"{name}\"",
-
 	"error.field.converter.invalid": "Convertitore \"{converter}\" non valido",
 	"error.field.type.missing": "Campo \"{ name }\": il tipo di campo \"{ type }\" non esiste",
-
 	"error.file.changeName.empty": "Il nome non dev'essere vuoto",
 	"error.file.changeName.permission": "Non ti è permesso modificare il nome di \"{filename}\"",
 	"error.file.changeTemplate.invalid": "The template for the file \"{id}\" cannot be changed to \"{template}\" (valid: \"{blueprints}\")",
 	"error.file.changeTemplate.permission": "You are not allowed to change the template for the file \"{id}\"",
-
 	"error.file.duplicate": "Un file con il nome \"{filename}\" esiste già",
 	"error.file.extension.forbidden": "L'estensione \"{extension}\" non è consentita",
 	"error.file.extension.invalid": "Estensione non valida: {extension}",
@@ -121,30 +99,22 @@
 	"error.file.type.forbidden": "Non ti è permesso caricare file {type}",
 	"error.file.type.invalid": "Tipo di file non valido: {type}",
 	"error.file.undefined": "Il file non \u00e8 stato trovato",
-
 	"error.form.incomplete": "Correggi tutti gli errori nel form...",
 	"error.form.notSaved": "Non è stato possibile salvare il form",
-
 	"error.language.code": "Inserisci un codice valido per la lingua",
 	"error.language.duplicate": "La lingua esiste già",
 	"error.language.name": "Inserisci un nome valido per la lingua",
 	"error.language.notFound": "La lingua non è stata trovata",
-
 	"error.layout.validation.block": "C'è un errore sul campo \"{field}\" nel blocco {blockIndex} che utilizza il tipo di blocco \"{fieldset}\" nel layout {layoutIndex}",
 	"error.layout.validation.settings": "C'è un errore nelle impostazioni del layout {index}",
-
 	"error.license.domain": "Il dominio per la licenza è assente",
 	"error.license.email": "Inserisci un indirizzo email valido",
 	"error.license.format": "Per favore inserisci un codice di licenza valido",
 	"error.license.verification": "Non è stato possibile verificare la licenza",
-
 	"error.login.totp.confirm.invalid": "Codice non valido",
 	"error.login.totp.confirm.missing": "Inserisci il codice attuale",
-
 	"error.object.validation": "C'è un errore nel campo \"{label}\":\n{message}",
-
 	"error.offline": "Il pannello di controllo è attualmente offline",
-
 	"error.page.changeSlug.permission": "Non ti è permesso cambiare l'URL di \"{slug}\"",
 	"error.page.changeSlug.reserved": "The path of top-level pages must not start with \"{path}\"",
 	"error.page.changeStatus.incomplete": "La pagina contiene errori e non può essere pubblicata",
@@ -176,30 +146,22 @@
 	"error.page.status.invalid": "Imposta uno stato valido per la pagina",
 	"error.page.undefined": "La pagina non \u00e8 stata trovata",
 	"error.page.update.permission": "Non ti è permesso modificare \"{slug}\"",
-
 	"error.section.files.max.plural": "Non puoi aggiungere più di {max} file alla sezione \"{section}\"",
 	"error.section.files.max.singular": "Non puoi aggiungere più di un file alla sezione \"{section}\"",
 	"error.section.files.min.plural": "La sezione \"{section}\" richiede almeno {min} file",
 	"error.section.files.min.singular": "La sezione \"{section}\" richiede almeno un file",
-
 	"error.section.pages.max.plural": "Non puoi aggiungere più di {max} pagine alla sezione \"{section}\"",
 	"error.section.pages.max.singular": "Non puoi aggiungere più di una pagina alla sezione \"{section}\"",
 	"error.section.pages.min.plural": "La sezione \"{section}\" richiede almeno {min} pagine",
 	"error.section.pages.min.singular": "La sezione \"{section}\" richiede almeno una pagina",
-
 	"error.section.notLoaded": "Non è stato possibile caricare la sezione \"{name}\"",
 	"error.section.type.invalid": "Il tipo di sezione \"{type}\" non è valido",
-
 	"error.site.changeTitle.empty": "Il titolo non può essere vuoto",
 	"error.site.changeTitle.permission": "Non ti è permesso modificare il titolo del sito",
 	"error.site.update.permission": "Non ti è permesso modificare i contenuti globali del sito",
-
 	"error.structure.validation": "C'è un errore nel campo \"{field}\" nella riga {index}",
-
 	"error.template.default.notFound": "Il template \"default\" non esiste",
-
 	"error.unexpected": "Si è verificato un errore inaspettato! Abilita la modalità \"debug\" per ulteriori informazioni: https://getkirby.com/docs/reference/system/options/debug",
-
 	"error.user.changeEmail.permission": "Non ti è permesso modificare l'indirizzo email di \"{name}\"",
 	"error.user.changeLanguage.permission": "Non ti è permesso modificare la lingua per l'utente \"{name}\"",
 	"error.user.changeName.permission": "Non ti è permesso modificare il nome dell'utente \"{name}\"",
@@ -224,7 +186,6 @@
 	"error.user.role.invalid": "Inserisci un ruolo valido",
 	"error.user.undefined": "L'utente non è stato trovato",
 	"error.user.update.permission": "Non ti è permesso aggiornare l'utente \"{name}\"",
-
 	"error.validation.accepted": "Per favore conferma",
 	"error.validation.alpha": "Puoi inserire solo caratteri tra a-z",
 	"error.validation.alphanum": "Puoi inserire solo caratteri tra a-z e numeri 0-9",
@@ -259,7 +220,7 @@
 	"error.validation.notin": "Non inserire nessuno dei valori seguenti: ({notIn})",
 	"error.validation.option": "Seleziona un'opzione valida",
 	"error.validation.num": "Inserisci un numero valido",
-	"error.validation.required": "Inserisci qualcosa",
+	"error.validation.required": "Campo obbligatorio",
 	"error.validation.same": "Inserisci \"{other}\"",
 	"error.validation.size": "La dimensione del valore dev'essere \"{size}\"",
 	"error.validation.startswith": "Il valore deve iniziare con \"{start}\"",
@@ -270,10 +231,8 @@
 	"error.validation.time.between": "Inserisci un orario tra le {min} e le {max}",
 	"error.validation.uuid": "Please enter a valid UUID",
 	"error.validation.url": "Inserisci un URL valido",
-
 	"expand": "Espandi",
 	"expand.all": "Espandi tutto",
-
 	"field.invalid": "The field is invalid",
 	"field.required": "Il campo è obbligatorio",
 	"field.blocks.changeType": "Cambia tipo",
@@ -322,28 +281,20 @@
 	"field.blocks.video.placeholder": "Inserisci un URL di un video",
 	"field.blocks.video.url.label": "URL Video",
 	"field.blocks.video.url.placeholder": "https://youtube.com/?v=",
-
 	"field.files.empty": "Nessun file selezionato",
-
 	"field.layout.change": "Change layout",
 	"field.layout.delete": "Elimina layout",
 	"field.layout.delete.confirm": "Vuoi veramente eliminare questo layout?",
 	"field.layout.delete.confirm.all": "Do you really want to delete all layouts?",
 	"field.layout.empty": "Nessuna riga inserita",
 	"field.layout.select": "Scegli un layout",
-
 	"field.object.empty": "Ancora nessuna informazione",
-
 	"field.pages.empty": "Nessuna pagina selezionata",
-
 	"field.structure.delete.confirm": "Vuoi veramente eliminare questo elemento?",
 	"field.structure.delete.confirm.all": "Vuoi davvero cancellare tutte le voci?",
 	"field.structure.empty": "Non ci sono ancora elementi.",
-
 	"field.users.empty": "Nessun utente selezionato",
-
 	"fields.empty": "No fields yet",
-
 	"file": "File",
 	"file.blueprint": "Questo file non ha ancora un blueprint. Puoi definire la sua configurazione in <strong>/site/blueprints/files/{blueprint}.yml</strong>",
 	"file.changeTemplate": "Cambia template",
@@ -353,12 +304,9 @@
 	"file.focus.reset": "Remove focal point",
 	"file.focus.title": "Focus",
 	"file.sort": "Cambia posizione",
-
 	"files": "Files",
 	"files.empty": "Nessun file caricato",
-
 	"filter": "Filter",
-
 	"hide": "Nascondi",
 	"hour": "Ora",
 	"hue": "Hue",
@@ -368,7 +316,6 @@
 	"insert.after": "Inserisci dopo",
 	"insert.before": "Inserisci prima",
 	"install": "Installa",
-
 	"installation": "Installazione",
 	"installation.completed": "Il pannello è stato installato",
 	"installation.disabled": "L'installazione del pannello è disabilitata di default sui server pubblici. Esegui l'installazione in locale oppure abilitala usando l'opzione <code>panel.install</code>.",
@@ -381,7 +328,6 @@
 	"installation.issues.php": "Assicurati di utilizzare <code>PHP 8+</code>",
 	"installation.issues.server": "Kirby necessita di <code>Apache</code>, <code>Nginx</code> o <code>Caddy</code>",
 	"installation.issues.sessions": "La cartella <code>/site/sessions</code>non esiste o non dispone dei permessi di scrittura",
-
 	"language": "Lingua",
 	"language.code": "Codice",
 	"language.convert": "Imposta come predefinito",
@@ -401,18 +347,15 @@
 	"language.updated": "La lingua è stata aggiornata",
 	"language.variables": "Language variables",
 	"language.variables.empty": "No translations yet",
-
 	"language.variable.delete.confirm": "Do you really want to delete the variable for {key}?",
 	"language.variable.key": "Key",
 	"language.variable.notFound": "The variable could not be found",
 	"language.variable.value": "Value",
-
 	"languages": "Lingue",
 	"languages.default": "Lingua di default",
 	"languages.empty": "Non ci sono lingue impostate",
 	"languages.secondary": "Lingue secondarie",
 	"languages.secondary.empty": "Non ci sono lingue secondarie impostate",
-
 	"license": "Licenza di Kirby",
 	"license.activate": "Attiva ora",
 	"license.activate.label": "Attiva la tua licenza ora",
@@ -439,19 +382,15 @@
 	"license.purchased": "Acquistata",
 	"license.success": "Ti ringraziamo per aver supportato Kirby",
 	"license.unregistered.label": "Non registrato",
-
 	"link": "Link",
 	"link.text": "Testo del link",
-
 	"loading": "Caricamento",
-
 	"lock.unsaved": "Modifiche non salvate",
 	"lock.unsaved.empty": "Non ci sono altre modifiche non salvate",
 	"lock.isLocked": "Unsaved changes by {email}",
 	"lock.unlock": "Sblocca",
 	"lock.unlock.submit": "Unlock and overwrite unsaved changes by <strong>{email}</strong>",
 	"lock.isUnlocked": "Was unlocked by another user",
-
 	"login": "Accedi",
 	"login.code.label.login": "Codice di accesso",
 	"login.code.label.password-reset": "Codice per reimpostare la password",
@@ -483,15 +422,12 @@
 	"login.totp.disable.help": "In futuro, un secondo fattore diverso, come un codice login inviato tramite email, sarà richiesto per l'accesso. Potrai sempre reimpostare i codici monouso più tardi.",
 	"login.totp.disable.admin": "<p>Questo disattiverà i codici monouso per <strong>{user}</strong>.</p><p>In futuro verrà richiesto un secondo fattore diverso per l'accesso, per esempio un codice inviato per email. {user} potrà impostare nuovamente i codici monouso dopo il suo prossimo accesso.</p>",
 	"login.totp.disable.success": "Codici monouso disattivati",
-
 	"logout": "Esci",
-
 	"merge": "Merge",
 	"menu": "Menu",
 	"meridiem": "AM/PM",
 	"mime": "MIME Type",
 	"minutes": "Minuti",
-
 	"month": "Mese",
 	"months.april": "Aprile",
 	"months.august": "Agosto",
@@ -505,7 +441,6 @@
 	"months.november": "Novembre",
 	"months.october": "Ottobre",
 	"months.september": "Settembre",
-
 	"more": "Di più",
 	"move": "Move",
 	"name": "Nome",
@@ -520,12 +455,10 @@
 	"options": "Opzioni",
 	"options.none": "Nessuna opzione",
 	"options.all": "Mostra tutte le {count} opzioni",
-
 	"orientation": "Orientamento",
 	"orientation.landscape": "Orizzontale",
 	"orientation.portrait": "Verticale",
 	"orientation.square": "Quadrato",
-
 	"page": "Page",
 	"page.blueprint": "Questa pagina non ha ancora un blueprint. Puoi definire la sua configurazione in <strong>/site/blueprints/pages/{blueprint}.yml</strong>",
 	"page.changeSlug": "Modifica URL",
@@ -551,15 +484,12 @@
 	"page.status.listed.description": "La pagina è pubblicata per tutti",
 	"page.status.unlisted": "Non in elenco",
 	"page.status.unlisted.description": "La pagina è accessibile soltanto tramite URL",
-
 	"pages": "Pagine",
 	"pages.empty": "Nessuna pagina",
 	"pages.status.draft": "Bozza",
 	"pages.status.listed": "Pubblicato",
 	"pages.status.unlisted": "Non in elenco",
-
 	"pagination.page": "Pagina",
-
 	"password": "Password",
 	"paste": "Incolla",
 	"paste.after": "Incolla dopo",
@@ -577,7 +507,6 @@
 	"retry": "Riprova",
 	"revert": "Abbandona",
 	"revert.confirm": "Sei sicuro di voler <strong>cancellare tutte le modifiche non salvate</strong>?",
-
 	"role": "Ruolo",
 	"role.admin.description": "L'amministratore ha tutti i permessi",
 	"role.admin.title": "Amministratore",
@@ -586,16 +515,13 @@
 	"role.description.placeholder": "Nessuna descrizione",
 	"role.nobody.description": "Questo è un ruolo \"fallback\" senza permessi",
 	"role.nobody.title": "Nessuno",
-
 	"save": "Salva",
 	"search": "Cerca",
 	"search.min": "Inserisci almeno {min} caratteri per la ricerca",
 	"search.all": "Mostra tutti i {count} risultati",
 	"search.results.none": "Nessun risultato",
-
 	"section.invalid": "The section is invalid",
 	"section.required": "La sezione è obbligatoria",
-
 	"security": "Sicurezza",
 	"select": "Seleziona",
 	"server": "Server",
@@ -607,10 +533,8 @@
 	"sort": "Ordina",
 	"sort.drag": "Drag to sort …",
 	"split": "Split",
-
 	"stats.empty": "Nessuna segnalazione",
 	"status": "Stato",
-
 	"system.issues.content": "La cartella content sembra essere esposta",
 	"system.issues.eol.kirby": "La versione di Kirby installata è giunta alla fine del suo ciclo di vita e non riceverà ulteriori aggiornamenti di sicurezza ",
 	"system.issues.eol.plugin": "La versione installata del plugin { plugin } è giunta alla fine del suo ciclo di vita e non riceverà ulteriori aggiornamenti di sicurezza",
@@ -631,13 +555,11 @@
 	"system.updateStatus.up-to-date": "Aggiornato",
 	"system.updateStatus.update": "Aggiornamento gratuito { version } disponibile",
 	"system.updateStatus.upgrade": "Aggiornamento { version } disponibile",
-
 	"tel": "Phone",
 	"tel.placeholder": "+49123456789",
 	"template": "Template",
 	"title": "Titolo",
 	"today": "Oggi",
-
 	"toolbar.button.clear": "Clear formatting",
 	"toolbar.button.code": "Codice",
 	"toolbar.button.bold": "Grassetto",
@@ -661,14 +583,11 @@
 	"toolbar.button.ol": "Elenco numerato",
 	"toolbar.button.underline": "Sottolinea",
 	"toolbar.button.ul": "Elenco puntato",
-
 	"translation.author": "Kirby Team, Roman Steiner, Manu Moreale",
 	"translation.direction": "ltr",
 	"translation.name": "Italiano",
 	"translation.locale": "it_IT",
-
 	"type": "Tipo",
-
 	"upload": "Carica",
 	"upload.error.cantMove": "Non è stato possibile spostare il file caricato",
 	"upload.error.cantWrite": "Impossibile scrivere il file su disco",
@@ -683,10 +602,8 @@
 	"upload.error.tmpDir": "Manca la cartella temporanea",
 	"upload.errors": "Errore",
 	"upload.progress": "Caricamento...",
-
 	"url": "URL",
 	"url.placeholder": "https://esempio.com",
-
 	"user": "Utente",
 	"user.blueprint": "Puoi definire ulteriori sezioni e campi del form aggiuntivi per questo ruolo in <strong>/site/blueprints/users/{blueprint}.yml</strong>",
 	"user.changeEmail": "Modifica email",
@@ -700,14 +617,11 @@
 	"user.create": "Aggiungi nuovo utente",
 	"user.delete": "Elimina questo utente",
 	"user.delete.confirm": "Sei sicuro di voler eliminare l'utente <br><strong>{email}</strong>?",
-
 	"users": "Utenti",
-
 	"version": "Versione di Kirby",
 	"version.current": "Versione corrente",
 	"version.latest": "Ultima versione",
 	"versionInformation": "Informazioni sulla versione",
-
 	"view.account": "Il tuo account",
 	"view.installation": "Installazione",
 	"view.languages": "Lingue",
@@ -715,7 +629,6 @@
 	"view.site": "Sito",
 	"view.system": "Sistema",
 	"view.users": "Utenti",
-
 	"welcome": "Benvenuto",
 	"year": "Anno",
 	"yes": "sì"

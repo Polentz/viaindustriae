@@ -41,24 +41,23 @@
 
   <h2 class="radio-title text-title">
     <?= $field['label'] ?>
-    <?php if ($field['required']): ?>
-      <abbr title="<?= I18n::translate('field.required') ?>">*</abbr>
-    <?php endif ?>
   </h2>
 
   <?php foreach ($field['options'] as $option) : ?>
-    <div class="field text-subtitle shipping">
-    <input data-price="<?= $option['value'] ?>"
+    <?php $values = explode(";", $option['value']); ?> 
+    <div class="field text-subtitle">
+    <input data-price="<?= $values[0] ?>"
       <?= Html::attr([
         'type' => $field['type'],
         'name' => $field['name'],
-        'id' => $option['value'],
-        'value' => $option['value'],
+        'value' => $values[0],
+        'id' => $values[1],
+        'required' => true
       ]) ?>
     >
 
-    <label for="<?= $option['value'] ?>">
-      <?= $option['value'] ?> € <span><?= $option['text'] ?></span>
+    <label for="<?= $values[1] ?>">
+      <?= $values[0] ?> € <span><?= $option['text'] ?></span>
     </label>
 
     <?php if (isset($option['help'])): ?>

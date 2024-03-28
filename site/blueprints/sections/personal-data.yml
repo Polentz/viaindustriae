@@ -147,8 +147,7 @@ fields:
     query: 
       fetch: kirby.collection('shipping').filterBy('countries', 'Italy')
       text: "{{ page.description }}"
-      value: "{{ page.price }}"
-    required: true
+      value: "{{ page.price }};{{ page.uuid}}"
     translate: false
     when:
       country: 'Italy'
