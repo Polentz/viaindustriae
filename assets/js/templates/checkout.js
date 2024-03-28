@@ -211,56 +211,30 @@ class Checkout {
 document.querySelectorAll('.checkout').forEach((productElement) => new Checkout(productElement));
 
 const selectElement = document.querySelector('select[data-action="country"]');
-selectElement.addEventListener('change', () => {
+selectElement.addEventListener('change', async () => {
   const body = new FormData();
   body.append('destination', selectElement.value);
-  console.log(selectElement.value);
-  fetch('/update-destination', {
+  const response = await fetch('/update-destination', {
     method: 'POST',
     credentials: 'same-origin',
     body,
-  }).then(response => response.json()).then((data) => {
-    const cart = window.cart;
-    console.log(cart);
-    if (cart.data.shippingId != '') {
-      cart.update(cart.data.shippingId, 0, true);
-    }
-    if (data.status === 200) {
-      cart.request('cart', 'POST', {
-        id: data.shippingId,
-        quantity: 1,
-        isShipping: true,
-      });
-    } else if (data.status === 400 && data.message) {
-      console.log(data.message);
-    }
   });
-})
-// function updateCountry(element) {
-//   // let countryValue = selectElement.options[selectElement.selectedIndex].value;
-//   // // Compara quali lista devi usare tipo Germany == EU 
-//   // // Aggiungi al carello il prodotto Shipping EU
-//   // // FINITO
-//   // document.cookie = "shipping-destination=" + countryValue + "; SameSite=Lax";
-
-//   const body = new FormData();
-//   body.append('destination', element.value);
-//   console.log(body);
-//   console.log(element.value);
-//   fetch('/update-destination', {
-//     method: 'POST',
-//     credentials: 'same-origin',
-//     body,
-//   }).then(response => response.json()).then((data) => {
-//     if (data.status === 200) {
-//       // console.log(data.data)
-//       // console.log(data)
-//     } else if (data.status === 400 && data.message) {
-//       console.log(data.message);
-//     }
-//   });
-// }
-//selectElement.addEventListener('change', updateCountry(selectElement));
+  const data = await response.json();
+  const cart = window.cart;
+  console.log(cart);
+  if (cart.data.shippingId != '') {
+    cart.update(cart.data.shippingId, 0, true);
+  };
+  if (data.status === 200) {
+    cart.request('cart', 'POST', {
+      id: data.shippingId,
+      quantity: 1,
+      isShipping: true,
+    });
+  } else if (data.status === 400 && data.message) {
+    console.log(data.message);
+  };
+});
 
 const shippingOptions = document.querySelectorAll('.radio-wrapper[data-action="update-shipping"] input');
 shippingOptions.forEach((shippingOption) => {
